@@ -2628,32 +2628,40 @@ let audioCtx = null;
 let isPlayingMusic = false;
 let musicTimeout = null;
 
-function playMidiNote(freq, startTime, duration, volume = 0.04, type = 'triangle') {
+function playMidiNote(freq, startTime, duration, volume = 0.03, type = 'sawtooth') {
     if (!audioCtx || !isPlayingMusic) return;
 
     const osc = audioCtx.createOscillator();
     const subOsc = audioCtx.createOscillator();
+    const filter = audioCtx.createBiquadFilter();
     const gain = audioCtx.createGain();
 
-    // Blend triangle + sine for a warm MIDI electric-piano / synth pad timbre
+    // 1. Warm Acoustic Timbre Setup
     osc.type = type;
     osc.frequency.setValueAtTime(freq, startTime);
 
     subOsc.type = 'sine';
     subOsc.frequency.setValueAtTime(freq, startTime);
 
-    gain.gain.setValueAtTime(0.0001, startTime);
-    gain.gain.exponentialRampToValueAtTime(volume, startTime + 0.03);
-    gain.gain.exponentialRampToValueAtTime(0.0001, startTime + duration);
+    // 2. Low-pass filter to cut out harsh digital buzz (makes it sound more woody/warm)
+    filter.type = 'lowpass';
+    filter.frequency.setValueAtTime(1200, startTime); // mellow piano/pad cutoff
 
-    osc.connect(gain);
-    subOsc.connect(gain);
+    // 3. Smooth, natural piano-like envelope (softer attack, longer smooth decay)
+    gain.gain.setValueAtTime(0.0001, startTime);
+    gain.gain.linearRampToValueAtTime(volume, startTime + 0.08);
+    gain.gain.exponentialRampToValueAtTime(0.0001, startTime + duration + 0.5);
+
+    // Connect nodes: Oscillators -> Filter -> Gain -> Destination
+    osc.connect(filter);
+    subOsc.connect(filter);
+    filter.connect(gain);
     gain.connect(audioCtx.destination);
 
     osc.start(startTime);
     subOsc.start(startTime);
-    osc.stop(startTime + duration + 0.05);
-    subOsc.stop(startTime + duration + 0.05);
+    osc.stop(startTime + duration + 0.6);
+    subOsc.stop(startTime + duration + 0.6);
 }
 
 function toggleAmbientMusic() {
@@ -2682,10 +2690,9 @@ function toggleAmbientMusic() {
             };
 
             // [melodyNote, bassNote, chordNotes[], durationInBeats]
-            // "A Thousand Years" - Christina Perri (Arranged in C Major / Am)
+            // "A Thousand Years" - Christina Perri
             const song = [
                 // --- Verse 1: "Heart beats fast..." (Am - F - C - G) ---
-                // Bar 1: A Minor
                 [N.E4, N.A2, [N.C4, N.E4], 2],
                 [N.E4, null, [], 1],
                 [N.E4, N.A2, [N.C4, N.E4], 2],
@@ -2708,7 +2715,6 @@ function toggleAmbientMusic() {
                 [N.B3, N.G3, [], 3],
 
                 // --- Chorus / Bridge: "I have died ev-ery day..." ---
-                // Bar 5: A Minor
                 [N.C4, N.A2, [N.C4, N.E4], 2],
                 [N.E4, null, [], 1],
                 [N.A4, N.A2, [N.C4, N.E4], 3],
@@ -2729,7 +2735,7 @@ function toggleAmbientMusic() {
                 [N.D4, N.G3, [N.G3, N.B3], 3]
             ];
 
-            const beatDuration = 0.48; // Smooth ballad tempo
+            const beatDuration = 0.5; // Smooth, dreamy tempo
             let step = 0;
 
             function playNextStep() {
@@ -2739,19 +2745,19 @@ function toggleAmbientMusic() {
                 const durationSec = beats * beatDuration;
                 const now = audioCtx.currentTime;
 
-                // Lead MIDI melody
+                // Lead Melody
                 if (melody) {
-                    playMidiNote(melody, now, durationSec + 0.15, 0.038, 'triangle');
+                    playMidiNote(melody, now, durationSec + 0.2, 0.03, 'sawtooth');
                 }
 
-                // Driving bass note
+                // Warm Bass Note
                 if (bass) {
-                    playMidiNote(bass, now, durationSec + 0.25, 0.045, 'sine');
+                    playMidiNote(bass, now, durationSec + 0.3, 0.035, 'sine');
                 }
 
-                // Soft harmonic pad
+                // Soft Harmonic Chord Pad
                 chord.forEach((freq) => {
-                    playMidiNote(freq, now, durationSec + 0.4, 0.015, 'sine');
+                    playMidiNote(freq, now, durationSec + 0.4, 0.012, 'sine');
                 });
 
                 step = (step + 1) % song.length;
