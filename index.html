@@ -2674,69 +2674,62 @@ function toggleAmbientMusic() {
             if (icon) icon.className = 'fa-solid fa-volume-high text-gold-600 animate-pulse';
             if (text) text.textContent = 'Playing';
 
-            // Note frequencies in Key of D Major
+            // Note frequencies in Key of C Major / A Minor ("A Thousand Years")
             const N = {
-                G2: 98.00, A2: 110.00, B2: 123.47, D3: 146.83,
-                Fs3: 185.00, G3: 196.00, A3: 220.00, B3: 246.94, Cs4: 277.18,
-                D4: 293.66, E4: 329.63, Fs4: 369.99, G4: 392.00, A4: 440.00, B4: 493.88,
-                D5: 587.33
+                C3: 130.81, D3: 146.83, E3: 164.81, F3: 174.61, G3: 196.00, A2: 110.00, A3: 220.00, B2: 123.47, F2: 87.31,
+                C4: 261.63, D4: 293.66, E4: 329.63, F4: 349.23, G4: 392.00, A4: 440.00, B4: 493.88,
+                C5: 523.25
             };
 
             // [melodyNote, bassNote, chordNotes[], durationInBeats]
-            // "With or Without You" - U2 (Ross & Rachel's Theme)
+            // "A Thousand Years" - Christina Perri (Arranged in C Major / Am)
             const song = [
-                // --- Iconic 4-Bar Bass & Ambient Intro (D - A - Bm - G) ---
-                [N.A4, N.D3, [N.D4, N.Fs4], 4],
-                [N.A4, N.A2, [N.Cs4, N.E4], 4],
-                [N.Fs4, N.B2, [N.D4, N.Fs4], 4],
-                [N.G4, N.G2, [N.B3, N.D4], 4],
+                // --- Verse 1: "Heart beats fast..." (Am - F - C - G) ---
+                // Bar 1: A Minor
+                [N.E4, N.A2, [N.C4, N.E4], 2],
+                [N.E4, null, [], 1],
+                [N.E4, N.A2, [N.C4, N.E4], 2],
+                [N.E4, null, [], 1],
 
-                // --- Chorus Melody: "And you give your-self a-way..." ---
-                // Bar 1: D Major
-                [null, N.D3, [N.Fs3, N.A3], 1],
-                [N.Fs4, null, [], 0.5],
-                [N.Fs4, null, [], 0.5],
-                [N.Fs4, N.D3, [], 0.5],
-                [N.E4, null, [], 0.5],
-                [N.D4, null, [], 0.5],
-                [N.E4, null, [], 0.5],
+                // Bar 2: F Major ("...colors and promises...")
+                [N.F4, N.F2, [N.A3, N.C4], 2],
+                [N.E4, null, [], 1],
+                [N.D4, N.F2, [N.A3, N.C4], 2],
+                [N.C4, null, [], 1],
 
-                // Bar 2: A Major ("...and you give your-self a-way...")
-                [N.E4, N.A2, [N.Cs4, N.E4], 1],
-                [N.Fs4, null, [], 0.5],
-                [N.Fs4, null, [], 0.5],
-                [N.Fs4, N.A2, [], 0.5],
-                [N.E4, null, [], 0.5],
-                [N.D4, null, [], 0.5],
-                [N.E4, null, [], 0.5],
-
-                // Bar 3: B Minor ("...and you give, and you give...")
-                [N.Fs4, N.B2, [N.D4, N.Fs4], 1],
-                [N.A4, null, [], 0.5],
-                [N.A4, null, [], 0.5],
-                [N.A4, N.B2, [], 1],
-                [N.B4, null, [], 0.5],
-                [N.A4, null, [], 0.5],
-
-                // Bar 4: G Major ("...and you give your-self a-way.")
-                [N.A4, N.G2, [N.B3, N.D4], 1],
-                [N.Fs4, null, [], 0.5],
-                [N.Fs4, null, [], 0.5],
-                [N.Fs4, N.G2, [], 0.5],
-                [N.E4, null, [], 0.5],
+                // Bar 3: C Major ("...how to be brave...")
+                [N.C4, N.C3, [N.G3, N.C4], 2],
                 [N.D4, null, [], 1],
+                [N.E4, N.C3, [N.G3, N.C4], 3],
 
-                // --- High Peak: "With or with-out you..." ---
-                [N.D5, N.D3, [N.Fs3, N.A3, N.D4], 2],
-                [N.B4, N.D3, [], 1],
-                [N.A4, null, [], 1],
-                [N.A4, N.A2, [N.Cs4, N.E4], 3],
-                [N.Fs4, null, [], 1],
-                [N.Fs4, N.B2, [N.D4, N.Fs4], 4],
-                [N.D4, N.G2, [N.B3, N.D4], 4]
+                // Bar 4: G Major ("...how can I love...")
+                [N.D4, N.G3, [N.G3, N.B3], 2],
+                [N.C4, null, [], 1],
+                [N.B3, N.G3, [], 3],
+
+                // --- Chorus / Bridge: "I have died ev-ery day..." ---
+                // Bar 5: A Minor
+                [N.C4, N.A2, [N.C4, N.E4], 2],
+                [N.E4, null, [], 1],
+                [N.A4, N.A2, [N.C4, N.E4], 3],
+
+                // Bar 6: F Major ("...wait-ing for you...")
+                [N.G4, N.F2, [N.A3, N.C4], 2],
+                [N.F4, null, [], 1],
+                [N.E4, N.F2, [N.A3, N.C4], 3],
+
+                // Bar 7: C Major ("...Dar-ling, don't be afraid...")
+                [N.E4, N.C3, [N.G3, N.C4], 2],
+                [N.D4, null, [], 1],
+                [N.C4, N.C3, [N.G3, N.C4], 3],
+
+                // Bar 8: G Major ("...I have loved you for a thou-sand years...")
+                [N.B3, N.G3, [N.G3, N.B3], 2],
+                [N.C4, null, [], 1],
+                [N.D4, N.G3, [N.G3, N.B3], 3]
             ];
 
-            const beatDuration = 0.52; // ~115 BPM matching the original track
+            const beatDuration = 0.48; // Smooth ballad tempo
             let step = 0;
 
             function playNextStep() {
@@ -2751,7 +2744,7 @@ function toggleAmbientMusic() {
                     playMidiNote(melody, now, durationSec + 0.15, 0.038, 'triangle');
                 }
 
-                // Driving eighth-note style bass pulse
+                // Driving bass note
                 if (bass) {
                     playMidiNote(bass, now, durationSec + 0.25, 0.045, 'sine');
                 }
