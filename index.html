@@ -2,8 +2,8 @@
 <html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lily &amp; Richard | Wedding Invitation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Lily &amp; Richard | April 9, 2027</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts for Luxury Editorial & Cinematic Typography -->
@@ -56,6 +56,7 @@
             -moz-osx-font-smoothing: grayscale;
             overflow-x: hidden;
             max-width: 100%;
+            width: 100%;
         }
 
         /* Editorial Luxury Typography Refinements */
@@ -70,18 +71,14 @@
         .luxury-kicker {
             font-family: 'Plus Jakarta Sans', sans-serif;
             font-weight: 600;
-            letter-spacing: 0.36em;
+            letter-spacing: 0.22em;
             text-transform: uppercase;
         }
 
-        .editorial-dropcap::first-letter {
-            font-family: 'Cinzel Decorative', 'Cinzel', serif;
-            float: left;
-            font-size: 3.1rem;
-            line-height: 0.85;
-            padding-right: 0.55rem;
-            padding-top: 0.15rem;
-            color: #A67C37;
+        @media (min-width: 768px) {
+            .luxury-kicker {
+                letter-spacing: 0.34em;
+            }
         }
 
         /* Subtle Piña Silk / Linen Texture Overlay */
@@ -91,12 +88,99 @@
         }
 
         /* ==========================================
+           MOBILE-OPTIMIZED FROSTED GLASSMORPHISM
+           ========================================== */
+        .glass-light {
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.88) 0%, rgba(253, 251, 247, 0.78) 100%);
+            backdrop-filter: blur(12px) saturate(145%);
+            -webkit-backdrop-filter: blur(12px) saturate(145%);
+            border: 1px solid rgba(212, 175, 55, 0.28);
+            box-shadow:
+                0 14px 32px -12px rgba(18, 17, 16, 0.12),
+                0 4px 12px -4px rgba(166, 124, 55, 0.12),
+                inset 0 1px 0 rgba(255, 255, 255, 0.95);
+            transform: translateZ(0);
+        }
+
+        .glass-ivory {
+            background: linear-gradient(145deg, rgba(251, 247, 238, 0.9) 0%, rgba(244, 236, 220, 0.8) 100%);
+            backdrop-filter: blur(12px) saturate(140%);
+            -webkit-backdrop-filter: blur(12px) saturate(140%);
+            border: 1px solid rgba(212, 175, 55, 0.36);
+            box-shadow:
+                0 14px 30px -12px rgba(18, 17, 16, 0.12),
+                inset 0 1px 0 rgba(255, 255, 255, 0.92);
+            transform: translateZ(0);
+        }
+
+        .glass-dark {
+            background: linear-gradient(145deg, rgba(32, 30, 27, 0.86) 0%, rgba(16, 15, 14, 0.92) 100%);
+            backdrop-filter: blur(14px) saturate(145%);
+            -webkit-backdrop-filter: blur(14px) saturate(145%);
+            border: 1px solid rgba(232, 206, 122, 0.34);
+            box-shadow:
+                0 20px 44px -14px rgba(0, 0, 0, 0.65),
+                0 6px 18px -6px rgba(212, 175, 55, 0.14),
+                inset 0 1px 0 rgba(255, 248, 225, 0.22);
+            transform: translateZ(0);
+        }
+
+        .glass-pill {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.88) 0%, rgba(253, 251, 247, 0.76) 100%);
+            backdrop-filter: blur(10px) saturate(140%);
+            -webkit-backdrop-filter: blur(10px) saturate(140%);
+            border: 1px solid rgba(212, 175, 55, 0.32);
+            box-shadow: 0 8px 20px -6px rgba(94, 64, 20, 0.16), inset 0 1px 0 rgba(255, 255, 255, 0.95);
+            transform: translateZ(0);
+        }
+
+        .glass-pill-dark {
+            background: linear-gradient(135deg, rgba(30, 27, 23, 0.84) 0%, rgba(14, 12, 10, 0.9) 100%);
+            backdrop-filter: blur(12px) saturate(145%);
+            -webkit-backdrop-filter: blur(12px) saturate(145%);
+            border: 1px solid rgba(232, 206, 122, 0.46);
+            box-shadow: 0 10px 26px rgba(0, 0, 0, 0.58), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+            transform: translateZ(0);
+        }
+
+        /* Desktop/Tablet Rich Refraction Upgrade */
+        @media (min-width: 768px) {
+            .glass-light {
+                background: linear-gradient(145deg, rgba(255, 255, 255, 0.74) 0%, rgba(253, 251, 247, 0.56) 100%);
+                backdrop-filter: blur(20px) saturate(165%);
+                -webkit-backdrop-filter: blur(20px) saturate(165%);
+                border-color: rgba(255, 255, 255, 0.78);
+            }
+            .glass-ivory {
+                background: linear-gradient(145deg, rgba(249, 245, 235, 0.76) 0%, rgba(242, 234, 216, 0.54) 100%);
+                backdrop-filter: blur(18px) saturate(155%);
+                -webkit-backdrop-filter: blur(18px) saturate(155%);
+            }
+            .glass-dark {
+                background: linear-gradient(145deg, rgba(38, 36, 32, 0.66) 0%, rgba(18, 17, 16, 0.8) 100%);
+                backdrop-filter: blur(22px) saturate(160%);
+                -webkit-backdrop-filter: blur(22px) saturate(160%);
+            }
+            .glass-pill {
+                background: linear-gradient(135deg, rgba(255, 255, 255, 0.76) 0%, rgba(253, 251, 247, 0.5) 100%);
+                backdrop-filter: blur(16px) saturate(160%);
+                -webkit-backdrop-filter: blur(16px) saturate(160%);
+                border-color: rgba(255, 255, 255, 0.8);
+            }
+            .glass-pill-dark {
+                background: linear-gradient(135deg, rgba(34, 30, 26, 0.66) 0%, rgba(15, 13, 11, 0.76) 100%);
+                backdrop-filter: blur(18px) saturate(165%);
+                -webkit-backdrop-filter: blur(18px) saturate(165%);
+            }
+        }
+
+        /* ==========================================
            ROMANTIC COMEDY FILM PREMIERE ENTRANCE
            ========================================== */
         #cinemaEntrance {
             position: fixed;
             inset: 0;
-            width: 100vw;
+            width: 100%;
             height: 100dvh;
             z-index: 9999;
             background-color: #0D0B09;
@@ -131,7 +215,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            object-position: center 28%;
+            object-position: center 26%;
             animation: entranceExposure 2.4s cubic-bezier(0.16, 1, 0.3, 1) forwards,
                        romComSlowZoom 22s ease-in-out 2.2s infinite alternate;
             filter: brightness(0.88) contrast(1.05) saturate(1.1);
@@ -183,23 +267,37 @@
             pointer-events: none;
         }
 
-        /* 35mm Widescreen Letterbox Bars */
+        /* 35mm Widescreen Letterbox Bars (Adaptive for Mobile & Tablet Safe Areas) */
         .letterbox-bar {
-            height: 7.5vh;
-            min-height: 44px;
-            background-color: rgba(8, 7, 6, 0.96);
+            height: 6vh;
+            min-height: 38px;
+            background-color: rgba(8, 7, 6, 0.9);
             width: 100%;
             z-index: 20;
             transition: transform 1.2s cubic-bezier(0.76, 0, 0.24, 1);
-            border-color: rgba(212, 175, 55, 0.25);
-            backdrop-filter: blur(6px);
+            border-color: rgba(212, 175, 55, 0.32);
+            backdrop-filter: blur(12px) saturate(140%);
+            -webkit-backdrop-filter: blur(12px) saturate(140%);
+            transform: translateZ(0);
+        }
+
+        @media (min-width: 640px) {
+            .letterbox-bar {
+                height: 7vh;
+                min-height: 42px;
+                background-color: rgba(8, 7, 6, 0.84);
+                backdrop-filter: blur(16px) saturate(150%);
+                -webkit-backdrop-filter: blur(16px) saturate(150%);
+            }
         }
 
         .letterbox-top {
+            padding-top: env(safe-area-inset-top, 0px);
             animation: barSlideDown 1.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
         }
 
         .letterbox-bottom {
+            padding-bottom: env(safe-area-inset-bottom, 0px);
             animation: barSlideUp 1.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
         }
 
@@ -300,12 +398,52 @@
         @keyframes rackFocusIn {
             0% {
                 opacity: 0;
-                filter: blur(22px);
-                letter-spacing: 0.48em;
-                transform: translateY(26px) scale(1.14);
+                filter: blur(18px);
+                letter-spacing: 0.24em;
+                transform: translateY(20px) scale(1.06);
             }
             60% {
                 opacity: 0.85;
+                filter: blur(4px);
+            }
+            100% {
+                opacity: 1;
+                filter: blur(0px);
+                letter-spacing: 0.12em;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        @media (min-width: 768px) {
+            @keyframes rackFocusIn {
+                0% {
+                    opacity: 0;
+                    filter: blur(22px);
+                    letter-spacing: 0.42em;
+                    transform: translateY(26px) scale(1.12);
+                }
+                60% {
+                    opacity: 0.85;
+                    filter: blur(4px);
+                }
+                100% {
+                    opacity: 1;
+                    filter: blur(0px);
+                    letter-spacing: 0.18em;
+                    transform: translateY(0) scale(1);
+                }
+            }
+        }
+
+        @keyframes slowNameUnveil {
+            0% {
+                opacity: 0;
+                filter: blur(16px);
+                letter-spacing: 0.3em;
+                transform: translateY(20px) scale(1.05);
+            }
+            55% {
+                opacity: 0.8;
                 filter: blur(4px);
             }
             100% {
@@ -316,22 +454,24 @@
             }
         }
 
-        @keyframes slowNameUnveil {
-            0% {
-                opacity: 0;
-                filter: blur(20px);
-                letter-spacing: 0.52em;
-                transform: translateY(24px) scale(1.08);
-            }
-            55% {
-                opacity: 0.8;
-                filter: blur(5px);
-            }
-            100% {
-                opacity: 1;
-                filter: blur(0px);
-                letter-spacing: 0.24em;
-                transform: translateY(0) scale(1);
+        @media (min-width: 768px) {
+            @keyframes slowNameUnveil {
+                0% {
+                    opacity: 0;
+                    filter: blur(20px);
+                    letter-spacing: 0.46em;
+                    transform: translateY(24px) scale(1.08);
+                }
+                55% {
+                    opacity: 0.8;
+                    filter: blur(5px);
+                }
+                100% {
+                    opacity: 1;
+                    filter: blur(0px);
+                    letter-spacing: 0.24em;
+                    transform: translateY(0) scale(1);
+                }
             }
         }
 
@@ -417,19 +557,6 @@
         .showcase-delay-3 { transition-delay: 0.36s; }
         .showcase-delay-4 { transition-delay: 0.48s; }
 
-        /* Hero Staggered Entrance Reveal */
-        .hero-reveal-1 {
-            opacity: 0;
-            animation: cinemaFadeRise 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.15s forwards;
-        }
-        .hero-reveal-2 {
-            opacity: 0;
-            animation: cinemaFadeRise 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.35s forwards;
-        }
-        .hero-reveal-3 {
-            opacity: 0;
-            animation: cinemaFadeRise 1.35s cubic-bezier(0.16, 1, 0.3, 1) 0.55s forwards;
-        }
         /* Hero Staggered Entrance Reveal (Triggered After Curtain Opens) */
         .hero-reveal-1,
         .hero-reveal-2,
@@ -507,29 +634,6 @@
             50% { left: 140%; }
         }
 
-        @keyframes flarePulse {
-            0%, 100% { opacity: 0.6; transform: scaleX(0.92); }
-            50% { opacity: 1; transform: scaleX(1.04); }
-        }
-
-        /* Theatrical Title Rack-Focus Reveal */
-        @keyframes rackFocusIn {
-            0% {
-                opacity: 0;
-                filter: blur(12px);
-                transform: translateY(12px) scale(1.04);
-            }
-            100% {
-                opacity: 1;
-                filter: blur(0px);
-                transform: translateY(0) scale(1);
-            }
-        }
-
-        .title-rack-focus {
-            animation: rackFocusIn 1.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-        }
-
         /* Floating Golden Dust Motes */
         .dust-mote {
             position: absolute;
@@ -558,29 +662,33 @@
 
         /* Soft Watercolor Paper Frame Styling */
         .watercolor-frame {
-            background: linear-gradient(145deg, #FFFDF9 0%, #F7EFE1 100%);
-            box-shadow: 0 22px 45px -12px rgba(18, 17, 16, 0.35), 0 8px 20px -6px rgba(133, 96, 36, 0.22);
+            background: linear-gradient(145deg, rgba(255, 253, 249, 0.94) 0%, rgba(247, 239, 225, 0.86) 100%);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            box-shadow: 0 18px 36px -12px rgba(18, 17, 16, 0.35), 0 6px 16px -6px rgba(133, 96, 36, 0.22);
         }
 
         /* Editorial Luxury Elevation & Drop Shadows */
         .luxury-card-shadow {
-            box-shadow: 0 20px 45px -15px rgba(18, 17, 16, 0.14), 0 8px 20px -8px rgba(133, 96, 36, 0.12);
             transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.45s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.45s ease;
         }
 
-        .luxury-card-shadow:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 28px 55px -14px rgba(18, 17, 16, 0.2), 0 12px 26px -8px rgba(166, 124, 55, 0.18);
+        @media (hover: hover) {
+            .luxury-card-shadow:hover {
+                transform: translateY(-4px);
+                box-shadow: 0 28px 55px -14px rgba(18, 17, 16, 0.18), 0 12px 26px -8px rgba(166, 124, 55, 0.22), inset 0 1px 1px rgba(255, 255, 255, 0.95);
+            }
         }
 
         .dark-card-shadow {
-            box-shadow: 0 28px 60px -15px rgba(0, 0, 0, 0.65), 0 10px 25px -8px rgba(212, 175, 55, 0.12);
             transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.45s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.45s ease;
         }
 
-        .dark-card-shadow:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 34px 70px -15px rgba(0, 0, 0, 0.78), 0 14px 32px -8px rgba(212, 175, 55, 0.22);
+        @media (hover: hover) {
+            .dark-card-shadow:hover {
+                transform: translateY(-4px);
+                box-shadow: 0 34px 70px -15px rgba(0, 0, 0, 0.78), 0 14px 32px -8px rgba(212, 175, 55, 0.24), inset 0 1px 0 rgba(255, 248, 225, 0.28);
+            }
         }
 
         .hero-title-shadow {
@@ -591,10 +699,11 @@
             box-shadow: inset 0 2px 6px rgba(255, 255, 255, 0.65), 0 14px 28px -8px rgba(18, 17, 16, 0.22), 0 4px 10px -2px rgba(133, 96, 36, 0.16);
         }
 
-        /* 3D Coverflow Carousel Styling */
+        /* 3D Coverflow Carousel Styling with Mobile-Safe Glassmorphic Bezel */
         .coverflow-stage {
-            perspective: 1200px;
+            perspective: 1250px;
             transform-style: preserve-3d;
+            touch-action: pan-y;
         }
 
         .coverflow-item {
@@ -603,9 +712,31 @@
             top: 50%;
             left: 50%;
             transform-origin: center center;
-            box-shadow: 0 25px 50px -12px rgba(22, 21, 19, 0.35);
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.78) 0%, rgba(253, 251, 247, 0.62) 100%);
+            border: 1px solid rgba(212, 175, 55, 0.45);
+            box-shadow:
+                0 20px 44px -12px rgba(22, 21, 19, 0.32),
+                0 6px 18px -6px rgba(197, 160, 89, 0.22),
+                inset 0 1px 1px rgba(255, 255, 255, 0.9);
             user-select: none;
             -webkit-user-drag: none;
+        }
+
+        @media (min-width: 768px) {
+            .coverflow-item {
+                background: linear-gradient(145deg, rgba(255, 255, 255, 0.42) 0%, rgba(253, 251, 247, 0.18) 100%);
+                backdrop-filter: blur(18px) saturate(160%);
+                -webkit-backdrop-filter: blur(18px) saturate(160%);
+                border-color: rgba(255, 255, 255, 0.72);
+            }
+        }
+
+        .coverflow-item.is-active {
+            border: 1.5px solid rgba(232, 206, 122, 0.92);
+            box-shadow:
+                0 28px 60px -14px rgba(18, 17, 16, 0.44),
+                0 10px 26px -6px rgba(212, 175, 55, 0.34),
+                inset 0 1px 2px rgba(255, 255, 255, 0.95);
         }
 
         /* Custom Scrollbar */
@@ -657,49 +788,49 @@
         <div id="dustContainer" class="absolute inset-0 pointer-events-none z-10"></div>
 
         <!-- Top Widescreen Letterbox Bar -->
-        <div class="letterbox-bar letterbox-top border-b flex items-center justify-between px-4 sm:px-10 text-[9px] sm:text-[10px] tracking-[0.25em] sm:tracking-[0.35em] text-gold-300/85 uppercase">
-            <span>THE WEDDING OF LILY &amp; RICHARD</span>
-            <span class="hidden md:inline">A CELEBRATION OF COVENANT &amp; DEVOTION</span>
-            <span class="font-cinzel tracking-[0.3em] sm:tracking-[0.42em] text-gold-300 font-medium">CAINTA &bull; RIZAL</span>
+        <div class="letterbox-bar letterbox-top border-b flex items-center justify-between px-4 sm:px-8 md:px-10 text-[9px] sm:text-[10px] tracking-[0.18em] sm:tracking-[0.32em] text-gold-300/85 uppercase">
+            <span class="truncate max-w-[60%] sm:max-w-none">THE WEDDING OF LILY &amp; RICHARD</span>
+            <span class="hidden lg:inline">A CELEBRATION OF COVENANT &amp; DEVOTION</span>
+            <span class="font-cinzel tracking-[0.22em] sm:tracking-[0.38em] text-gold-300 font-medium shrink-0">CAINTA &bull; RIZAL</span>
         </div>
 
         <!-- Overlay (Top Poetic Quote + Lower-Third Title & Action) -->
-        <div class="relative z-20 flex-1 flex flex-col justify-between px-4 sm:px-8 py-5 sm:py-8 text-center">
+        <div class="relative z-20 flex-1 flex flex-col justify-between px-4 sm:px-8 md:px-12 py-3.5 sm:py-7 text-center">
             <!-- Top Romantic Verse -->
-            <div class="mt-1 sm:mt-2 cinema-seq-1">
-                <div class="inline-flex items-center space-x-2 text-gold-300 text-[10px] sm:text-xs mb-1.5">
-                    <i class="fa-solid fa-diamond text-[8px]"></i>
-                    <i class="fa-solid fa-diamond text-[10px]"></i>
-                    <i class="fa-solid fa-diamond text-[8px]"></i>
+            <div class="mt-0.5 sm:mt-2 cinema-seq-1 max-w-md sm:max-w-xl mx-auto">
+                <div class="inline-flex items-center space-x-2 text-gold-300 text-[9px] sm:text-[11px] mb-1">
+                    <i class="fa-solid fa-diamond text-[6px] sm:text-[7px]"></i>
+                    <i class="fa-solid fa-diamond text-[8px] sm:text-[9px]"></i>
+                    <i class="fa-solid fa-diamond text-[6px] sm:text-[7px]"></i>
                 </div>
-                <p class="font-serif italic text-base sm:text-xl text-ivory-100/95 tracking-wide drop-shadow">
+                <p class="font-serif italic text-xs sm:text-base md:text-lg text-ivory-100/95 tracking-wide drop-shadow leading-snug">
                     &ldquo;Two ordinary paths, one extraordinary grace—written long before we knew.&rdquo;
                 </p>
             </div>
 
             <!-- Lower-Third Title Block (Keeps Couple's Faces Unobstructed) -->
-            <div class="flex flex-col items-center mb-1 sm:mb-3">
-                <span class="cinema-seq-2 px-4 py-1.5 rounded-full bg-obsidian/75 border border-gold-400/50 backdrop-blur-md text-[9px] sm:text-[11px] uppercase tracking-[0.32em] font-medium text-gold-300 mb-3">
+            <div class="flex flex-col items-center mb-1 sm:mb-2">
+                <span class="cinema-seq-2 px-3.5 sm:px-4 py-1 rounded-full glass-pill-dark text-[8px] sm:text-[10px] uppercase tracking-[0.2em] sm:tracking-[0.3em] font-medium text-gold-300 mb-2 sm:mb-2.5">
                     From Chance Encounter &bull; To Chosen Forever
                 </span>
 
-                <h2 class="font-display text-3xl sm:text-6xl md:text-7xl font-normal tracking-[0.14em] sm:tracking-[0.18em] entrance-foil-text drop-shadow-[0_6px_28px_rgba(0,0,0,0.9)]">
+                <h2 class="font-display text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-normal tracking-[0.12em] sm:tracking-[0.16em] entrance-foil-text drop-shadow-[0_6px_28px_rgba(0,0,0,0.9)]">
                     <span class="inline-block">LILY</span>
-                    <span class="font-serif italic text-gold-300 font-normal tracking-normal px-2 inline-block" style="-webkit-text-fill-color: #E8CE7A;">&amp;</span>
+                    <span class="font-serif italic text-gold-300 font-normal tracking-normal px-1 sm:px-2 inline-block" style="-webkit-text-fill-color: #E8CE7A;">&amp;</span>
                     <span class="inline-block">RICHARD</span>
                 </h2>
 
                 <!-- Glowing Anamorphic Lens Flare -->
-                <div class="anamorphic-flare my-3 sm:my-4"></div>
+                <div class="anamorphic-flare my-2 sm:my-3.5"></div>
 
-                <p class="cinema-seq-3 font-serif italic text-base sm:text-2xl text-ivory-50 max-w-md sm:max-w-xl mb-5 sm:mb-7 drop-shadow-[0_2px_12px_rgba(0,0,0,0.85)]">
+                <p class="cinema-seq-3 font-serif italic text-xs sm:text-base md:text-lg text-ivory-50 max-w-xs sm:max-w-lg mb-3.5 sm:mb-6 drop-shadow-[0_2px_12px_rgba(0,0,0,0.85)] leading-snug">
                     &ldquo;What began as quiet conversation in passing seasons blossomed into the safest place our hearts have ever called home.&rdquo;
                 </p>
 
                 <!-- Open Invitation Trigger Button -->
-                <button onclick="enterPremiere()" class="cinema-seq-4 btn-cinema-shimmer group relative inline-flex items-center space-x-3 px-7 sm:px-10 py-3.5 sm:py-4 rounded-full border border-gold-300/80 bg-obsidian/85 hover:bg-gold-400 text-ivory-50 hover:text-obsidian backdrop-blur-md transition-all duration-500 shadow-[0_10px_35px_rgba(0,0,0,0.65)] active:scale-95">
-                    <i class="fa-solid fa-envelope-open text-xs sm:text-sm text-gold-300 group-hover:text-obsidian transition-colors"></i>
-                    <span class="font-cinzel text-xs sm:text-sm tracking-[0.22em] sm:tracking-[0.28em] uppercase font-semibold">
+                <button onclick="enterPremiere()" class="cinema-seq-4 btn-cinema-shimmer group relative inline-flex items-center space-x-2 sm:space-x-2.5 px-5 sm:px-9 py-3 sm:py-3.5 rounded-full glass-pill-dark hover:bg-gold-400 text-ivory-50 hover:text-obsidian transition-all duration-500 active:scale-95 min-h-[42px]">
+                    <i class="fa-solid fa-envelope-open text-[11px] sm:text-xs text-gold-300 group-hover:text-obsidian transition-colors"></i>
+                    <span class="font-cinzel text-[11px] sm:text-xs tracking-[0.18em] sm:tracking-[0.26em] uppercase font-semibold">
                         Open Our Invitation
                     </span>
                 </button>
@@ -708,43 +839,70 @@
 
         <!-- Bottom Widescreen Letterbox Bar -->
         <div class="letterbox-bar letterbox-bottom border-t flex flex-col items-center justify-center px-3 text-center">
-            <p class="text-[8px] sm:text-[10px] tracking-[0.18em] sm:tracking-[0.26em] text-ivory-100/80 uppercase leading-relaxed truncate max-w-full">
+            <p class="text-[8px] sm:text-[9.5px] tracking-[0.14em] sm:tracking-[0.24em] text-ivory-100/80 uppercase leading-relaxed truncate max-w-full">
                 CEREMONY <span class="text-gold-300">IGLESIA NI CRISTO LOCALE OF VILLAGE EAST</span> &bull;
                 RECEPTION <span class="text-gold-300">VILLA ARDIN EVENT'S PLACE</span>
             </p>
         </div>
     </div>
 
-    <!-- Floating Ambient Music & Navigation Bar -->
-    <nav id="topNav" class="fixed top-0 left-0 right-0 z-40 bg-ivory-50/95 backdrop-blur-md border-b border-gold-500/25 shadow-[0_8px_30px_rgba(18,17,16,0.08)] opacity-0 pointer-events-none transition-all duration-700">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-3">
-            <a href="#top" class="font-cinzel text-lg sm:text-xl tracking-[0.2em] text-obsidian font-semibold shrink-0 whitespace-nowrap">
+    <!-- Floating Ambient Music & Navigation Bar (Optimized for Mobile, Tablet & Desktop) -->
+    <nav id="topNav" class="fixed top-0 left-0 right-0 z-40 bg-ivory-50/92 sm:bg-ivory-50/78 backdrop-blur-md sm:backdrop-blur-xl backdrop-saturate-150 border-b border-gold-500/20 sm:border-white/70 shadow-[0_10px_34px_rgba(18,17,16,0.08)] opacity-0 pointer-events-none transition-all duration-700">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 h-14 sm:h-16 flex items-center justify-between gap-2 sm:gap-3">
+            <a href="#top" class="font-cinzel text-base sm:text-lg tracking-[0.2em] text-obsidian font-semibold shrink-0 whitespace-nowrap py-1">
                 L <span class="text-gold-600">&amp;</span> R
             </a>
             
+            <!-- Desktop Navigation Links -->
             <div class="hidden lg:flex items-center space-x-7 text-[11px] uppercase tracking-[0.18em] font-semibold text-charcoal whitespace-nowrap">
                 <a href="#story" class="hover:text-gold-600 transition-colors">The Prelude</a>
                 <a href="#venues" class="hover:text-gold-600 transition-colors">Venues</a>
                 <a href="#entourage" class="hover:text-gold-600 transition-colors">Entourage</a>
                 <a href="#attire" class="hover:text-gold-600 transition-colors">Couture &amp; Palette</a>
-                <a href="#etiquette-rsvp" class="px-5 py-2 rounded-full bg-obsidian text-ivory-50 hover:bg-gold-600 transition-colors">Etiquette &amp; RSVP</a>
+                <a href="#etiquette-rsvp" class="px-5 py-2 rounded-full bg-obsidian/90 backdrop-blur-md border border-gold-400/40 text-ivory-50 hover:bg-gold-600 transition-colors">Etiquette &amp; RSVP</a>
             </div>
 
-            <div class="flex items-center space-x-2.5 shrink-0">
-                <a href="#etiquette-rsvp" class="lg:hidden px-4 py-2 rounded-full bg-obsidian text-ivory-50 hover:bg-gold-600 text-[11px] uppercase tracking-[0.16em] font-semibold whitespace-nowrap transition-colors">
+            <!-- Action Buttons & Mobile/Tablet Drawer Toggle -->
+            <div class="flex items-center space-x-2 shrink-0">
+                <a href="#etiquette-rsvp" class="lg:hidden px-3 sm:px-3.5 py-1.5 sm:py-2 rounded-full bg-obsidian/95 backdrop-blur-md border border-gold-400/40 text-ivory-50 hover:bg-gold-600 text-[10px] uppercase tracking-[0.15em] font-semibold whitespace-nowrap transition-colors">
                     RSVP
                 </a>
                 <!-- Ambient Piano Synthesizer Toggle -->
-                <button id="musicToggle" onclick="toggleAmbientMusic()" class="flex items-center space-x-2 px-3.5 py-2 rounded-full border border-gold-500/45 bg-ivory-100 hover:bg-gold-500/15 text-[11px] tracking-[0.16em] uppercase font-semibold text-obsidian whitespace-nowrap transition-all" aria-label="Toggle Ambient Music">
+                <button id="musicToggle" onclick="toggleAmbientMusic()" class="flex items-center space-x-1.5 px-2.5 sm:px-3 py-1.5 sm:py-2 rounded-full glass-pill hover:bg-gold-500/15 text-[10px] tracking-[0.15em] uppercase font-semibold text-obsidian whitespace-nowrap transition-all min-h-[34px] sm:min-h-[38px]" aria-label="Toggle Ambient Music">
                     <i id="musicIcon" class="fa-solid fa-volume-xmark text-gold-600"></i>
                     <span id="musicText" class="hidden sm:inline">Soundtrack</span>
                 </button>
+                <!-- Mobile & Tablet Section Menu Button -->
+                <button id="mobileMenuBtn" onclick="toggleMobileMenu()" class="lg:hidden w-8 h-8 sm:w-9 sm:h-9 rounded-full glass-pill hover:bg-gold-500/15 text-obsidian flex items-center justify-center transition-colors" aria-label="Toggle Navigation Menu" aria-expanded="false">
+                    <i id="mobileMenuIcon" class="fa-solid fa-bars text-xs"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Collapsible Mobile & Tablet Navigation Drawer -->
+        <div id="mobileNavDrawer" class="hidden lg:hidden bg-ivory-50/96 sm:bg-ivory-50/90 backdrop-blur-xl border-t border-gold-500/20 px-4 sm:px-6 py-3.5 shadow-xl">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-1.5 text-center sm:text-left">
+                <a href="#story" onclick="closeMobileMenu()" class="px-3.5 py-2.5 rounded-xl hover:bg-white/70 text-[11px] uppercase tracking-[0.18em] font-semibold text-charcoal transition-colors">
+                    <i class="fa-solid fa-camera-retro text-gold-600 mr-2 w-4"></i>Chapter I &bull; The Prelude
+                </a>
+                <a href="#venues" onclick="closeMobileMenu()" class="px-3.5 py-2.5 rounded-xl hover:bg-white/70 text-[11px] uppercase tracking-[0.18em] font-semibold text-charcoal transition-colors">
+                    <i class="fa-solid fa-church text-gold-600 mr-2 w-4"></i>Chapter II &bull; Venues &amp; Schedule
+                </a>
+                <a href="#entourage" onclick="closeMobileMenu()" class="px-3.5 py-2.5 rounded-xl hover:bg-white/70 text-[11px] uppercase tracking-[0.18em] font-semibold text-charcoal transition-colors">
+                    <i class="fa-solid fa-users text-gold-600 mr-2 w-4"></i>Chapter III &bull; Entourage
+                </a>
+                <a href="#attire" onclick="closeMobileMenu()" class="px-3.5 py-2.5 rounded-xl hover:bg-white/70 text-[11px] uppercase tracking-[0.18em] font-semibold text-charcoal transition-colors">
+                    <i class="fa-solid fa-palette text-gold-600 mr-2 w-4"></i>Chapter IV &bull; Couture &amp; Palette
+                </a>
+                <a href="#etiquette-rsvp" onclick="closeMobileMenu()" class="sm:col-span-2 px-3.5 py-2.5 rounded-xl bg-obsidian text-ivory-50 hover:bg-gold-600 text-[11px] uppercase tracking-[0.2em] font-semibold text-center transition-colors mt-1">
+                    Chapter V &bull; Etiquette &amp; Confirm R.S.V.P.
+                </a>
             </div>
         </div>
     </nav>
 
     <!-- HERO SECTION: Vibrant Philippine Golden Hour -->
-    <header id="top" class="relative min-h-[100dvh] flex items-center justify-center overflow-hidden pt-24 pb-16 bg-gradient-to-br from-[#FBF7EE] via-[#F4E7CF] to-[#E8D5B2] text-obsidian">
+    <header id="top" class="relative min-h-[100dvh] flex items-center justify-center overflow-hidden pt-20 sm:pt-24 pb-12 sm:pb-16 bg-gradient-to-br from-[#FBF7EE] via-[#F4E7CF] to-[#E8D5B2] text-obsidian">
         <!-- Vibrant Golden Sunlight & Soft Floral Bokeh Layer -->
         <div class="absolute inset-0 z-0 overflow-hidden">
             <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=2000&q=80" 
@@ -753,56 +911,56 @@
                  class="w-full h-full object-cover opacity-35 animate-ken-burns">
             <div class="absolute inset-0 bg-gradient-to-b from-ivory-50/85 via-[#F9F1E2]/55 to-ivory-50/95"></div>
             <!-- Warm Golden Sun Glow -->
-            <div class="absolute -top-24 left-1/2 -translate-x-1/2 w-[320px] sm:w-[650px] h-[320px] sm:h-[650px] rounded-full bg-amber-900/[0.06] blur-3xl pointer-events-none"></div>
+            <div class="absolute -top-24 left-1/2 -translate-x-1/2 w-[280px] sm:w-[480px] md:w-[620px] h-[280px] sm:h-[480px] md:h-[620px] rounded-full bg-amber-900/[0.06] blur-3xl pointer-events-none"></div>
         </div>
 
-        <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center">
-            <div class="hero-reveal-1 inline-block mb-6 sm:mb-8 px-5 sm:px-7 py-2 rounded-full border border-gold-700/50 bg-white/95 backdrop-blur-md shadow-[0_10px_25px_-5px_rgba(94,64,20,0.2)]">
-                <p class="luxury-kicker text-[9px] sm:text-[11px] text-gold-700">
+        <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-8 text-center">
+            <div class="hero-reveal-1 inline-block mb-4 sm:mb-7 px-3.5 sm:px-6 py-1.5 sm:py-2 rounded-full glass-pill max-w-full">
+                <p class="luxury-kicker text-[8px] sm:text-[10px] md:text-[11px] text-gold-700">
                     Two Lives Entwined in Grace, Gratitude &amp; Vow
                 </p>
             </div>
 
-            <p class="hero-reveal-2 font-serif italic text-2xl sm:text-3xl text-[#6E4D19] font-medium mb-4 tracking-wide drop-shadow-[0_1px_1px_rgba(255,255,255,0.95)]">
+            <p class="hero-reveal-2 font-serif italic text-base sm:text-xl md:text-2xl text-[#6E4D19] font-medium mb-2.5 sm:mb-3.5 tracking-wide drop-shadow-[0_1px_1px_rgba(255,255,255,0.95)] px-2">
                 Humbled by Providence and cherished by those who raised us
             </p>
 
-            <h1 class="font-display text-center mx-auto my-6 hero-title-shadow flex flex-col items-center justify-center">
-                <span class="hero-name-first block text-4xl sm:text-6xl md:text-[5.25rem] font-normal tracking-[0.2em] sm:tracking-[0.26em] leading-none gold-foil-text py-1">
+            <h1 class="font-display text-center mx-auto my-4 sm:my-5 hero-title-shadow flex flex-col items-center justify-center">
+                <span class="hero-name-first block text-3xl sm:text-5xl md:text-6xl lg:text-[5rem] font-normal tracking-[0.16em] sm:tracking-[0.22em] lg:tracking-[0.26em] leading-none gold-foil-text py-0.5 sm:py-1">
                     LILY
                 </span>
-                <span class="hero-name-amp my-2 sm:my-3 flex items-center justify-center space-x-5">
-                    <span class="w-12 sm:w-20 h-[1px] bg-gradient-to-r from-transparent to-gold-700/85"></span>
-                    <span class="font-serif italic text-3xl sm:text-5xl text-gold-700 font-medium tracking-normal drop-shadow-[0_1px_1px_rgba(255,255,255,0.9)]">&amp;</span>
-                    <span class="w-12 sm:w-20 h-[1px] bg-gradient-to-l from-transparent to-gold-700/85"></span>
+                <span class="hero-name-amp my-1.5 sm:my-2.5 flex items-center justify-center space-x-3 sm:space-x-5">
+                    <span class="w-8 sm:w-16 md:w-20 h-[1px] bg-gradient-to-r from-transparent to-gold-700/85"></span>
+                    <span class="font-serif italic text-2xl sm:text-4xl md:text-5xl text-gold-700 font-medium tracking-normal drop-shadow-[0_1px_1px_rgba(255,255,255,0.9)]">&amp;</span>
+                    <span class="w-8 sm:w-16 md:w-20 h-[1px] bg-gradient-to-l from-transparent to-gold-700/85"></span>
                 </span>
-                <span class="hero-name-second block text-4xl sm:text-6xl md:text-[5.25rem] font-normal tracking-[0.2em] sm:tracking-[0.26em] leading-none gold-foil-text py-1">
+                <span class="hero-name-second block text-3xl sm:text-5xl md:text-6xl lg:text-[5rem] font-normal tracking-[0.16em] sm:tracking-[0.22em] lg:tracking-[0.26em] leading-none gold-foil-text py-0.5 sm:py-1">
                     RICHARD
                 </span>
             </h1>
 
-            <div class="hero-reveal-4 w-28 h-[1px] bg-gradient-to-r from-transparent via-gold-700 to-transparent mx-auto my-7 shadow-[0_2px_10px_rgba(133,96,36,0.45)]"></div>
+            <div class="hero-reveal-4 w-20 sm:w-28 h-[1px] bg-gradient-to-r from-transparent via-gold-700 to-transparent mx-auto my-4 sm:my-6 shadow-[0_2px_10px_rgba(133,96,36,0.45)]"></div>
 
             <!-- Save the Date Anchor -->
-            <div class="hero-reveal-4 mb-6">
-                <p class="font-cinzel text-base sm:text-xl md:text-2xl tracking-[0.22em] sm:tracking-[0.28em] text-obsidian font-semibold uppercase">
+            <div class="hero-reveal-4 mb-4 sm:mb-5">
+                <p class="font-cinzel text-xs sm:text-lg md:text-xl lg:text-2xl tracking-[0.16em] sm:tracking-[0.24em] text-obsidian font-semibold uppercase">
                     Friday &bull; April 9, 2027
                 </p>
-                <p class="font-serif italic text-lg sm:text-xl text-gold-700 font-medium mt-1">
-                    Ceremony Begins at 2:00 PM
+                <p class="font-serif italic text-sm sm:text-lg md:text-xl text-gold-700 font-medium mt-0.5 sm:mt-1">
+                    Ceremony Begins at 1:30 PM
                 </p>
             </div>
 
-            <p class="hero-reveal-4 max-w-2xl mx-auto font-serif text-xl sm:text-[1.6rem] text-obsidian/90 leading-[1.65] tracking-[0.01em] drop-shadow-[0_1px_1px_rgba(255,255,255,0.85)]">
+            <p class="hero-reveal-4 max-w-lg md:max-w-xl lg:max-w-2xl mx-auto font-serif text-base sm:text-xl md:text-[1.35rem] lg:text-[1.55rem] text-obsidian/90 leading-relaxed tracking-[0.01em] drop-shadow-[0_1px_1px_rgba(255,255,255,0.85)] px-1">
                 Joyfully invite you to stand as witness as we seal our promise before Heaven—honoring the quiet fidelity that carried us from familiar strangers to lifelong companions.
             </p>
 
             <!-- Scroll Indicator -->
-            <div class="hero-reveal-5 mt-12 flex flex-col items-center">
-                <a href="#story" class="group flex flex-col items-center text-[#6E4D19] hover:text-obsidian transition-colors">
-                    <span class="text-[10px] uppercase tracking-[0.35em] mb-2.5 font-semibold">Step Into Our Story</span>
-                    <div class="w-7 h-11 rounded-full border border-gold-700/65 flex items-start justify-center p-1.5 bg-white/90 shadow-[0_8px_20px_-4px_rgba(94,64,20,0.24)]">
-                        <div class="w-1 h-2.5 bg-gold-700 rounded-full animate-bounce"></div>
+            <div class="hero-reveal-5 mt-8 sm:mt-10 flex flex-col items-center">
+                <a href="#story" class="group flex flex-col items-center text-[#6E4D19] hover:text-obsidian transition-colors py-1">
+                    <span class="text-[9px] sm:text-[10px] uppercase tracking-[0.28em] sm:tracking-[0.34em] mb-2 font-semibold">Step Into Our Story</span>
+                    <div class="w-6 h-10 sm:w-7 sm:h-11 rounded-full glass-pill flex items-start justify-center p-1.5">
+                        <div class="w-1 h-2 bg-gold-700 rounded-full animate-bounce"></div>
                     </div>
                 </a>
             </div>
@@ -810,71 +968,78 @@
     </header>
 
     <!-- SECTION 1: BEFORE MOMENTS - 3D COVERFLOW CAROUSEL -->
-    <section id="story" class="py-24 sm:py-32 px-4 sm:px-6 max-w-7xl mx-auto overflow-hidden">
-        <div class="text-center max-w-2xl mx-auto mb-14">
-            <p class="luxury-kicker text-[11px] text-gold-600 mb-3">Chapter I &bull; The Overture</p>
-            <h2 class="font-display text-3xl sm:text-5xl text-obsidian tracking-[0.12em] mb-4 drop-shadow-[0_4px_14px_rgba(18,17,16,0.08)]">Before Moments</h2>
-            <div class="w-20 h-[1px] bg-gold-500 mx-auto mb-6"></div>
-            <p class="font-serif text-xl sm:text-2xl text-charcoal/85 italic leading-relaxed">
+    <section id="story" class="relative py-14 sm:py-20 lg:py-28 px-4 sm:px-6 max-w-7xl mx-auto overflow-hidden">
+        <!-- Ambient Glassmorphic Backdrop Orbs -->
+        <div class="pointer-events-none absolute -top-10 left-1/4 w-64 sm:w-96 h-64 sm:h-96 rounded-full bg-gold-300/20 blur-3xl"></div>
+        <div class="pointer-events-none absolute bottom-10 right-1/4 w-64 sm:w-96 h-64 sm:h-96 rounded-full bg-amber-200/25 blur-3xl"></div>
+
+        <div class="relative z-10 text-center max-w-2xl mx-auto mb-8 sm:mb-12">
+            <p class="luxury-kicker text-[9.5px] sm:text-[10.5px] text-gold-600 mb-2">Chapter I &bull; The Overture</p>
+            <h2 class="font-display text-xl sm:text-3xl md:text-4xl lg:text-5xl text-obsidian tracking-[0.12em] mb-3 drop-shadow-[0_4px_14px_rgba(18,17,16,0.08)]">Before Moments</h2>
+            <div class="w-16 sm:w-20 h-[1px] bg-gold-500 mx-auto mb-4 sm:mb-5"></div>
+            <p class="font-serif text-base sm:text-lg md:text-xl text-charcoal/85 italic leading-relaxed px-2">
                 &ldquo;Stolen pauses in late afternoon light—fragments of the tenderness, shared humor, and calm certainty that led us to this sacred day.&rdquo;
             </p>
         </div>
 
         <!-- Interactive 3D Coverflow Stage -->
-        <div class="relative w-full h-[380px] sm:h-[460px] md:h-[520px] flex items-center justify-center coverflow-stage" id="coverflowContainer">
+        <div class="relative z-10 w-full h-[320px] sm:h-[410px] md:h-[470px] lg:h-[530px] flex items-center justify-center coverflow-stage" id="coverflowContainer">
             <!-- Slides injected and positioned via JS -->
         </div>
+		</br>
+        <!-- Frosted Glass Caption & Coverflow Controls -->
+        <div class="relative z-10 mt-5 sm:mt-7 max-w-md mx-auto rounded-3xl glass-light px-5 py-4 sm:px-7 sm:py-5 text-center">
+            <h3 id="cfTitle" class="font-cinzel text-sm sm:text-lg md:text-xl text-obsidian tracking-widest uppercase px-2">Golden Hour Reverie</h3>
+            <p id="cfSubtitle" class="font-serif italic text-xs sm:text-base md:text-lg text-charcoal/75 mt-1">Prenuptial Portrait Series &bull; I</p>
 
-        <!-- Caption & Coverflow Controls -->
-        <div class="mt-8 text-center">
-            <h3 id="cfTitle" class="font-cinzel text-lg sm:text-xl text-obsidian tracking-widest uppercase">Golden Hour Reverie</h3>
-            <p id="cfSubtitle" class="font-serif italic text-base sm:text-lg text-charcoal/75 mt-1">Prenuptial Portrait Series &bull; I</p>
-
-            <div class="flex items-center justify-center space-x-6 mt-6">
-                <button onclick="moveCoverflow(-1)" class="w-12 h-12 rounded-full border border-gold-500/40 bg-white shadow-[0_10px_24px_-6px_rgba(18,17,16,0.16)] hover:bg-obsidian hover:text-ivory-50 text-obsidian flex items-center justify-center transition-all active:scale-95" aria-label="Previous Photo">
-                    <i class="fa-solid fa-chevron-left"></i>
+            <div class="flex items-center justify-center space-x-4 sm:space-x-6 mt-3.5 sm:mt-4">
+                <button onclick="moveCoverflow(-1)" class="w-10 h-10 sm:w-11 sm:h-11 rounded-full glass-pill hover:bg-obsidian hover:text-ivory-50 text-obsidian flex items-center justify-center transition-all active:scale-95" aria-label="Previous Photo">
+                    <i class="fa-solid fa-chevron-left text-xs"></i>
                 </button>
                 
-                <div id="cfDots" class="flex items-center space-x-2.5"></div>
+                <div id="cfDots" class="flex items-center space-x-2"></div>
 
-                <button onclick="moveCoverflow(1)" class="w-12 h-12 rounded-full border border-gold-500/40 bg-white shadow-[0_10px_24px_-6px_rgba(18,17,16,0.16)] hover:bg-obsidian hover:text-ivory-50 text-obsidian flex items-center justify-center transition-all active:scale-95" aria-label="Next Photo">
-                    <i class="fa-solid fa-chevron-right"></i>
+                <button onclick="moveCoverflow(1)" class="w-10 h-10 sm:w-11 sm:h-11 rounded-full glass-pill hover:bg-obsidian hover:text-ivory-50 text-obsidian flex items-center justify-center transition-all active:scale-95" aria-label="Next Photo">
+                    <i class="fa-solid fa-chevron-right text-xs"></i>
                 </button>
             </div>
-            <p class="text-[11px] uppercase tracking-[0.2em] text-charcoal/50 mt-4">Swipe or click side frames to explore</p>
+            <p class="text-[9.5px] sm:text-[10.5px] uppercase tracking-[0.2em] text-charcoal/55 mt-3">Swipe or click side frames to explore</p>
         </div>
     </section>
 
     <!-- SECTION 2: THE VENUES WITH WATERCOLOR ARCHITECTURAL ILLUSTRATIONS -->
-    <section id="venues" class="py-24 bg-obsidian text-ivory-50 relative shadow-[0_-15px_40px_rgba(18,17,16,0.12),0_15px_40px_rgba(18,17,16,0.12)]">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6">
-            <div class="text-center max-w-2xl mx-auto mb-16">
-                <p class="luxury-kicker text-[11px] text-gold-400 mb-3">Chapter II &bull; The Sacred &amp; The Grand</p>
-                <h2 class="font-display text-3xl sm:text-5xl tracking-[0.12em] mb-3 drop-shadow-[0_6px_22px_rgba(0,0,0,0.65)]">Chronicle &amp; Venues</h2>
-                <p class="font-cinzel text-sm sm:text-base tracking-[0.25em] text-gold-300 uppercase mb-4">Friday, April 9, 2027 &bull; 2:00 PM</p>
-                <div class="w-20 h-[1px] bg-gold-400 mx-auto"></div>
+    <section id="venues" class="py-14 sm:py-20 lg:py-24 bg-obsidian text-ivory-50 relative overflow-hidden shadow-[0_-15px_40px_rgba(18,17,16,0.12),0_15px_40px_rgba(18,17,16,0.12)]">
+        <!-- Ambient Golden Glow Orbs for Glass Refraction -->
+        <div class="pointer-events-none absolute -top-24 -left-24 w-80 sm:w-[460px] h-80 sm:h-[460px] rounded-full bg-gold-500/15 blur-3xl"></div>
+        <div class="pointer-events-none absolute bottom-10 -right-24 w-80 sm:w-[460px] h-80 sm:h-[460px] rounded-full bg-amber-400/10 blur-3xl"></div>
+
+        <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="text-center max-w-2xl mx-auto mb-10 sm:mb-14">
+                <p class="luxury-kicker text-[9.5px] sm:text-[10.5px] text-gold-400 mb-2">Chapter II &bull; The Sacred &amp; The Grand</p>
+                <h2 class="font-display text-xl sm:text-3xl md:text-4xl lg:text-5xl tracking-[0.12em] mb-2.5 drop-shadow-[0_6px_22px_rgba(0,0,0,0.65)]">Chronicle &amp; Venues</h2>
+                <p class="font-cinzel text-xs sm:text-sm md:text-base tracking-[0.18em] sm:tracking-[0.24em] text-gold-300 uppercase mb-3.5">Friday, April 9, 2027 &bull; 2:00 PM</p>
+                <div class="w-16 sm:w-20 h-[1px] bg-gold-400 mx-auto"></div>
             </div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-7 lg:gap-10">
                 <!-- Ceremony Card with Watercolor Chapel Illustration -->
-                <div class="rounded-2xl border border-gold-500/30 bg-charcoal/75 backdrop-blur-sm p-7 sm:p-10 flex flex-col justify-between hover:border-gold-400 dark-card-shadow">
+                <div class="rounded-2xl glass-dark p-5 sm:p-7 lg:p-9 flex flex-col justify-between hover:border-gold-400 dark-card-shadow">
                     <div>
-                        <div class="flex items-center justify-between mb-5">
-                            <span class="px-4 py-1 rounded-full bg-gold-500/15 border border-gold-400/30 text-gold-400 text-xs uppercase tracking-[0.25em]">
+                        <div class="flex items-center justify-between gap-2 mb-4">
+                            <span class="px-3 py-1 rounded-full bg-gold-500/20 backdrop-blur-md border border-gold-400/40 text-gold-300 text-[9.5px] sm:text-[10.5px] uppercase tracking-[0.18em] sm:tracking-[0.22em]">
                                 The Solemn Vows
                             </span>
                             <!-- Interlocking Couple Wedding Rings SVG Emblem -->
-                            <svg viewBox="0 0 36 24" class="w-8 h-6 text-gold-400 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" aria-label="Couple Wedding Rings">
+                            <svg viewBox="0 0 36 24" class="w-7 h-5 sm:w-8 sm:h-6 text-gold-400 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" aria-label="Couple Wedding Rings">
                                 <circle cx="13" cy="14" r="7.5" />
                                 <circle cx="23" cy="14" r="7.5" />
-                                <!-- Solitaire Diamond Accent on Left Ring -->
                                 <polygon points="13,3.2 15.2,5.3 13,7 10.8,5.3" fill="currentColor" stroke="none" />
                             </svg>
                         </div>
 
                         <!-- Watercolor Illustration: Iglesia Ni Cristo Chapel -->
-                        <div class="watercolor-frame rounded-xl p-3 mb-6 border border-gold-400/40 overflow-hidden">
-                            <svg viewBox="0 0 400 180" class="w-full h-40 sm:h-44 object-cover rounded-lg" aria-label="Watercolor Illustration of Iglesia Ni Cristo Locale of Village East">
+                        <div class="watercolor-frame rounded-xl p-2 sm:p-2.5 mb-5 border border-gold-400/45 overflow-hidden">
+                            <svg viewBox="0 0 400 180" class="w-full h-32 sm:h-40 object-cover rounded-lg" aria-label="Watercolor Illustration of Iglesia Ni Cristo Locale of Village East">
                                 <defs>
                                     <linearGradient id="skyWash1" x1="0%" y1="0%" x2="100%" y2="100%">
                                         <stop offset="0%" stop-color="#E6EFF7"/>
@@ -887,66 +1052,61 @@
                                     </linearGradient>
                                 </defs>
                                 <rect width="400" height="180" fill="url(#skyWash1)"/>
-                                <!-- Soft Watercolor Clouds & Foliage -->
                                 <ellipse cx="95" cy="45" rx="65" ry="18" fill="#FFFFFF" opacity="0.65"/>
                                 <ellipse cx="310" cy="52" rx="70" ry="20" fill="#FFFFFF" opacity="0.6"/>
                                 <ellipse cx="55" cy="155" rx="65" ry="28" fill="#B7CEB6" opacity="0.75"/>
                                 <ellipse cx="345" cy="155" rx="65" ry="28" fill="#B7CEB6" opacity="0.75"/>
-                                <!-- Iconic Towering Spires Architecture -->
                                 <polygon points="145,155 153,45 161,155" fill="url(#spireWall)" stroke="#C5A059" stroke-width="1"/>
                                 <polygon points="239,155 247,45 255,155" fill="url(#spireWall)" stroke="#C5A059" stroke-width="1"/>
                                 <polygon points="192,155 200,22 208,155" fill="url(#spireWall)" stroke="#C5A059" stroke-width="1.2"/>
-                                <!-- Main Sanctuary Facade -->
                                 <rect x="135" y="92" width="130" height="63" fill="url(#spireWall)" stroke="#C8B99E" stroke-width="1"/>
                                 <polygon points="130,92 200,66 270,92" fill="#F6EFE2" stroke="#C5A059" stroke-width="1"/>
-                                <!-- Arched Sanctuary Windows & Grand Entrance -->
                                 <path d="M190,155 L190,122 Q200,112 210,122 L210,155 Z" fill="#8C6D46"/>
                                 <path d="M162,135 L162,112 Q168,105 174,112 L174,135 Z" fill="#D5E1EC" stroke="#B68B40" stroke-width="0.8"/>
                                 <path d="M226,135 L226,112 Q232,105 238,112 L238,135 Z" fill="#D5E1EC" stroke="#B68B40" stroke-width="0.8"/>
-                                <!-- Warm Courtyard Pathway -->
                                 <polygon points="175,155 225,155 245,180 155,180" fill="#E5D5B7"/>
                             </svg>
                         </div>
 
-                        <h3 class="font-cinzel text-2xl sm:text-3xl text-ivory-50 tracking-wide mb-2">
+                        <h3 class="font-cinzel text-lg sm:text-xl lg:text-2xl text-ivory-50 tracking-wide mb-1.5">
                             Iglesia Ni Cristo
                         </h3>
-                        <p class="font-serif text-xl sm:text-2xl text-gold-400 italic mb-5">
+                        <p class="font-serif text-base sm:text-xl text-gold-400 italic mb-4">
                             Locale of Village East
                         </p>
 
-                        <div class="space-y-3 text-sm sm:text-base text-ivory-200/90 font-light border-t border-ivory-100/10 pt-5">
-                            <p class="flex items-start space-x-3">
-                                <i class="fa-solid fa-location-dot text-gold-400 mt-1"></i>
+                        <div class="space-y-2.5 text-xs sm:text-sm md:text-base text-ivory-200/90 font-light border-t border-ivory-100/15 pt-4">
+                            <p class="flex items-start space-x-2.5">
+                                <i class="fa-solid fa-location-dot text-gold-400 mt-1 shrink-0"></i>
                                 <span>Village East Executive Homes, Cainta, Rizal, Philippines</span>
                             </p>
-                            <p class="flex items-start space-x-3">
-                                <i class="fa-regular fa-clock text-gold-400 mt-1"></i>
+                            <p class="flex items-start space-x-2.5">
+                                <i class="fa-regular fa-clock text-gold-400 mt-1 shrink-0"></i>
                                 <span>We kindly ask our beloved guests to take their seats thirty minutes early, allowing stillness to settle before the processional begins.</span>
                             </p>
                         </div>
                     </div>
 
-                    <div class="mt-8 pt-5 border-t border-ivory-100/10">
-                        <a href="https://maps.google.com/?q=Iglesia+Ni+Cristo+Locale+of+Village+East+Cainta+Rizal" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto inline-block text-center px-6 py-3 rounded-xl bg-gold-500 text-obsidian font-medium text-xs uppercase tracking-[0.2em] shadow-[0_12px_28px_-6px_rgba(212,175,55,0.4)] hover:bg-gold-400 transition-all">
-                            <i class="fa-solid fa-diamond-turn-right mr-2"></i> Navigate to Sanctuary
+                    <div class="mt-6 pt-4 border-t border-ivory-100/15">
+                        <a href="https://maps.google.com/?q=Iglesia+Ni+Cristo+Locale+of+Village+East+Cainta+Rizal" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto inline-block text-center px-5 py-3 rounded-xl bg-gold-500/95 backdrop-blur-md text-obsidian font-medium text-[11px] uppercase tracking-[0.18em] shadow-[0_12px_28px_-6px_rgba(212,175,55,0.4)] hover:bg-gold-400 transition-all">
+                            <i class="fa-solid fa-diamond-turn-right mr-2"></i> Navigate to church
                         </a>
                     </div>
                 </div>
 
                 <!-- Reception Card with Watercolor Garden Villa Illustration -->
-                <div class="rounded-2xl border border-gold-500/30 bg-charcoal/75 backdrop-blur-sm p-7 sm:p-10 flex flex-col justify-between hover:border-gold-400 dark-card-shadow">
+                <div class="rounded-2xl glass-dark p-5 sm:p-7 lg:p-9 flex flex-col justify-between hover:border-gold-400 dark-card-shadow">
                     <div>
-                        <div class="flex items-center justify-between mb-5">
-                            <span class="px-4 py-1 rounded-full bg-gold-500/15 border border-gold-400/30 text-gold-400 text-xs uppercase tracking-[0.25em]">
+                        <div class="flex items-center justify-between gap-2 mb-4">
+                            <span class="px-3 py-1 rounded-full bg-gold-500/20 backdrop-blur-md border border-gold-400/40 text-gold-300 text-[9.5px] sm:text-[10.5px] uppercase tracking-[0.18em] sm:tracking-[0.22em]">
                                 The Grand Soirée
                             </span>
-                            <i class="fa-solid fa-champagne-glasses text-gold-400 text-xl"></i>
+                            <i class="fa-solid fa-champagne-glasses text-gold-400 text-base sm:text-lg shrink-0"></i>
                         </div>
 
                         <!-- Watercolor Illustration: Villa Ardin Event's Place -->
-                        <div class="watercolor-frame rounded-xl p-3 mb-6 border border-gold-400/40 overflow-hidden">
-                            <svg viewBox="0 0 400 180" class="w-full h-40 sm:h-44 object-cover rounded-lg" aria-label="Watercolor Illustration of Villa Ardin Event's Place">
+                        <div class="watercolor-frame rounded-xl p-2 sm:p-2.5 mb-5 border border-gold-400/45 overflow-hidden">
+                            <svg viewBox="0 0 400 180" class="w-full h-32 sm:h-40 object-cover rounded-lg" aria-label="Watercolor Illustration of Villa Ardin Event's Place">
                                 <defs>
                                     <linearGradient id="skyWash2" x1="0%" y1="0%" x2="100%" y2="100%">
                                         <stop offset="0%" stop-color="#FDE8D7"/>
@@ -955,46 +1115,41 @@
                                     </linearGradient>
                                 </defs>
                                 <rect width="400" height="180" fill="url(#skyWash2)"/>
-                                <!-- Lush Tropical Watercolor Gardens -->
                                 <circle cx="55" cy="115" r="42" fill="#A9C7A7" opacity="0.65"/>
                                 <circle cx="345" cy="115" r="44" fill="#A9C7A7" opacity="0.65"/>
                                 <circle cx="95" cy="135" r="30" fill="#F4D4D7" opacity="0.6"/>
                                 <circle cx="305" cy="135" r="30" fill="#F4D4D7" opacity="0.6"/>
-                                <!-- Filipino-Spanish Garden Pavilion & Villa -->
                                 <polygon points="105,86 200,52 295,86" fill="#D58A6C" opacity="0.85"/>
                                 <rect x="118" y="86" width="164" height="66" fill="#FFFDF8" stroke="#C8B99E" stroke-width="1"/>
-                                <!-- Warm Glowing Reception Arches & String Lights -->
                                 <path d="M136,152 L136,108 Q152,94 168,108 L168,152 Z" fill="#FBE4B4" stroke="#C5A059" stroke-width="1"/>
                                 <path d="M184,152 L184,104 Q200,90 216,104 L216,152 Z" fill="#FBE4B4" stroke="#C5A059" stroke-width="1.2"/>
                                 <path d="M232,152 L232,108 Q248,94 264,108 L264,152 Z" fill="#FBE4B4" stroke="#C5A059" stroke-width="1"/>
-                                <!-- Festoon Fairy Lights -->
                                 <path d="M60,72 Q130,92 200,72 Q270,92 340,72" fill="none" stroke="#C5A059" stroke-width="1" stroke-dasharray="3,4"/>
-                                <!-- Courtyard Terrace -->
                                 <rect x="85" y="152" width="230" height="28" fill="#E8DEC8"/>
                             </svg>
                         </div>
 
-                        <h3 class="font-cinzel text-2xl sm:text-3xl text-ivory-50 tracking-wide mb-2">
+                        <h3 class="font-cinzel text-lg sm:text-xl lg:text-2xl text-ivory-50 tracking-wide mb-1.5">
                             Villa Ardin Event's Place
                         </h3>
-                        <p class="font-serif text-xl sm:text-2xl text-gold-400 italic mb-5">
+                        <p class="font-serif text-base sm:text-xl text-gold-400 italic mb-4">
                             Cocktail Hour &amp; Evening Reception
                         </p>
 
-                        <div class="space-y-3 text-sm sm:text-base text-ivory-200/90 font-light border-t border-ivory-100/10 pt-5">
-                            <p class="flex items-start space-x-3">
-                                <i class="fa-solid fa-location-dot text-gold-400 mt-1"></i>
+                        <div class="space-y-2.5 text-xs sm:text-sm md:text-base text-ivory-200/90 font-light border-t border-ivory-100/15 pt-4">
+                            <p class="flex items-start space-x-2.5">
+                                <i class="fa-solid fa-location-dot text-gold-400 mt-1 shrink-0"></i>
                                 <span>Villa Ardin Event's Place, Rizal / Metro East, Philippines</span>
                             </p>
-                            <p class="flex items-start space-x-3">
-                                <i class="fa-solid fa-utensils text-gold-400 mt-1"></i>
+                            <p class="flex items-start space-x-2.5">
+                                <i class="fa-solid fa-utensils text-gold-400 mt-1 shrink-0"></i>
                                 <span>Right after the vows, gather beneath the garden lights for artisanal grazing fare and chilled refreshments before we toast to the evening feast.</span>
                             </p>
                         </div>
                     </div>
 
-                    <div class="mt-8 pt-5 border-t border-ivory-100/10">
-                        <a href="https://maps.google.com/?q=Villa+Ardin+Events+Place+Philippines" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto inline-block text-center px-6 py-3 rounded-xl border border-gold-400 text-gold-400 font-medium text-xs uppercase tracking-[0.2em] shadow-[0_12px_28px_-6px_rgba(0,0,0,0.45)] hover:bg-gold-400 hover:text-obsidian transition-all">
+                    <div class="mt-6 pt-4 border-t border-ivory-100/15">
+                        <a href="https://maps.google.com/?q=Villa+Ardin+Events+Place+Philippines" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto inline-block text-center px-5 py-3 rounded-xl bg-white/15 backdrop-blur-md border border-gold-400 text-gold-300 font-medium text-[11px] uppercase tracking-[0.18em] shadow-[0_12px_28px_-6px_rgba(0,0,0,0.45)] hover:bg-gold-400 hover:text-obsidian transition-all">
                             <i class="fa-solid fa-diamond-turn-right mr-2"></i> Navigate to Reception
                         </a>
                     </div>
@@ -1002,123 +1157,106 @@
             </div>
 
             <!-- Order of Events / Wedding Day Timeline -->
-            <div class="mt-16 sm:mt-20 pt-14 border-t border-gold-500/20">
-                <div class="text-center max-w-xl mx-auto mb-12">
-                    <p class="text-[11px] uppercase tracking-[0.35em] text-gold-400 font-semibold mb-2">Order of Events</p>
-                    <h3 class="font-cinzel text-2xl sm:text-3xl text-ivory-50 tracking-wider mb-3">The Wedding Day Timeline</h3>
-                    <p class="font-serif italic text-lg text-ivory-200/75">
+            <div class="mt-12 sm:mt-16 pt-10 sm:pt-12 border-t border-gold-500/20">
+                <div class="text-center max-w-xl mx-auto mb-8 sm:mb-10">
+                    <p class="text-[9.5px] sm:text-[10.5px] uppercase tracking-[0.28em] sm:tracking-[0.34em] text-gold-400 font-semibold mb-1.5">Order of Events</p>
+                    <h3 class="font-cinzel text-xl sm:text-2xl md:text-3xl text-ivory-50 tracking-wider mb-2.5">The Wedding Day Timeline</h3>
+                    <p class="font-serif italic text-sm sm:text-base md:text-lg text-ivory-200/75">
                         From the hush of afternoon prayers to the last lantern-lit toast
                     </p>
                 </div>
 
                 <div class="relative max-w-4xl mx-auto">
-                    <!-- Vertical Timeline Spine (Left on mobile, Centered on desktop) -->
-                    <div class="absolute left-5 md:left-1/2 top-2 bottom-2 w-[1px] bg-gradient-to-b from-transparent via-gold-400/60 to-transparent md:-translate-x-1/2"></div>
+                    <!-- Vertical Timeline Spine (Left on mobile & portrait tablet, Centered on md+) -->
+                    <div class="absolute left-4 sm:left-5 md:left-1/2 top-2 bottom-2 w-[1px] bg-gradient-to-b from-transparent via-gold-400/60 to-transparent md:-translate-x-1/2"></div>
 
-                    <div class="space-y-8 sm:space-y-10">
+                    <div class="space-y-6 sm:space-y-8">
                         <!-- Event 1: Guest Arrival -->
-                        <div class="relative flex flex-col md:flex-row items-start md:items-center justify-between pl-14 md:pl-0">
+                        <div class="relative flex flex-col md:flex-row items-start md:items-center justify-between pl-11 sm:pl-14 md:pl-0">
                             <div class="md:w-[44%] md:text-right md:pr-8">
-                                <span class="inline-block px-3 py-0.5 rounded-full bg-gold-500/15 border border-gold-400/30 text-gold-300 font-cinzel text-xs tracking-[0.2em] mb-1.5">
+                                <span class="inline-block px-2.5 py-0.5 rounded-full bg-gold-500/20 backdrop-blur-md border border-gold-400/35 text-gold-300 font-cinzel text-[11px] tracking-[0.2em] mb-1">
                                     1:30 PM
                                 </span>
-                                <h4 class="font-cinzel text-lg sm:text-xl text-ivory-50 tracking-wide">Gathering in Stillness</h4>
-                                <p class="font-serif text-base text-ivory-200/80 mt-1">
-                                    Sanctuary doors open at <span class="text-gold-300">Iglesia Ni Cristo Locale of Village East</span>. Settle in thirty minutes before the processional unfolds.
+                                <h4 class="font-cinzel text-base sm:text-lg text-ivory-50 tracking-wide">Gathering in Stillness</h4>
+                                <p class="font-serif text-sm sm:text-base text-ivory-200/80 mt-0.5">
+                                    Church doors open at <span class="text-gold-300">Iglesia Ni Cristo Locale of Village East</span>.
                                 </p>
                             </div>
-                            <div class="absolute left-5 md:left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-obsidian border border-gold-400 flex items-center justify-center text-gold-400 text-xs shadow-[0_0_16px_rgba(212,175,55,0.45)]">
+                            <div class="absolute left-4 sm:left-5 md:left-1/2 -translate-x-1/2 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-obsidian/90 backdrop-blur-md border border-gold-400 flex items-center justify-center text-gold-400 text-[11px] shadow-[0_0_16px_rgba(212,175,55,0.45)]">
                                 <i class="fa-regular fa-clock"></i>
                             </div>
                             <div class="hidden md:block md:w-[44%]"></div>
                         </div>
 
                         <!-- Event 2: Sacred Ceremony -->
-                        <div class="relative flex flex-col md:flex-row items-start md:items-center justify-between pl-14 md:pl-0">
+                        <div class="relative flex flex-col md:flex-row items-start md:items-center justify-between pl-11 sm:pl-14 md:pl-0">
                             <div class="hidden md:block md:w-[44%]"></div>
-                            <div class="absolute left-5 md:left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-obsidian border border-gold-400 flex items-center justify-center text-gold-400 shadow-[0_0_16px_rgba(212,175,55,0.45)]">
-                                <svg viewBox="0 0 28 20" class="w-4 h-3" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                            <div class="absolute left-4 sm:left-5 md:left-1/2 -translate-x-1/2 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-obsidian/90 backdrop-blur-md border border-gold-400 flex items-center justify-center text-gold-400 shadow-[0_0_16px_rgba(212,175,55,0.45)]">
+                                <svg viewBox="0 0 28 20" class="w-3.5 h-2.5 sm:w-4 sm:h-3" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
                                     <circle cx="10.5" cy="11.5" r="5.5" />
                                     <circle cx="17.5" cy="11.5" r="5.5" />
                                 </svg>
                             </div>
                             <div class="md:w-[44%] md:text-left md:pl-8">
-                                <span class="inline-block px-3 py-0.5 rounded-full bg-gold-500/15 border border-gold-400/30 text-gold-300 font-cinzel text-xs tracking-[0.2em] mb-1.5">
+                                <span class="inline-block px-2.5 py-0.5 rounded-full bg-gold-500/20 backdrop-blur-md border border-gold-400/35 text-gold-300 font-cinzel text-[11px] tracking-[0.2em] mb-1">
                                     2:00 PM
                                 </span>
-                                <h4 class="font-cinzel text-lg sm:text-xl text-ivory-50 tracking-wide">The Covenant Vows</h4>
-                                <p class="font-serif text-base text-ivory-200/80 mt-1">
+                                <h4 class="font-cinzel text-base sm:text-lg text-ivory-50 tracking-wide">The Covenant Vows</h4>
+                                <p class="font-serif text-sm sm:text-base text-ivory-200/80 mt-0.5">
                                     Two lives joined in solemn prayer and sacred promise before God, family, and our dearest witnesses.
                                 </p>
                             </div>
                         </div>
 
                         <!-- Event 3: Cocktail Hour & Grazing Table -->
-                        <div class="relative flex flex-col md:flex-row items-start md:items-center justify-between pl-14 md:pl-0">
+                        <div class="relative flex flex-col md:flex-row items-start md:items-center justify-between pl-11 sm:pl-14 md:pl-0">
                             <div class="md:w-[44%] md:text-right md:pr-8">
-                                <span class="inline-block px-3 py-0.5 rounded-full bg-gold-500/15 border border-gold-400/30 text-gold-300 font-cinzel text-xs tracking-[0.2em] mb-1.5">
+                                <span class="inline-block px-2.5 py-0.5 rounded-full bg-gold-500/20 backdrop-blur-md border border-gold-400/35 text-gold-300 font-cinzel text-[11px] tracking-[0.2em] mb-1">
                                     3:30 PM
                                 </span>
-                                <h4 class="font-cinzel text-lg sm:text-xl text-ivory-50 tracking-wide">Garden Aperitifs &amp; Grazing</h4>
-                                <p class="font-serif text-base text-ivory-200/80 mt-1">
+                                <h4 class="font-cinzel text-base sm:text-lg text-ivory-50 tracking-wide">Garden Aperitifs &amp; Grazing</h4>
+                                <p class="font-serif text-sm sm:text-base text-ivory-200/80 mt-0.5">
                                     Unwind at <span class="text-gold-300">Villa Ardin Event's Place</span> with curated bites and twilight refreshments as we capture our first portraits as husband and wife.
                                 </p>
                             </div>
-                            <div class="absolute left-5 md:left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-obsidian border border-gold-400 flex items-center justify-center text-gold-400 text-xs shadow-[0_0_16px_rgba(212,175,55,0.45)]">
+                            <div class="absolute left-4 sm:left-5 md:left-1/2 -translate-x-1/2 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-obsidian/90 backdrop-blur-md border border-gold-400 flex items-center justify-center text-gold-400 text-[11px] shadow-[0_0_16px_rgba(212,175,55,0.45)]">
                                 <i class="fa-solid fa-wine-glass"></i>
                             </div>
                             <div class="hidden md:block md:w-[44%]"></div>
                         </div>
 
                         <!-- Event 4: Grand Entrance & Toast -->
-                        <div class="relative flex flex-col md:flex-row items-start md:items-center justify-between pl-14 md:pl-0">
+                        <div class="relative flex flex-col md:flex-row items-start md:items-center justify-between pl-11 sm:pl-14 md:pl-0">
                             <div class="hidden md:block md:w-[44%]"></div>
-                            <div class="absolute left-5 md:left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-obsidian border border-gold-400 flex items-center justify-center text-gold-400 text-xs shadow-[0_0_16px_rgba(212,175,55,0.45)]">
+                            <div class="absolute left-4 sm:left-5 md:left-1/2 -translate-x-1/2 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-obsidian/90 backdrop-blur-md border border-gold-400 flex items-center justify-center text-gold-400 text-[11px] shadow-[0_0_16px_rgba(212,175,55,0.45)]">
                                 <i class="fa-solid fa-champagne-glasses"></i>
                             </div>
                             <div class="md:w-[44%] md:text-left md:pl-8">
-                                <span class="inline-block px-3 py-0.5 rounded-full bg-gold-500/15 border border-gold-400/30 text-gold-300 font-cinzel text-xs tracking-[0.2em] mb-1.5">
+                                <span class="inline-block px-2.5 py-0.5 rounded-full bg-gold-500/20 backdrop-blur-md border border-gold-400/35 text-gold-300 font-cinzel text-[11px] tracking-[0.2em] mb-1">
                                     5:00 PM
                                 </span>
-                                <h4 class="font-cinzel text-lg sm:text-xl text-ivory-50 tracking-wide">First Entrance as One</h4>
-                                <p class="font-serif text-base text-ivory-200/80 mt-1">
+                                <h4 class="font-cinzel text-base sm:text-lg text-ivory-50 tracking-wide">First Entrance as One</h4>
+                                <p class="font-serif text-sm sm:text-base text-ivory-200/80 mt-0.5">
                                     Raise a glass as we step into the pavilion together, accompanied by blessings from our parents and principal sponsors.
                                 </p>
                             </div>
                         </div>
 
                         <!-- Event 5: Dinner Banquet & Fellowship -->
-                        <div class="relative flex flex-col md:flex-row items-start md:items-center justify-between pl-14 md:pl-0">
+                        <div class="relative flex flex-col md:flex-row items-start md:items-center justify-between pl-11 sm:pl-14 md:pl-0">
                             <div class="md:w-[44%] md:text-right md:pr-8">
-                                <span class="inline-block px-3 py-0.5 rounded-full bg-gold-500/15 border border-gold-400/30 text-gold-300 font-cinzel text-xs tracking-[0.2em] mb-1.5">
-                                    5:30 PM
+                                <span class="inline-block px-2.5 py-0.5 rounded-full bg-gold-500/20 backdrop-blur-md border border-gold-400/35 text-gold-300 font-cinzel text-[11px] tracking-[0.2em] mb-1">
+                                    6:00 PM
                                 </span>
-                                <h4 class="font-cinzel text-lg sm:text-xl text-ivory-50 tracking-wide">Candlelit Feast &amp; Stories</h4>
-                                <p class="font-serif text-base text-ivory-200/80 mt-1">
+                                <h4 class="font-cinzel text-base sm:text-lg text-ivory-50 tracking-wide">Candlelit Feast &amp; Stories</h4>
+                                <p class="font-serif text-sm sm:text-base text-ivory-200/80 mt-0.5">
                                     An evening banquet shared around warm tables, filled with laughter, heartfelt toasts, and unhurried fellowship.
                                 </p>
                             </div>
-                            <div class="absolute left-5 md:left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-obsidian border border-gold-400 flex items-center justify-center text-gold-400 text-xs shadow-[0_0_16px_rgba(212,175,55,0.45)]">
+                            <div class="absolute left-4 sm:left-5 md:left-1/2 -translate-x-1/2 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-obsidian/90 backdrop-blur-md border border-gold-400 flex items-center justify-center text-gold-400 text-[11px] shadow-[0_0_16px_rgba(212,175,55,0.45)]">
                                 <i class="fa-solid fa-utensils"></i>
                             </div>
                             <div class="hidden md:block md:w-[44%]"></div>
-                        </div>
-
-                        <!-- Event 6: Cake Cutting & Fond Farewell -->
-                        <div class="relative flex flex-col md:flex-row items-start md:items-center justify-between pl-14 md:pl-0">
-                            <div class="hidden md:block md:w-[44%]"></div>
-                            <div class="absolute left-5 md:left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-obsidian border border-gold-400 flex items-center justify-center text-gold-400 text-xs shadow-[0_0_16px_rgba(212,175,55,0.45)]">
-                                <i class="fa-solid fa-heart"></i>
-                            </div>
-                            <div class="md:w-[44%] md:text-left md:pl-8">
-                                <span class="inline-block px-3 py-0.5 rounded-full bg-gold-500/15 border border-gold-400/30 text-gold-300 font-cinzel text-xs tracking-[0.2em] mb-1.5">
-                                    7:30 PM
-                                </span>
-                                <h4 class="font-cinzel text-lg sm:text-xl text-ivory-50 tracking-wide">Sweet Finale &amp; Lantern Send-Off</h4>
-                                <p class="font-serif text-base text-ivory-200/80 mt-1">
-                                    Sharing the first slice, tossing the blooms, and sending us off into our new chapter wrapped in your blessings.
-                                </p>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -1127,154 +1265,183 @@
     </section>
 
     <!-- SECTION 3: THE WEDDING ENTOURAGE -->
-    <section id="entourage" class="py-24 sm:py-32 px-4 sm:px-6 max-w-6xl mx-auto">
-        <div class="text-center max-w-2xl mx-auto mb-16">
-            <p class="text-xs uppercase tracking-[0.35em] text-gold-600 font-semibold mb-3">Chapter III &bull; Pillars of Grace</p>
-            <h2 class="font-cinzel text-3xl sm:text-5xl text-obsidian tracking-wider mb-4 drop-shadow-[0_4px_14px_rgba(18,17,16,0.08)]">The Wedding Entourage</h2>
-            <div class="w-20 h-[1px] bg-gold-500 mx-auto mb-6"></div>
-            <p class="font-serif text-xl text-charcoal/80 italic">
+    <section id="entourage" class="relative py-14 sm:py-20 lg:py-28 px-4 sm:px-6 max-w-6xl mx-auto">
+        <!-- Soft Ambient Orbs Behind Glass Cards -->
+        <div class="pointer-events-none absolute top-24 left-6 w-72 h-72 rounded-full bg-gold-300/20 blur-3xl"></div>
+        <div class="pointer-events-none absolute bottom-20 right-6 w-80 h-80 rounded-full bg-rose-200/20 blur-3xl"></div>
+
+        <div class="relative z-10 text-center max-w-2xl mx-auto mb-10 sm:mb-14">
+            <p class="text-[9.5px] sm:text-[11px] uppercase tracking-[0.28em] sm:tracking-[0.34em] text-gold-600 font-semibold mb-2">Chapter III &bull; Pillars of Grace</p>
+            <h2 class="font-cinzel text-xl sm:text-3xl md:text-4xl lg:text-5xl text-obsidian tracking-wider mb-3 drop-shadow-[0_4px_14px_rgba(18,17,16,0.08)]">The Wedding Entourage</h2>
+            <div class="w-16 sm:w-20 h-[1px] bg-gold-500 mx-auto mb-4 sm:mb-5"></div>
+            <p class="font-serif text-base sm:text-lg md:text-xl text-charcoal/80 italic px-2">
                 &ldquo;Held steady by the hands that nurtured us, the mentors who guided us, and the kindred spirits walking beside us.&rdquo;
             </p>
         </div>
 
         <!-- Parents of the Bride & Groom -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-            <div class="rounded-2xl bg-white/95 border border-gold-500/30 p-8 text-center luxury-card-shadow">
-                <p class="text-xs uppercase tracking-[0.28em] text-gold-600 mb-3">Parents of the Bride</p>
-                <h3 class="font-cinzel text-xl sm:text-2xl text-obsidian mb-1">Mr. Alejandro Reyes</h3>
-                <p class="font-serif italic text-lg text-gold-600 my-1">&amp;</p>
-                <h3 class="font-cinzel text-xl sm:text-2xl text-obsidian">Mrs. Maria Clara Reyes</h3>
+        <div class="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-7 mb-7 sm:mb-10">
+            <div class="rounded-2xl glass-light p-5 sm:p-7 text-center luxury-card-shadow">
+                <p class="text-[10px] sm:text-[11px] uppercase tracking-[0.24em] text-gold-600 mb-2.5">Parents of the Bride</p>
+                <h3 class="font-cinzel text-base sm:text-lg md:text-xl text-obsidian mb-0.5">Johnny Calata</h3>
+                <p class="font-serif italic text-base text-gold-600 my-0.5">&amp;</p>
+                <h3 class="font-cinzel text-base sm:text-lg md:text-xl text-obsidian">Noemi Calata</h3>
             </div>
 
-            <div class="rounded-2xl bg-white/95 border border-gold-500/30 p-8 text-center luxury-card-shadow">
-                <p class="text-xs uppercase tracking-[0.28em] text-gold-600 mb-3">Parents of the Groom</p>
-                <h3 class="font-cinzel text-xl sm:text-2xl text-obsidian mb-1">Mr. Roberto Mendoza</h3>
-                <p class="font-serif italic text-lg text-gold-600 my-1">&amp;</p>
-                <h3 class="font-cinzel text-xl sm:text-2xl text-obsidian">Mrs. Elena Santos-Mendoza</h3>
-            </div>
-        </div>
-
-        <!-- Principal Sponsors (Ninong & Ninang) -->
-        <div class="rounded-2xl bg-white/95 border border-gold-500/30 p-8 sm:p-12 mb-12 luxury-card-shadow">
-            <div class="text-center mb-10">
-                <p class="text-xs uppercase tracking-[0.3em] text-gold-600 mb-2">Ninong &amp; Ninang</p>
-                <h3 class="font-cinzel text-2xl sm:text-3xl text-obsidian">Principal Sponsors</h3>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-4 text-center md:text-left font-serif text-lg sm:text-xl text-charcoal">
-                <div class="space-y-3 md:text-right md:border-r md:border-gold-500/20 md:pr-10">
-                    <p>Engr. Antonio Villareal</p>
-                    <p>Dr. Francisco De Leon</p>
-                    <p>Hon. Mariano Pangilinan</p>
-                    <p>Arch. Eduardo Tolentino</p>
-                    <p>Mr. Benjamin Concepcion</p>
-                    <p>Col. Augusto Magbanua</p>
-                </div>
-                <div class="space-y-3 md:pl-2">
-                    <p>Mrs. Victoria Villareal</p>
-                    <p>Dra. Corazon De Leon</p>
-                    <p>Mrs. Josephine Pangilinan</p>
-                    <p>Mrs. Rosalinda Tolentino</p>
-                    <p>Mrs. Teresita Concepcion</p>
-                    <p>Mrs. Remedios Magbanua</p>
-                </div>
+            <div class="rounded-2xl glass-light p-5 sm:p-7 text-center luxury-card-shadow">
+                <p class="text-[10px] sm:text-[11px] uppercase tracking-[0.24em] text-gold-600 mb-2.5">Parents of the Groom</p>
+                <h3 class="font-cinzel text-base sm:text-lg md:text-xl text-obsidian mb-0.5">Ricardo Bonus</h3>
+                <p class="font-serif italic text-base text-gold-600 my-0.5">&amp;</p>
+                <h3 class="font-cinzel text-base sm:text-lg md:text-xl text-obsidian">Emerenciana Disameto</h3>
             </div>
         </div>
 
-        <!-- Best Man & Groomsmen | Maid of Honor & Bridesmaids -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+        <!-- Principal Sponsors (Ninong & Ninang — Paired by Partners) -->
+        <div class="relative z-10 rounded-2xl glass-light p-5 sm:p-8 lg:p-11 mb-7 sm:mb-10 luxury-card-shadow">
+            <div class="text-center mb-6 sm:mb-9">
+                <p class="text-[10px] sm:text-[11px] uppercase tracking-[0.26em] text-gold-600 mb-1.5">Ninong &amp; Ninang</p>
+                <h3 class="font-cinzel text-lg sm:text-2xl md:text-3xl text-obsidian">Principal Sponsors</h3>
+            </div>
+
+            <!-- Column Subheaders -->
+            <div class="grid grid-cols-2 gap-4 sm:gap-8 max-w-3xl mx-auto pb-2.5 mb-3 border-b border-gold-500/25 text-[10px] sm:text-[11px] uppercase tracking-[0.22em] text-gold-600 font-semibold">
+                <span class="text-right pr-2 sm:pr-6">Ninong</span>
+                <span class="text-left pl-2 sm:pl-6">Ninang</span>
+            </div>
+
+            <!-- Partner Rows (Always side-by-side by couple across Mobile, Tablet & Desktop) -->
+            <div class="max-w-3xl mx-auto divide-y divide-gold-500/15 font-serif text-sm sm:text-base md:text-lg lg:text-xl text-charcoal">
+                <!-- Partner Pair 1 -->
+                <div class="grid grid-cols-2 items-center py-2.5 sm:py-3">
+                    <p class="text-right pr-3 sm:pr-6 border-r border-gold-500/20 leading-snug">Romulo Delos Reyes Jr.</p>
+                    <p class="text-left pl-3 sm:pl-6 leading-snug">Rodora Fernandez</p>
+                </div>
+
+                <!-- Partner Pair 2 -->
+                <div class="grid grid-cols-2 items-center py-2.5 sm:py-3">
+                    <p class="text-right pr-3 sm:pr-6 border-r border-gold-500/20 leading-snug">Renato Disameto</p>
+                    <p class="text-left pl-3 sm:pl-6 leading-snug">Ducydides Rosario</p>
+                </div>
+
+                <!-- Partner Pair 3 -->
+                <div class="grid grid-cols-2 items-center py-2.5 sm:py-3">
+                    <p class="text-right pr-3 sm:pr-6 border-r border-gold-500/20 leading-snug">Rolando Dela Merced</p>
+                    <p class="text-left pl-3 sm:pl-6 leading-snug">Lilia Dela Merced</p>
+                </div>
+
+                <!-- Partner Pair 4 -->
+                <div class="grid grid-cols-2 items-center py-2.5 sm:py-3">
+                    <p class="text-right pr-3 sm:pr-6 border-r border-gold-500/20 leading-snug">Rizaldy Fontanilla</p>
+                    <p class="text-left pl-3 sm:pl-6 leading-snug">Julie Sta. Maria - Mabalot</p>
+                </div>
+
+                <!-- Partner Pair 5 -->
+                <div class="grid grid-cols-2 items-center py-2.5 sm:py-3">
+                    <p class="text-right pr-3 sm:pr-6 border-r border-gold-500/20 leading-snug">Ramil Morte</p>
+                    <p class="text-left pl-3 sm:pl-6 leading-snug">Janeth Morte</p>
+                </div>
+				
+            </div>
+        </div>
+
+        <!-- Best Man & Groomsmen | Maid of Honor & Bridesmaids (Always Side-by-Side on Mobile, Tablet & Desktop) -->
+        <div class="relative z-10 grid grid-cols-2 gap-3 sm:gap-6 md:gap-7 mb-7 sm:mb-10">
             <!-- Best Man & Groomsmen -->
-            <div class="rounded-2xl bg-white/95 border border-gold-500/30 p-8 text-center luxury-card-shadow">
-                <p class="text-xs uppercase tracking-[0.28em] text-gold-600 mb-2">Best Man &amp; Groomsmen</p>
-                <h4 class="font-cinzel text-xl sm:text-2xl text-obsidian mb-1">Mr. Gabriel Mendoza</h4>
-                <p class="text-[11px] uppercase tracking-[0.24em] text-gold-600/90 mb-5">Best Man</p>
+            <div class="rounded-2xl glass-light p-3.5 sm:p-6 md:p-7 text-center luxury-card-shadow">
+                <p class="text-[8.5px] sm:text-[10px] md:text-[11px] uppercase tracking-[0.14em] sm:tracking-[0.24em] text-gold-600 mb-1.5 leading-snug">Best Man &amp; Groomsmen</p>
+                <h4 class="font-cinzel text-xs sm:text-base md:text-lg lg:text-xl text-obsidian mb-0.5 leading-snug">Ricky James Tyler Bonus III</h4>
+                <p class="text-[9px] sm:text-[10px] uppercase tracking-[0.18em] sm:tracking-[0.22em] text-gold-600/90 mb-3 sm:mb-4">Best Man</p>
 
-                <div class="w-12 h-[1px] bg-gold-500/40 mx-auto mb-5"></div>
+                <div class="w-8 sm:w-10 h-[1px] bg-gold-500/40 mx-auto mb-3 sm:mb-4"></div>
 
-                <div class="space-y-2.5 font-serif text-lg sm:text-xl text-charcoal">
-                    <p>Mr. Rafael Cruz</p>
-                    <p>Mr. Lorenzo Bautista</p>
-                    <p>Mr. Miguel Aquino</p>
-                    <p>Mr. Julian Navarro</p>
+                <div class="space-y-1.5 sm:space-y-2 font-serif text-sm sm:text-base md:text-lg lg:text-xl text-charcoal leading-snug">
+                    <p>Divino Carlo Disameto</p>
+                    <p>John Noel Calata</p>
+                    <p>John Paolo Disameto</p>
+                    <p>Edilberto Magat Jr.</p>
                 </div>
             </div>
 
             <!-- Maid of Honor & Bridesmaids -->
-            <div class="rounded-2xl bg-white/95 border border-gold-500/30 p-8 text-center luxury-card-shadow">
-                <p class="text-xs uppercase tracking-[0.28em] text-gold-600 mb-2">Maid of Honor &amp; Bridesmaids</p>
-                <h4 class="font-cinzel text-xl sm:text-2xl text-obsidian mb-1">Ms. Isabella Reyes</h4>
-                <p class="text-[11px] uppercase tracking-[0.24em] text-gold-600/90 mb-5">Maid of Honor</p>
+            <div class="rounded-2xl glass-light p-3.5 sm:p-6 md:p-7 text-center luxury-card-shadow">
+                <p class="text-[8.5px] sm:text-[10px] md:text-[11px] uppercase tracking-[0.14em] sm:tracking-[0.24em] text-gold-600 mb-1.5 leading-snug">Maid of Honor &amp; Bridesmaids</p>
+                <h4 class="font-cinzel text-xs sm:text-base md:text-lg lg:text-xl text-obsidian mb-0.5 leading-snug">Lovelyn Layon</h4>
+                <p class="text-[9px] sm:text-[10px] uppercase tracking-[0.18em] sm:tracking-[0.22em] text-gold-600/90 mb-3 sm:mb-4">Maid of Honor</p>
 
-                <div class="w-12 h-[1px] bg-gold-500/40 mx-auto mb-5"></div>
+                <div class="w-8 sm:w-10 h-[1px] bg-gold-500/40 mx-auto mb-3 sm:mb-4"></div>
 
-                <div class="space-y-2.5 font-serif text-lg sm:text-xl text-charcoal">
-                    <p>Ms. Camille Navarro</p>
-                    <p>Ms. Sofia Lim</p>
-                    <p>Ms. Bianca Soriano</p>
-                    <p>Ms. Clarissa Del Rosario</p>
+                <div class="space-y-1.5 sm:space-y-2 font-serif text-sm sm:text-base md:text-lg lg:text-xl text-charcoal leading-snug">
+                    <p>Hannah Chito</p>
+                    <p>Erikarose Dela Cruz</p>
+                    <p>Krizzia Oñate</p>
+                    <p>Janeth Morte</p>
                 </div>
             </div>
         </div>
 
         <!-- Flower Maidens -->
-        <div class="max-w-xl mx-auto rounded-2xl bg-ivory-100/95 border border-gold-500/25 p-7 sm:p-8 text-center luxury-card-shadow">
-            <i class="fa-solid fa-spa text-gold-600 mb-2.5"></i>
-            <p class="text-xs uppercase tracking-[0.28em] text-gold-600 mb-3">Flower Maidens</p>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 font-serif text-lg sm:text-xl text-obsidian">
-                <p>Ms. Sofia Gabrielle Reyes</p>
-                <p>Ms. Chloe Reign Mendoza</p>
+        <div class="relative z-10 max-w-xl mx-auto rounded-2xl glass-ivory p-5 sm:p-7 text-center luxury-card-shadow">
+            <i class="fa-solid fa-spa text-gold-600 text-sm mb-2"></i>
+            <p class="text-[10px] sm:text-[11px] uppercase tracking-[0.24em] text-gold-600 mb-2.5">Flower Maidens</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3 font-serif text-base sm:text-lg md:text-xl text-obsidian">
+                <p>Amber Riana Bonus-Fernandez</p>
+                <p>Gabrielle Angeline Dela Merced</p>
             </div>
         </div>
     </section>
 
     <!-- SECTION 4: ATTIRE & PASTEL PALETTE (FILIPINO HERITAGE & PASTELS) -->
-    <section id="attire" class="py-24 bg-ivory-100 border-y border-gold-500/20 px-4 sm:px-6">
-        <div class="max-w-5xl mx-auto">
-            <div class="text-center max-w-2xl mx-auto mb-14">
-                <p class="text-xs uppercase tracking-[0.35em] text-gold-600 font-semibold mb-3">Chapter IV &bull; Sartorial Grace</p>
-                <h2 class="font-cinzel text-3xl sm:text-5xl text-obsidian tracking-wider mb-4 drop-shadow-[0_4px_14px_rgba(18,17,16,0.08)]">Formal Couture &amp; Palette</h2>
-                <div class="w-20 h-[1px] bg-gold-500 mx-auto mb-6"></div>
-                <p class="font-serif text-xl text-charcoal/85 italic">
+    <section id="attire" class="relative py-14 sm:py-20 lg:py-24 bg-ivory-100/85 border-y border-gold-500/20 px-4 sm:px-6 overflow-hidden">
+        <!-- Ambient Pastel Refraction Orbs -->
+        <div class="pointer-events-none absolute top-16 left-10 w-72 h-72 rounded-full bg-[#F4D4D7]/35 blur-3xl"></div>
+        <div class="pointer-events-none absolute bottom-16 right-10 w-80 h-80 rounded-full bg-[#DCE5D8]/40 blur-3xl"></div>
+
+        <div class="relative z-10 max-w-5xl mx-auto">
+            <div class="text-center max-w-2xl mx-auto mb-8 sm:mb-12">
+                <p class="text-[9.5px] sm:text-[11px] uppercase tracking-[0.28em] sm:tracking-[0.34em] text-gold-600 font-semibold mb-2">Chapter IV &bull; Sartorial Grace</p>
+                <h2 class="font-cinzel text-xl sm:text-3xl md:text-4xl lg:text-5xl text-obsidian tracking-wider mb-3 drop-shadow-[0_4px_14px_rgba(18,17,16,0.08)]">Formal Couture &amp; Palette</h2>
+                <div class="w-16 sm:w-20 h-[1px] bg-gold-500 mx-auto mb-4 sm:mb-5"></div>
+                <p class="font-serif text-base sm:text-lg md:text-xl text-charcoal/85 italic px-2">
                     &ldquo;Dressed in whispered pastels and timeless Philippine craftsmanship—honoring the sanctity of the house of worship and the romance of the garden evening.&rdquo;
                 </p>
             </div>
 
             <!-- Highlighted Bridal Reservation Callout (Pure Ivory & White) -->
-            <div class="mb-12 rounded-2xl bg-obsidian text-ivory-50 border border-gold-400/60 p-6 sm:p-7 text-center dark-card-shadow relative overflow-hidden">
-                <div class="inline-flex items-center space-x-2.5 px-3.5 py-1 rounded-full bg-gold-500/20 border border-gold-400/40 text-gold-300 text-[10px] sm:text-xs uppercase tracking-[0.26em] font-semibold mb-2.5">
-                    <i class="fa-solid fa-crown text-[10px]"></i>
+            <div class="mb-8 sm:mb-10 rounded-2xl glass-dark text-ivory-50 p-4 sm:p-6 text-center dark-card-shadow relative overflow-hidden">
+                <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-gold-500/20 backdrop-blur-md border border-gold-400/40 text-gold-300 text-[9px] sm:text-[10.5px] uppercase tracking-[0.2em] sm:tracking-[0.24em] font-semibold mb-2">
+                    <i class="fa-solid fa-crown text-[9px]"></i>
                     <span>Bridal Color Reservation</span>
                 </div>
-                <p class="font-cinzel text-base sm:text-xl text-ivory-50 tracking-wide">
+                <p class="font-cinzel text-xs sm:text-base md:text-lg text-ivory-50 tracking-wide leading-relaxed">
                     Kindly Reserve <span class="text-gold-300 underline decoration-gold-400/70 underline-offset-4 font-semibold">Pure Ivory &amp; Pure White</span> Exclusively for the Bride
                 </p>
-                <p class="font-serif italic text-base sm:text-lg text-ivory-200/80 mt-1.5">
-                    We deeply appreciate our guests embracing the curated six-shade pastel palette below.
+                <p class="font-serif italic text-sm sm:text-base md:text-lg text-ivory-200/80 mt-1">
+                    We deeply appreciate our guests embracing the curated whimsicala pastel palette below.
                 </p>
             </div>
 
-            <!-- Guest Attire Guidelines with Bespoke Watercolor Fashion Illustrations -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-14">
+            <!-- Guest Attire Guidelines with Bespoke Watercolor Fashion Illustrations (Always Side-by-Side on Mobile, Tablet & Desktop) -->
+            <div class="grid grid-cols-2 gap-3 sm:gap-6 md:gap-7 mb-10 sm:mb-12">
                 <!-- Gentlemen Card -->
-                <div class="rounded-2xl bg-white border border-gold-500/30 p-7 sm:p-8 luxury-card-shadow flex flex-col justify-between">
+                <div class="rounded-2xl glass-light p-3 sm:p-6 md:p-7 luxury-card-shadow flex flex-col justify-between">
                     <div>
-                        <div class="flex items-center space-x-3 mb-5">
+                        <div class="flex items-center space-x-1.5 sm:space-x-2.5 mb-3 sm:mb-4">
                             <!-- Bespoke Gentlemen Formal Lapel & Collar Emblem -->
-                            <svg viewBox="0 0 28 28" class="w-6 h-6 text-gold-600 shrink-0" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+                            <svg viewBox="0 0 28 28" class="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-gold-600 shrink-0" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
                                 <path d="M9 5L14 11L19 5" />
                                 <path d="M6 7L14 23L22 7" />
                                 <path d="M14 11V23" />
                                 <circle cx="14" cy="14.5" r="0.9" fill="currentColor" stroke="none" />
                                 <circle cx="14" cy="18" r="0.9" fill="currentColor" stroke="none" />
                             </svg>
-                            <h3 class="font-cinzel text-xl sm:text-2xl text-obsidian">Gentlemen</h3>
+                            <h3 class="font-cinzel text-sm sm:text-lg md:text-xl text-obsidian">Gentlemen</h3>
                         </div>
 
                         <!-- Two Side-by-Side Watercolor Sample Cards -->
-                        <div class="grid grid-cols-2 gap-3.5 mb-6">
+                        <div class="grid grid-cols-2 gap-1.5 sm:gap-3 mb-3.5 sm:mb-5">
                             <!-- Sample 1: Barong Tagalog -->
-                            <div class="watercolor-frame rounded-xl p-2.5 border border-gold-400/40 overflow-hidden flex flex-col items-center">
-                                <svg viewBox="0 0 180 190" class="w-full h-40 sm:h-44 object-cover rounded-lg" aria-label="Watercolor Illustration of Barong Tagalog">
+                            <div class="watercolor-frame rounded-lg sm:rounded-xl p-1 sm:p-2 border border-gold-400/40 overflow-hidden flex flex-col items-center">
+                                <svg viewBox="0 0 180 190" class="w-full h-20 sm:h-32 md:h-40 object-cover rounded-md sm:rounded-lg" aria-label="Watercolor Illustration of Barong Tagalog">
                                     <defs>
                                         <linearGradient id="gentsWash1" x1="0%" y1="0%" x2="100%" y2="100%">
                                             <stop offset="0%" stop-color="#FBF6EC"/>
@@ -1295,12 +1462,12 @@
                                         <path d="M35,124 L37,162 L52,162 L55,134 L58,162 L73,162 L75,124 Z" fill="#3C3833"/>
                                     </g>
                                 </svg>
-                                <p class="font-serif italic text-xs sm:text-sm text-charcoal mt-2 text-center">Barong Tagalog</p>
+                                <p class="font-serif italic text-[10px] sm:text-xs md:text-sm text-charcoal mt-1 sm:mt-1.5 text-center leading-tight">Barong Tagalog</p>
                             </div>
 
                             <!-- Sample 2: Long-Sleeved Formal -->
-                            <div class="watercolor-frame rounded-xl p-2.5 border border-gold-400/40 overflow-hidden flex flex-col items-center">
-                                <svg viewBox="0 0 180 190" class="w-full h-40 sm:h-44 object-cover rounded-lg" aria-label="Watercolor Illustration of Long-Sleeved Formal Dress Shirt">
+                            <div class="watercolor-frame rounded-lg sm:rounded-xl p-1 sm:p-2 border border-gold-400/40 overflow-hidden flex flex-col items-center">
+                                <svg viewBox="0 0 180 190" class="w-full h-20 sm:h-32 md:h-40 object-cover rounded-md sm:rounded-lg" aria-label="Watercolor Illustration of Long-Sleeved Formal Dress Shirt">
                                     <defs>
                                         <linearGradient id="gentsWash2" x1="0%" y1="0%" x2="100%" y2="100%">
                                             <stop offset="0%" stop-color="#F6FAF5"/>
@@ -1324,66 +1491,66 @@
                                         <path d="M34,116 L36,162 L52,162 L55,130 L58,162 L74,162 L76,116 Z" fill="#4A453E"/>
                                     </g>
                                 </svg>
-                                <p class="font-serif italic text-xs sm:text-sm text-charcoal mt-2 text-center">Long-Sleeved Formal</p>
+                                <p class="font-serif italic text-[10px] sm:text-xs md:text-sm text-charcoal mt-1 sm:mt-1.5 text-center leading-tight">Long-Sleeved</p>
                             </div>
                         </div>
 
-                        <p class="font-serif text-lg text-charcoal/90 leading-relaxed mb-4">
-                            We kindly invite gentlemen to wear formal attire in our soft pastel palette or classic neutral tones:
+                        <p class="font-serif text-xs sm:text-sm md:text-base lg:text-lg text-charcoal/90 leading-snug sm:leading-relaxed mb-2.5 sm:mb-3.5">
+                            Formal attire in our soft pastel palette or classic neutral tones:
                         </p>
 
-                        <ul class="space-y-2.5 font-serif text-base sm:text-lg text-charcoal/90 mb-5">
-                            <li class="flex items-start space-x-2.5">
+                        <ul class="space-y-1.5 sm:space-y-2 font-serif text-xs sm:text-sm md:text-base lg:text-lg text-charcoal/90 mb-3 sm:mb-4 leading-snug">
+                            <li class="flex items-start space-x-1.5 sm:space-x-2">
                                 <span class="text-gold-600 font-bold mt-0.5">&bull;</span>
-                                <span><strong class="text-obsidian font-semibold">Barong Tagalog:</strong> Traditional or modern Jusi, Piña, or Organza Barong paired with black or dark charcoal slacks.</span>
+                                <span><strong class="text-obsidian font-semibold">Barong Tagalog:</strong> Jusi, Piña, or Organza Barong with dark slacks.</span>
                             </li>
-                            <li class="flex items-start space-x-2.5">
+                            <li class="flex items-start space-x-1.5 sm:space-x-2">
                                 <span class="text-gold-600 font-bold mt-0.5">&bull;</span>
-                                <span><strong class="text-obsidian font-semibold">Long-Sleeved Formal:</strong> Tailored button-down long-sleeved dress shirt in our six-shade pastel palette (or soft neutral) with tailored trousers.</span>
+                                <span><strong class="text-obsidian font-semibold">Long-Sleeved Formal:</strong> Tailored pastel or neutral dress shirt with trousers.</span>
                             </li>
-                            <li class="flex items-start space-x-2.5">
+                            <li class="flex items-start space-x-1.5 sm:space-x-2">
                                 <span class="text-gold-600 font-bold mt-0.5">&bull;</span>
-                                <span><strong class="text-obsidian font-semibold">Suits &amp; Blazers:</strong> Optional lightweight pastel, beige, or charcoal suit paired with a crisp collared shirt.</span>
+                                <span><strong class="text-obsidian font-semibold">Suits &amp; Blazers:</strong> Optional pastel, beige, or charcoal suit.</span>
                             </li>
-                            <li class="flex items-start space-x-2.5">
+                            <li class="flex items-start space-x-1.5 sm:space-x-2">
                                 <span class="text-gold-600 font-bold mt-0.5">&bull;</span>
-                                <span><strong class="text-obsidian font-semibold">Footwear:</strong> Closed-toe leather dress shoes, loafers, or formal Oxford shoes with dark socks.</span>
+                                <span><strong class="text-obsidian font-semibold">Footwear:</strong> Closed-toe leather dress shoes, loafers, or Oxfords.</span>
                             </li>
                         </ul>
                     </div>
 
-                    <div class="pt-4 border-t border-gold-500/20 bg-ivory-50/80 rounded-xl p-3.5">
-                        <p class="text-[11px] uppercase tracking-[0.24em] text-gold-700 font-semibold mb-2">Kindly Avoid</p>
-                        <ul class="space-y-1.5 text-xs text-charcoal/85 leading-relaxed">
-                            <li class="flex items-start space-x-2">
-                                <i class="fa-solid fa-xmark text-gold-600 mt-0.5"></i>
-                                <span><strong>Pure Ivory, Pure White, or Cream</strong> (reserved for the Bride)</span>
+                    <div class="pt-2.5 sm:pt-3.5 border-t border-gold-500/20 bg-white/75 backdrop-blur-md rounded-xl p-2 sm:p-3">
+                        <p class="text-[8.5px] sm:text-[10px] uppercase tracking-[0.18em] sm:tracking-[0.22em] text-gold-700 font-semibold mb-1">Kindly Avoid</p>
+                        <ul class="space-y-1 text-[10px] sm:text-[11.5px] md:text-xs text-charcoal/85 leading-snug">
+                            <li class="flex items-start space-x-1.5">
+                                <i class="fa-solid fa-xmark text-gold-600 mt-0.5 shrink-0"></i>
+                                <span><strong>Pure Ivory, White, or Cream</strong> (Bride only)</span>
                             </li>
-                            <li class="flex items-start space-x-2">
-                                <i class="fa-solid fa-xmark text-gold-600 mt-0.5"></i>
-                                <span>Denim jeans, cargo pants, shorts, sneakers, or sandals</span>
+                            <li class="flex items-start space-x-1.5">
+                                <i class="fa-solid fa-xmark text-gold-600 mt-0.5 shrink-0"></i>
+                                <span>Denim jeans, cargo pants, shorts, or sneakers</span>
                             </li>
                         </ul>
                     </div>
                 </div>
 
                 <!-- Ladies Card -->
-                <div class="rounded-2xl bg-white border border-gold-500/30 p-7 sm:p-8 luxury-card-shadow flex flex-col justify-between">
+                <div class="rounded-2xl glass-light p-3 sm:p-6 md:p-7 luxury-card-shadow flex flex-col justify-between">
                     <div>
-                        <div class="flex items-center space-x-3 mb-5">
+                        <div class="flex items-center space-x-1.5 sm:space-x-2.5 mb-3 sm:mb-4">
                             <!-- Bespoke Ladies Sleeved Gown Emblem -->
-                            <svg viewBox="0 0 28 28" class="w-6 h-6 text-gold-600 shrink-0" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+                            <svg viewBox="0 0 28 28" class="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-gold-600 shrink-0" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
                                 <path d="M10 6L6 10L8 12L10 10V13L6 23H22L18 13V10L20 12L22 10L18 6Q14 9 10 6Z" />
                                 <line x1="10" y1="13" x2="18" y2="13" />
                             </svg>
-                            <h3 class="font-cinzel text-xl sm:text-2xl text-obsidian">Ladies</h3>
+                            <h3 class="font-cinzel text-sm sm:text-lg md:text-xl text-obsidian">Ladies</h3>
                         </div>
 
                         <!-- Two Side-by-Side Watercolor Sample Cards -->
-                        <div class="grid grid-cols-2 gap-3.5 mb-6">
+                        <div class="grid grid-cols-2 gap-1.5 sm:gap-3 mb-3.5 sm:mb-5">
                             <!-- Sample 1: Modern Filipiniana -->
-                            <div class="watercolor-frame rounded-xl p-2.5 border border-gold-400/40 overflow-hidden flex flex-col items-center">
-                                <svg viewBox="0 0 180 190" class="w-full h-40 sm:h-44 object-cover rounded-lg" aria-label="Watercolor Illustration of Modern Filipiniana">
+                            <div class="watercolor-frame rounded-lg sm:rounded-xl p-1 sm:p-2 border border-gold-400/40 overflow-hidden flex flex-col items-center">
+                                <svg viewBox="0 0 180 190" class="w-full h-20 sm:h-32 md:h-40 object-cover rounded-md sm:rounded-lg" aria-label="Watercolor Illustration of Modern Filipiniana">
                                     <defs>
                                         <linearGradient id="ladiesWash1" x1="0%" y1="0%" x2="100%" y2="100%">
                                             <stop offset="0%" stop-color="#FDF4F5"/>
@@ -1405,12 +1572,12 @@
                                         <line x1="59" y1="66" x2="68" y2="156" stroke="#C78F96" stroke-width="0.7" opacity="0.7"/>
                                     </g>
                                 </svg>
-                                <p class="font-serif italic text-xs sm:text-sm text-charcoal mt-2 text-center">Modern Filipiniana</p>
+                                <p class="font-serif italic text-[10px] sm:text-xs md:text-sm text-charcoal mt-1 sm:mt-1.5 text-center leading-tight">Filipiniana</p>
                             </div>
 
                             <!-- Sample 2: Pastel Evening Gown -->
-                            <div class="watercolor-frame rounded-xl p-2.5 border border-gold-400/40 overflow-hidden flex flex-col items-center">
-                                <svg viewBox="0 0 180 190" class="w-full h-40 sm:h-44 object-cover rounded-lg" aria-label="Watercolor Illustration of Sleeved Pastel Evening Gown">
+                            <div class="watercolor-frame rounded-lg sm:rounded-xl p-1 sm:p-2 border border-gold-400/40 overflow-hidden flex flex-col items-center">
+                                <svg viewBox="0 0 180 190" class="w-full h-20 sm:h-32 md:h-40 object-cover rounded-md sm:rounded-lg" aria-label="Watercolor Illustration of Sleeved Pastel Evening Gown">
                                     <defs>
                                         <linearGradient id="ladiesWash2" x1="0%" y1="0%" x2="100%" y2="100%">
                                             <stop offset="0%" stop-color="#F7F4FB"/>
@@ -1424,57 +1591,55 @@
                                     <rect width="180" height="190" fill="url(#ladiesWash2)"/>
                                     <ellipse cx="90" cy="148" rx="64" ry="24" fill="#DFD5EC" opacity="0.6"/>
                                     <g transform="translate(35, 14)">
-                                        <!-- Modest Flutter/Three-Quarter Sleeves -->
                                         <path d="M44,24 L26,34 L22,74 L32,76 L38,44 L44,44 Z" fill="url(#lilacGown)" stroke="#9F8CB5" stroke-width="1"/>
                                         <path d="M66,24 L84,34 L88,74 L78,76 L72,44 L66,44 Z" fill="url(#lilacGown)" stroke="#9F8CB5" stroke-width="1"/>
-                                        <!-- Modest Bodice & Flowing Skirt -->
                                         <path d="M44,24 Q55,30 66,24 L64,62 L86,158 L24,158 L46,62 Z" fill="url(#lilacGown)" stroke="#9F8CB5" stroke-width="1.1"/>
                                         <line x1="46" y1="62" x2="64" y2="62" stroke="#B68B40" stroke-width="1.4"/>
                                         <line x1="55" y1="64" x2="55" y2="156" stroke="#9F8CB5" stroke-width="0.7" opacity="0.65"/>
                                     </g>
                                 </svg>
-                                <p class="font-serif italic text-xs sm:text-sm text-charcoal mt-2 text-center">Sleeved Pastel Gown</p>
+                                <p class="font-serif italic text-[10px] sm:text-xs md:text-sm text-charcoal mt-1 sm:mt-1.5 text-center leading-tight">Sleeved Gown</p>
                             </div>
                         </div>
 
-                        <p class="font-serif text-lg text-charcoal/90 leading-relaxed mb-4">
-                            We kindly invite ladies to dress in modest, sanctuary-appropriate silhouettes in any of our six pastel hues:
+                        <p class="font-serif text-xs sm:text-sm md:text-base lg:text-lg text-charcoal/90 leading-snug sm:leading-relaxed mb-2.5 sm:mb-3.5">
+                            Modest, church-appropriate silhouettes in any of our six pastel hues:
                         </p>
 
-                        <ul class="space-y-2.5 font-serif text-base sm:text-lg text-charcoal/90 mb-5">
-                            <li class="flex items-start space-x-2.5">
+                        <ul class="space-y-1.5 sm:space-y-2 font-serif text-xs sm:text-sm md:text-base lg:text-lg text-charcoal/90 mb-3 sm:mb-4 leading-snug">
+                            <li class="flex items-start space-x-1.5 sm:space-x-2">
                                 <span class="text-gold-600 font-bold mt-0.5">&bull;</span>
-                                <span><strong class="text-obsidian font-semibold">Modern Filipiniana:</strong> Traditional Terno, Alampay, or butterfly-sleeve ensemble in soft pastel silk, chiffon, or lace.</span>
+                                <span><strong class="text-obsidian font-semibold">Modern Filipiniana:</strong> Terno, Alampay, or butterfly-sleeve ensemble.</span>
                             </li>
-                            <li class="flex items-start space-x-2.5">
+                            <li class="flex items-start space-x-1.5 sm:space-x-2">
                                 <span class="text-gold-600 font-bold mt-0.5">&bull;</span>
-                                <span><strong class="text-obsidian font-semibold">Formal Gowns &amp; Dresses:</strong> Floor-length evening gowns, flowing maxi dresses, or modest below-the-knee midi dresses with sleeves.</span>
+                                <span><strong class="text-obsidian font-semibold">Formal Gowns &amp; Dresses:</strong> Floor-length gown or below-the-knee midi dress.</span>
                             </li>
-                            <li class="flex items-start space-x-2.5">
+                            <li class="flex items-start space-x-1.5 sm:space-x-2">
                                 <span class="text-gold-600 font-bold mt-0.5">&bull;</span>
-                                <span><strong class="text-obsidian font-semibold">Sanctuary Modesty:</strong> All attire must feature covered shoulders and backs (cap, flutter, three-quarter, or long sleeves).</span>
+                                <span><strong class="text-obsidian font-semibold">church Modesty:</strong> Covered shoulders and backs with sleeves.</span>
                             </li>
-                            <li class="flex items-start space-x-2.5">
+                            <li class="flex items-start space-x-1.5 sm:space-x-2">
                                 <span class="text-gold-600 font-bold mt-0.5">&bull;</span>
-                                <span><strong class="text-obsidian font-semibold">Footwear:</strong> Formal heels, dressy block heels (garden-friendly for the reception), or embellished flats.</span>
+                                <span><strong class="text-obsidian font-semibold">Footwear:</strong> Formal heels, garden-friendly block heels, or flats.</span>
                             </li>
                         </ul>
                     </div>
 
-                    <div class="pt-4 border-t border-gold-500/20 bg-ivory-50/80 rounded-xl p-3.5">
-                        <p class="text-[11px] uppercase tracking-[0.24em] text-gold-700 font-semibold mb-2">Kindly Avoid</p>
-                        <ul class="space-y-1.5 text-xs text-charcoal/85 leading-relaxed">
-                            <li class="flex items-start space-x-2">
-                                <i class="fa-solid fa-xmark text-gold-600 mt-0.5"></i>
-                                <span><strong>Pure Ivory, Pure White, or Cream</strong> (reserved for the Bride)</span>
+                    <div class="pt-2.5 sm:pt-3.5 border-t border-gold-500/20 bg-white/75 backdrop-blur-md rounded-xl p-2 sm:p-3">
+                        <p class="text-[8.5px] sm:text-[10px] uppercase tracking-[0.18em] sm:tracking-[0.22em] text-gold-700 font-semibold mb-1">Kindly Avoid</p>
+                        <ul class="space-y-1 text-[10px] sm:text-[11.5px] md:text-xs text-charcoal/85 leading-snug">
+                            <li class="flex items-start space-x-1.5">
+                                <i class="fa-solid fa-xmark text-gold-600 mt-0.5 shrink-0"></i>
+                                <span><strong>Pure Ivory, White, or Cream</strong> (Bride only)</span>
                             </li>
-                            <li class="flex items-start space-x-2">
-                                <i class="fa-solid fa-xmark text-gold-600 mt-0.5"></i>
-                                <span><strong>Sleeveless, strapless, off-shoulder, or backless</strong> dresses &amp; gowns</span>
+                            <li class="flex items-start space-x-1.5">
+                                <i class="fa-solid fa-xmark text-gold-600 mt-0.5 shrink-0"></i>
+                                <span><strong>Sleeveless, strapless, off-shoulder, or backless</strong> gowns</span>
                             </li>
-                            <li class="flex items-start space-x-2">
-                                <i class="fa-solid fa-xmark text-gold-600 mt-0.5"></i>
-                                <span>Mini dresses, high slits, plunging necklines, denim, or flip-flops</span>
+                            <li class="flex items-start space-x-1.5">
+                                <i class="fa-solid fa-xmark text-gold-600 mt-0.5 shrink-0"></i>
+                                <span>Mini dresses, high slits, denim, or flip-flops</span>
                             </li>
                         </ul>
                     </div>
@@ -1482,192 +1647,196 @@
             </div>
 
             <!-- Interactive 6-Color Pastel Swatch Cards -->
-            <div class="text-center mb-6">
-                <p class="text-xs uppercase tracking-[0.28em] text-gold-600 font-semibold">The Six-Shade Pastel Palette &bull; Tap a Swatch to Copy</p>
+            <div class="text-center mb-4 sm:mb-5">
+                <p class="text-[10px] sm:text-[11px] uppercase tracking-[0.22em] sm:tracking-[0.26em] text-gold-600 font-semibold">The Six-Shade Pastel Palette &bull; Tap a Swatch to Copy</p>
             </div>
 
-            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
-                <button onclick="copyColor('#F7E7CE', 'Champagne Silk')" class="group rounded-2xl bg-white border border-gold-500/30 p-4 text-center luxury-card-shadow focus:outline-none">
-                    <div class="w-16 h-16 rounded-full mx-auto mb-3 border border-black/10 swatch-orb-shadow group-hover:scale-105 transition-transform" style="background-color: #F7E7CE;"></div>
-                    <p class="font-cinzel text-xs sm:text-sm text-obsidian font-semibold">Champagne</p>
-                    <p class="font-serif text-xs text-charcoal/70 mt-0.5">#F7E7CE</p>
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4">
+                <button onclick="copyColor('#F7E7CE', 'Champagne Silk')" class="group rounded-2xl glass-light p-3 sm:p-4 text-center luxury-card-shadow focus:outline-none active:scale-95">
+                    <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full mx-auto mb-2 border border-white/80 swatch-orb-shadow group-hover:scale-105 transition-transform" style="background-color: #F7E7CE;"></div>
+                    <p class="font-cinzel text-[11px] sm:text-xs text-obsidian font-semibold">Champagne</p>
+                    <p class="font-serif text-[11px] text-charcoal/70 mt-0.5">#F7E7CE</p>
                 </button>
 
-                <button onclick="copyColor('#F4D4D7', 'Blush Rose')" class="group rounded-2xl bg-white border border-gold-500/30 p-4 text-center luxury-card-shadow focus:outline-none">
-                    <div class="w-16 h-16 rounded-full mx-auto mb-3 border border-black/10 swatch-orb-shadow group-hover:scale-105 transition-transform" style="background-color: #F4D4D7;"></div>
-                    <p class="font-cinzel text-xs sm:text-sm text-obsidian font-semibold">Blush Rose</p>
-                    <p class="font-serif text-xs text-charcoal/70 mt-0.5">#F4D4D7</p>
+                <button onclick="copyColor('#F4D4D7', 'Blush Rose')" class="group rounded-2xl glass-light p-3 sm:p-4 text-center luxury-card-shadow focus:outline-none active:scale-95">
+                    <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full mx-auto mb-2 border border-white/80 swatch-orb-shadow group-hover:scale-105 transition-transform" style="background-color: #F4D4D7;"></div>
+                    <p class="font-cinzel text-[11px] sm:text-xs text-obsidian font-semibold">Blush Rose</p>
+                    <p class="font-serif text-[11px] text-charcoal/70 mt-0.5">#F4D4D7</p>
                 </button>
 
-                <button onclick="copyColor('#DCE5D8', 'Sage Celadon')" class="group rounded-2xl bg-white border border-gold-500/30 p-4 text-center luxury-card-shadow focus:outline-none">
-                    <div class="w-16 h-16 rounded-full mx-auto mb-3 border border-black/10 swatch-orb-shadow group-hover:scale-105 transition-transform" style="background-color: #DCE5D8;"></div>
-                    <p class="font-cinzel text-xs sm:text-sm text-obsidian font-semibold">Sage Celadon</p>
-                    <p class="font-serif text-xs text-charcoal/70 mt-0.5">#DCE5D8</p>
+                <button onclick="copyColor('#DCE5D8', 'Sage Celadon')" class="group rounded-2xl glass-light p-3 sm:p-4 text-center luxury-card-shadow focus:outline-none active:scale-95">
+                    <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full mx-auto mb-2 border border-white/80 swatch-orb-shadow group-hover:scale-105 transition-transform" style="background-color: #DCE5D8;"></div>
+                    <p class="font-cinzel text-[11px] sm:text-xs text-obsidian font-semibold">Sage Celadon</p>
+                    <p class="font-serif text-[11px] text-charcoal/70 mt-0.5">#DCE5D8</p>
                 </button>
 
-                <button onclick="copyColor('#D8E2EC', 'Powder Sky')" class="group rounded-2xl bg-white border border-gold-500/30 p-4 text-center luxury-card-shadow focus:outline-none">
-                    <div class="w-16 h-16 rounded-full mx-auto mb-3 border border-black/10 swatch-orb-shadow group-hover:scale-105 transition-transform" style="background-color: #D8E2EC;"></div>
-                    <p class="font-cinzel text-xs sm:text-sm text-obsidian font-semibold">Powder Sky</p>
-                    <p class="font-serif text-xs text-charcoal/70 mt-0.5">#D8E2EC</p>
+                <button onclick="copyColor('#D8E2EC', 'Powder Sky')" class="group rounded-2xl glass-light p-3 sm:p-4 text-center luxury-card-shadow focus:outline-none active:scale-95">
+                    <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full mx-auto mb-2 border border-white/80 swatch-orb-shadow group-hover:scale-105 transition-transform" style="background-color: #D8E2EC;"></div>
+                    <p class="font-cinzel text-[11px] sm:text-xs text-obsidian font-semibold">Powder Sky</p>
+                    <p class="font-serif text-[11px] text-charcoal/70 mt-0.5">#D8E2EC</p>
                 </button>
 
-                <button onclick="copyColor('#E6DCEF', 'Wisteria Lilac')" class="group rounded-2xl bg-white border border-gold-500/30 p-4 text-center luxury-card-shadow focus:outline-none">
-                    <div class="w-16 h-16 rounded-full mx-auto mb-3 border border-black/10 swatch-orb-shadow group-hover:scale-105 transition-transform" style="background-color: #E6DCEF;"></div>
-                    <p class="font-cinzel text-xs sm:text-sm text-obsidian font-semibold">Wisteria Lilac</p>
-                    <p class="font-serif text-xs text-charcoal/70 mt-0.5">#E6DCEF</p>
+                <button onclick="copyColor('#E6DCEF', 'Wisteria Lilac')" class="group rounded-2xl glass-light p-3 sm:p-4 text-center luxury-card-shadow focus:outline-none active:scale-95">
+                    <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full mx-auto mb-2 border border-white/80 swatch-orb-shadow group-hover:scale-105 transition-transform" style="background-color: #E6DCEF;"></div>
+                    <p class="font-cinzel text-[11px] sm:text-xs text-obsidian font-semibold">Wisteria Lilac</p>
+                    <p class="font-serif text-[11px] text-charcoal/70 mt-0.5">#E6DCEF</p>
                 </button>
 
-                <button onclick="copyColor('#F5DDD0', 'Peach Blossom')" class="group rounded-2xl bg-white border border-gold-500/30 p-4 text-center luxury-card-shadow focus:outline-none">
-                    <div class="w-16 h-16 rounded-full mx-auto mb-3 border border-black/10 swatch-orb-shadow group-hover:scale-105 transition-transform" style="background-color: #F5DDD0;"></div>
-                    <p class="font-cinzel text-xs sm:text-sm text-obsidian font-semibold">Peach Blossom</p>
-                    <p class="font-serif text-xs text-charcoal/70 mt-0.5">#F5DDD0</p>
+                <button onclick="copyColor('#F5DDD0', 'Peach Blossom')" class="group rounded-2xl glass-light p-3 sm:p-4 text-center luxury-card-shadow focus:outline-none active:scale-95">
+                    <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full mx-auto mb-2 border border-white/80 swatch-orb-shadow group-hover:scale-105 transition-transform" style="background-color: #F5DDD0;"></div>
+                    <p class="font-cinzel text-[11px] sm:text-xs text-obsidian font-semibold">Peach Blossom</p>
+                    <p class="font-serif text-[11px] text-charcoal/70 mt-0.5">#F5DDD0</p>
                 </button>
             </div>
         </div>
     </section>
 
     <!-- SECTION 5: COMPACT ETIQUETTE & R.S.V.P. -->
-    <section id="etiquette-rsvp" class="py-20 sm:py-24 px-4 sm:px-6 max-w-6xl mx-auto">
-        <div class="text-center max-w-2xl mx-auto mb-12">
-            <p class="luxury-kicker text-[11px] text-gold-600 mb-2">Chapter V &bull; Courtesy &amp; Confirmation</p>
-            <h2 class="font-display text-3xl sm:text-5xl text-obsidian tracking-[0.12em] mb-3 drop-shadow-[0_4px_14px_rgba(18,17,16,0.08)]">Etiquette &amp; R.S.V.P.</h2>
-            <div class="w-20 h-[1px] bg-gold-500 mx-auto"></div>
+    <section id="etiquette-rsvp" class="relative py-14 sm:py-20 lg:py-24 px-4 sm:px-6 max-w-6xl mx-auto">
+        <!-- Ambient Golden Orbs for Glass Depth -->
+        <div class="pointer-events-none absolute top-28 left-12 w-72 h-72 rounded-full bg-gold-400/15 blur-3xl"></div>
+        <div class="pointer-events-none absolute bottom-12 right-12 w-80 h-80 rounded-full bg-amber-300/15 blur-3xl"></div>
+
+        <div class="relative z-10 text-center max-w-2xl mx-auto mb-8 sm:mb-11">
+            <p class="luxury-kicker text-[9.5px] sm:text-[10.5px] text-gold-600 mb-2">Chapter V &bull; Courtesy &amp; Confirmation</p>
+            <h2 class="font-display text-xl sm:text-3xl md:text-4xl lg:text-5xl text-obsidian tracking-[0.12em] mb-2.5 drop-shadow-[0_4px_14px_rgba(18,17,16,0.08)]">Etiquette &amp; R.S.V.P.</h2>
+            <div class="w-16 sm:w-20 h-[1px] bg-gold-500 mx-auto"></div>
         </div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-stretch">
+        <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-7 items-stretch">
             <!-- Left 7 Columns: Warm & Gracious Etiquette Notes -->
-            <div class="lg:col-span-7 flex flex-col gap-4 sm:gap-5">
-                <div class="rounded-2xl bg-gradient-to-br from-obsidian via-charcoal to-obsidian text-ivory-50 border border-gold-400/60 p-5 sm:p-6 dark-card-shadow">
-                    <div class="flex items-center justify-between gap-2 mb-2">
-                        <div class="flex items-center space-x-2.5 text-gold-300">
-                            <span class="w-8 h-8 rounded-full bg-gold-500/20 border border-gold-400/50 flex items-center justify-center shrink-0">
-                                <i class="fa-solid fa-camera-retro text-xs"></i>
+            <div class="lg:col-span-7 flex flex-col gap-4">
+                <div class="rounded-2xl glass-dark text-ivory-50 p-4 sm:p-5 dark-card-shadow">
+                    <div class="flex items-center justify-between gap-2 mb-1.5">
+                        <div class="flex items-center space-x-2 text-gold-300">
+                            <span class="w-7 h-7 rounded-full bg-gold-500/20 border border-gold-400/50 flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-camera-retro text-[11px]"></i>
                             </span>
-                            <h3 class="font-cinzel text-sm sm:text-base text-gold-300 tracking-wide font-semibold">Unplugged Ceremony &bull; Share the Moment With Us</h3>
+                            <h3 class="font-cinzel text-xs sm:text-sm md:text-base text-gold-300 tracking-wide font-semibold">Unplugged Ceremony &bull; Share the Moment With Us</h3>
                         </div>
-                        <span class="hidden sm:inline-block px-2.5 py-0.5 rounded-full bg-gold-500/20 border border-gold-400/40 text-[9px] uppercase tracking-[0.22em] text-gold-300 font-semibold shrink-0">
+                        <span class="hidden sm:inline-block px-2.5 py-0.5 rounded-full bg-gold-500/20 border border-gold-400/40 text-[9px] uppercase tracking-[0.2em] text-gold-300 font-semibold shrink-0">
                             Kindly Note
                         </span>
                     </div>
-                    <p class="font-serif text-base sm:text-lg text-ivory-100/95 leading-snug">
-                        As we exchange our vows in the sanctuary, we warmly invite you to set phones and cameras aside—trusting our photographers to preserve every memory while we share this sacred moment face to face.
+                    <p class="font-serif text-sm sm:text-base text-ivory-100/95 leading-snug">
+                        As we exchange our vows in the church, we warmly invite you to set phones and cameras aside—trusting our photographers to preserve every memory while we share this sacred moment face to face.
                     </p>
                 </div>
 
-                <div class="rounded-2xl bg-gradient-to-br from-obsidian via-charcoal to-obsidian text-ivory-50 border border-gold-400/60 p-5 sm:p-6 dark-card-shadow">
-                    <div class="flex items-center justify-between gap-2 mb-2">
-                        <div class="flex items-center space-x-2.5 text-gold-300">
-                            <span class="w-8 h-8 rounded-full bg-gold-500/20 border border-gold-400/50 flex items-center justify-center shrink-0">
-                                <i class="fa-solid fa-envelope-open-text text-xs"></i>
+                <div class="rounded-2xl glass-dark text-ivory-50 p-4 sm:p-5 dark-card-shadow">
+                    <div class="flex items-center justify-between gap-2 mb-1.5">
+                        <div class="flex items-center space-x-2 text-gold-300">
+                            <span class="w-7 h-7 rounded-full bg-gold-500/20 border border-gold-400/50 flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-envelope-open-text text-[11px]"></i>
                             </span>
-                            <h3 class="font-cinzel text-sm sm:text-base text-gold-300 tracking-wide font-semibold">A Note on Gifts &bull; Your Presence Is Our Treasure</h3>
+                            <h3 class="font-cinzel text-xs sm:text-sm md:text-base text-gold-300 tracking-wide font-semibold">A Note on Gifts &bull; Your Presence Is Our Treasure</h3>
                         </div>
-                        <span class="hidden sm:inline-block px-2.5 py-0.5 rounded-full bg-gold-500/20 border border-gold-400/40 text-[9px] uppercase tracking-[0.22em] text-gold-300 font-semibold shrink-0">
+                        <span class="hidden sm:inline-block px-2.5 py-0.5 rounded-full bg-gold-500/20 border border-gold-400/40 text-[9px] uppercase tracking-[0.2em] text-gold-300 font-semibold shrink-0">
                             With Gratitude
                         </span>
                     </div>
-                    <p class="font-serif text-base sm:text-lg text-ivory-100/95 leading-snug">
+                    <p class="font-serif text-sm sm:text-base text-ivory-100/95 leading-snug">
                         Having you travel, pray, and celebrate with us is truly all our hearts could wish for. However, if you feel moved to bless us with a gift as we begin our life together, a contribution toward our future home would be received with deepest gratitude.
                     </p>
                 </div>
 
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
-                    <div class="rounded-2xl bg-ivory-100/90 border border-gold-500/45 p-5 sm:p-6 luxury-card-shadow flex flex-col justify-between">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="rounded-2xl glass-ivory p-4 sm:p-5 luxury-card-shadow flex flex-col justify-between">
                         <div>
-                            <div class="flex items-center space-x-2.5 text-gold-700 mb-2">
-                                <i class="fa-solid fa-chair text-sm"></i>
-                                <h3 class="font-cinzel text-sm sm:text-base text-obsidian tracking-wide font-semibold">Reserved With Love</h3>
+                            <div class="flex items-center space-x-2 text-gold-700 mb-1.5">
+                                <i class="fa-solid fa-chair text-xs"></i>
+                                <h3 class="font-cinzel text-xs sm:text-sm md:text-base text-obsidian tracking-wide font-semibold">Reserved With Love</h3>
                             </div>
-                            <p class="font-serif text-base text-charcoal/90 leading-snug">
+                            <p class="font-serif text-sm sm:text-base text-charcoal/90 leading-snug">
                                 Because we dream of an intimate celebration with our nearest and dearest, we have lovingly reserved seats specifically for the guests named on your invitation.
                             </p>
                         </div>
                     </div>
 
-                    <div class="rounded-2xl bg-ivory-100/90 border border-gold-500/45 p-5 sm:p-6 luxury-card-shadow flex flex-col justify-between">
+                    <div class="rounded-2xl glass-ivory p-4 sm:p-5 luxury-card-shadow flex flex-col justify-between">
                         <div>
-                            <div class="flex items-center space-x-2.5 text-gold-700 mb-2">
-                                <i class="fa-solid fa-heart text-sm"></i>
-                                <h3 class="font-cinzel text-sm sm:text-base text-obsidian tracking-wide font-semibold">Sanctuary Reverence</h3>
+                            <div class="flex items-center space-x-2 text-gold-700 mb-1.5">
+                                <i class="fa-solid fa-heart text-xs"></i>
+                                <h3 class="font-cinzel text-xs sm:text-sm md:text-base text-obsidian tracking-wide font-semibold">church Reverence</h3>
                             </div>
-                            <p class="font-serif text-base text-charcoal/90 leading-snug">
+                            <p class="font-serif text-sm sm:text-base text-charcoal/90 leading-snug">
                                 Thank you for honoring our house of worship with modest formal attire and arriving thirty minutes early so we may begin in peaceful prayer.
                             </p>
                         </div>
                     </div>
                 </div>
 
-                <div class="rounded-2xl bg-ivory-100/90 border border-gold-500/45 p-5 sm:p-6 luxury-card-shadow">
-                    <div class="flex items-center space-x-2.5 text-gold-700 mb-2">
-                        <i class="fa-solid fa-mug-hot text-sm"></i>
-                        <h3 class="font-cinzel text-sm sm:text-base text-obsidian tracking-wide font-semibold">An Evening of Fellowship &bull; Alcohol-Free &amp; Non-Dancing</h3>
+                <div class="rounded-2xl glass-ivory p-4 sm:p-5 luxury-card-shadow">
+                    <div class="flex items-center space-x-2 text-gold-700 mb-1.5">
+                        <i class="fa-solid fa-mug-hot text-xs"></i>
+                        <h3 class="font-cinzel text-xs sm:text-sm md:text-base text-obsidian tracking-wide font-semibold">An Evening of Fellowship &bull; Alcohol-Free &amp; Non-Dancing</h3>
                     </div>
-                    <p class="font-serif text-base text-charcoal/90 leading-snug">
+                    <p class="font-serif text-sm sm:text-base text-charcoal/90 leading-snug">
                         In keeping with our cherished values, our reception will be a serene, alcohol-free gathering without a dance floor—thoughtfully curated for unhurried dining, warm conversation, and joyful fellowship together.
                     </p>
                 </div>
             </div>
 
             <!-- Right 5 Columns: Compact RSVP Form Card -->
-            <div class="lg:col-span-5 rounded-2xl bg-obsidian text-ivory-50 border border-gold-400/40 p-6 sm:p-8 dark-card-shadow flex flex-col justify-center">
-                <div class="mb-5">
-                    <span class="text-[10px] uppercase tracking-[0.28em] text-gold-400 font-semibold">Kindly Respond</span>
-                    <h3 class="font-cinzel text-2xl text-ivory-50 mt-1">Confirm Attendance</h3>
+            <div class="lg:col-span-5 rounded-2xl glass-dark text-ivory-50 p-5 sm:p-7 dark-card-shadow flex flex-col justify-center">
+                <div class="mb-4">
+                    <span class="text-[9.5px] uppercase tracking-[0.26em] text-gold-400 font-semibold">Kindly Respond</span>
+                    <h3 class="font-cinzel text-lg sm:text-xl md:text-2xl text-ivory-50 mt-0.5">Confirm Attendance</h3>
                 </div>
 
                 <!-- STEP 1: Verify First Name & Last Name from Guest List -->
-                <form id="rsvpLookupForm" onsubmit="handleGuestLookup(event)" class="space-y-4">
-                    <p class="font-serif text-base text-ivory-200/85 leading-snug">
+                <form id="rsvpLookupForm" onsubmit="handleGuestLookup(event)" class="space-y-3.5">
+                    <p class="font-serif text-sm sm:text-base text-ivory-200/85 leading-snug">
                         Enter your <span class="text-gold-300">First Name</span> and <span class="text-gold-300">Last Name</span> exactly as listed on your invitation to unlock your seat.
                     </p>
 
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
                         <div>
-                            <label for="lookupFirstName" class="block text-[11px] uppercase tracking-[0.2em] text-ivory-200/80 mb-1.5">First Name</label>
-                            <input type="text" id="lookupFirstName" oninput="validateLookupButtonState()" required placeholder="e.g., Richard" class="w-full px-4 py-2.5 rounded-xl bg-charcoal border border-gold-500/30 text-ivory-50 placeholder-ivory-200/40 text-base sm:text-sm focus:outline-none focus:border-gold-400">
+                            <label for="lookupFirstName" class="block text-[10px] uppercase tracking-[0.2em] text-ivory-200/80 mb-1">First Name</label>
+                            <input type="text" id="lookupFirstName" oninput="validateLookupButtonState()" required placeholder="e.g., Richard" class="w-full px-3.5 py-2.5 rounded-xl bg-white/10 backdrop-blur-md border border-gold-400/35 text-ivory-50 placeholder-ivory-200/45 text-sm focus:outline-none focus:border-gold-400 focus:bg-white/15 transition-colors">
                         </div>
                         <div>
-                            <label for="lookupLastName" class="block text-[11px] uppercase tracking-[0.2em] text-ivory-200/80 mb-1.5">Last Name</label>
-                            <input type="text" id="lookupLastName" oninput="validateLookupButtonState()" required placeholder="e.g., Bonus" class="w-full px-4 py-2.5 rounded-xl bg-charcoal border border-gold-500/30 text-ivory-50 placeholder-ivory-200/40 text-base sm:text-sm focus:outline-none focus:border-gold-400">
+                            <label for="lookupLastName" class="block text-[10px] uppercase tracking-[0.2em] text-ivory-200/80 mb-1">Last Name</label>
+                            <input type="text" id="lookupLastName" oninput="validateLookupButtonState()" required placeholder="e.g., Bonus" class="w-full px-3.5 py-2.5 rounded-xl bg-white/10 backdrop-blur-md border border-gold-400/35 text-ivory-50 placeholder-ivory-200/45 text-sm focus:outline-none focus:border-gold-400 focus:bg-white/15 transition-colors">
                         </div>
                     </div>
 
-                    <div id="lookupErrorBox" class="hidden rounded-xl bg-red-950/60 border border-red-400/40 px-3.5 py-2.5 text-xs text-red-200 leading-relaxed"></div>
+                    <div id="lookupErrorBox" class="hidden rounded-xl bg-red-950/60 backdrop-blur-md border border-red-400/40 px-3 py-2 text-xs text-red-200 leading-relaxed"></div>
 
-                    <button type="submit" id="lookupSubmitBtn" class="w-full py-3 rounded-xl bg-gold-500 hover:bg-gold-400 text-obsidian font-cinzel text-xs font-semibold uppercase tracking-[0.24em] shadow-[0_12px_28px_-6px_rgba(212,175,55,0.45)] transition-all active:scale-95">
+                    <button type="submit" id="lookupSubmitBtn" class="w-full py-3 rounded-xl bg-gold-500/95 hover:bg-gold-400 text-obsidian font-cinzel text-[11px] font-semibold uppercase tracking-[0.22em] shadow-[0_12px_28px_-6px_rgba(212,175,55,0.45)] transition-all active:scale-95">
                         <i class="fa-solid fa-check-circle mr-2"></i> Confirm Invitation
                     </button>
                 </form>
 
                 <!-- STEP 2: Individual or Bulk Group RSVP + Required Contact Info -->
-                <form id="rsvpConfirmForm" onsubmit="handleRsvpSubmit(event)" class="hidden space-y-4">
+                <form id="rsvpConfirmForm" onsubmit="handleRsvpSubmit(event)" class="hidden space-y-3.5">
                     <!-- Step 2 Header -->
-                    <div class="flex items-center justify-between gap-2 border-b border-gold-500/20 pb-3">
+                    <div class="flex items-center justify-between gap-2 border-b border-gold-500/20 pb-2.5">
                         <div class="min-w-0">
                             <p id="verifiedGuestHeader" class="font-cinzel text-sm text-gold-300 font-semibold truncate"></p>
                             <p id="verifiedGroupBadge" class="text-[11px] text-ivory-200/75 mt-0.5 truncate"></p>
                         </div>
-                        <button type="button" onclick="resetRsvpLookup()" class="shrink-0 text-[10px] uppercase tracking-[0.2em] text-gold-400 hover:text-gold-300 underline underline-offset-4">
+                        <button type="button" onclick="resetRsvpLookup()" class="shrink-0 py-1 px-2 text-[10px] uppercase tracking-[0.18em] text-gold-400 hover:text-gold-300 underline underline-offset-4">
                             Change
                         </button>
                     </div>
 
                     <!-- Dynamic Guest / Group Member Selection (Automatically determined by Group or Individual) -->
                     <div>
-                        <div class="flex items-center justify-between mb-1.5">
-                            <label class="block text-[11px] uppercase tracking-[0.2em] text-ivory-200/80" id="partySelectionLabel">
+                        <div class="flex items-center justify-between mb-1">
+                            <label class="block text-[10px] uppercase tracking-[0.2em] text-ivory-200/80" id="partySelectionLabel">
                                 Invited Guest
                             </label>
-                            <button type="button" id="selectAllGroupBtn" onclick="toggleSelectAllGroup()" class="hidden text-[10px] uppercase tracking-[0.18em] text-gold-400 hover:text-gold-300">
+                            <button type="button" id="selectAllGroupBtn" onclick="toggleSelectAllGroup()" class="hidden py-1 px-2 text-[10px] uppercase tracking-[0.16em] text-gold-400 hover:text-gold-300">
                                 Select All
                             </button>
                         </div>
-                        <div id="partyMembersContainer" class="space-y-2 max-h-40 overflow-y-auto pr-1"></div>
+                        <div id="partyMembersContainer" class="space-y-1.5 max-h-40 overflow-y-auto pr-1"></div>
                     </div>
 
                     <div>
-                        <label for="attendance" class="block text-[11px] uppercase tracking-[0.2em] text-ivory-200/80 mb-1.5">Response</label>
-                        <select id="attendance" class="w-full px-3.5 py-2.5 rounded-xl bg-charcoal border border-gold-500/30 text-ivory-50 text-base sm:text-sm focus:outline-none focus:border-gold-400">
+                        <label for="attendance" class="block text-[10px] uppercase tracking-[0.2em] text-ivory-200/80 mb-1">Response</label>
+                        <select id="attendance" class="w-full px-3.5 py-2.5 rounded-xl bg-charcoal/90 backdrop-blur-md border border-gold-400/35 text-ivory-50 text-sm focus:outline-none focus:border-gold-400">
                             <option value="Attending with Joy">Attending with Joy</option>
                             <option value="Unable to Attend">Unable to Attend</option>
                         </select>
@@ -1675,39 +1844,39 @@
 
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
                         <div>
-                            <label for="guestMobile" class="block text-[11px] uppercase tracking-[0.2em] text-ivory-200/80 mb-1.5">
+                            <label for="guestMobile" class="block text-[10px] uppercase tracking-[0.2em] text-ivory-200/80 mb-1">
                                 Mobile Number <span class="text-gold-400">*</span>
                             </label>
-                            <input type="tel" id="guestMobile" placeholder="e.g., 0917-123-4567" class="w-full px-3.5 py-2.5 rounded-xl bg-charcoal border border-gold-500/30 text-ivory-50 placeholder-ivory-200/40 text-base sm:text-sm focus:outline-none focus:border-gold-400">
+                            <input type="tel" id="guestMobile" placeholder="e.g., 0917-123-4567" class="w-full px-3.5 py-2.5 rounded-xl bg-white/10 backdrop-blur-md border border-gold-400/35 text-ivory-50 placeholder-ivory-200/45 text-sm focus:outline-none focus:border-gold-400 focus:bg-white/15 transition-colors">
                         </div>
 
                         <div>
-                            <label for="guestEmail" class="block text-[11px] uppercase tracking-[0.2em] text-ivory-200/80 mb-1.5">
+                            <label for="guestEmail" class="block text-[10px] uppercase tracking-[0.2em] text-ivory-200/80 mb-1">
                                 Email Address <span class="text-gold-400">*</span>
                             </label>
-                            <input type="email" id="guestEmail" placeholder="e.g., name@email.com" class="w-full px-3.5 py-2.5 rounded-xl bg-charcoal border border-gold-500/30 text-ivory-50 placeholder-ivory-200/40 text-base sm:text-sm focus:outline-none focus:border-gold-400">
+                            <input type="email" id="guestEmail" placeholder="e.g., name@email.com" class="w-full px-3.5 py-2.5 rounded-xl bg-white/10 backdrop-blur-md border border-gold-400/35 text-ivory-50 placeholder-ivory-200/45 text-sm focus:outline-none focus:border-gold-400 focus:bg-white/15 transition-colors">
                         </div>
                     </div>
-                    <p class="text-[11px] text-ivory-200/65 -mt-2">
+                    <p class="text-[11px] text-ivory-200/65 -mt-1.5">
                         Provide your mobile number, email address, or both for any event updates.
                     </p>
 
-                    <button type="submit" id="rsvpFinalSubmitBtn" class="w-full py-3 rounded-xl bg-gold-500 hover:bg-gold-400 text-obsidian font-cinzel text-xs font-semibold uppercase tracking-[0.24em] shadow-[0_12px_28px_-6px_rgba(212,175,55,0.45)] transition-all active:scale-95">
+                    <button type="submit" id="rsvpFinalSubmitBtn" class="w-full py-3 rounded-xl bg-gold-500/95 hover:bg-gold-400 text-obsidian font-cinzel text-[11px] font-semibold uppercase tracking-[0.22em] shadow-[0_12px_28px_-6px_rgba(212,175,55,0.45)] transition-all active:scale-95">
                         Confirm R.S.V.P.
                     </button>
                 </form>
 
                 <!-- STEP 3: Locked Confirmation Receipt (Prevents Duplicate Counting) -->
-                <div id="rsvpReceiptBox" class="hidden rounded-xl bg-charcoal/90 border border-gold-400/50 p-5 text-center space-y-3">
-                    <div class="w-10 h-10 rounded-full bg-gold-500/20 border border-gold-400/50 flex items-center justify-center text-gold-300 mx-auto">
-                        <i class="fa-solid fa-check"></i>
+                <div id="rsvpReceiptBox" class="hidden rounded-xl bg-white/10 backdrop-blur-md border border-gold-400/50 p-4 text-center space-y-2.5">
+                    <div class="w-9 h-9 rounded-full bg-gold-500/20 border border-gold-400/50 flex items-center justify-center text-gold-300 mx-auto">
+                        <i class="fa-solid fa-check text-xs"></i>
                     </div>
-                    <h4 class="font-cinzel text-lg text-gold-300">R.S.V.P. Recorded</h4>
-                    <p id="rsvpReceiptSummary" class="font-serif text-base text-ivory-100 leading-relaxed"></p>
+                    <h4 class="font-cinzel text-base text-gold-300">R.S.V.P. Recorded</h4>
+                    <p id="rsvpReceiptSummary" class="font-serif text-sm sm:text-base text-ivory-100 leading-relaxed"></p>
                     <p class="text-[11px] text-ivory-200/70">
                         We will reach out via your provided mobile/email should any event details change.
                     </p>
-                    <button type="button" onclick="resetRsvpLookup()" class="inline-block pt-1 text-[10px] uppercase tracking-[0.22em] text-gold-400 hover:text-gold-300 underline underline-offset-4">
+                    <button type="button" onclick="resetRsvpLookup()" class="inline-block py-1.5 px-3 text-[10px] uppercase tracking-[0.2em] text-gold-400 hover:text-gold-300 underline underline-offset-4">
                         Look Up Another Guest
                     </button>
                 </div>
@@ -1716,101 +1885,101 @@
     </section>
 
     <!-- FOOTER -->
-    <footer class="bg-obsidian text-ivory-200 py-16 px-6 text-center border-t border-gold-500/20">
-        <p class="font-cinzel text-2xl sm:text-3xl tracking-[0.2em] text-ivory-50 mb-2">
+    <footer class="bg-obsidian text-ivory-200 py-12 sm:py-14 px-4 sm:px-6 text-center border-t border-gold-500/20">
+        <p class="font-cinzel text-xl sm:text-2xl md:text-3xl tracking-[0.2em] text-ivory-50 mb-1.5">
             LILY <span class="text-gold-400">&amp;</span> RICHARD
         </p>
-        <p class="font-cinzel text-xs sm:text-sm tracking-[0.28em] text-gold-300 uppercase mb-3">
+        <p class="font-cinzel text-[11px] sm:text-xs md:text-sm tracking-[0.22em] sm:tracking-[0.26em] text-gold-300 uppercase mb-2.5">
             Friday &bull; April 9, 2027 &bull; 2:00 PM
         </p>
-        <p class="font-serif italic text-lg text-gold-400 mb-6">
+        <p class="font-serif italic text-sm sm:text-base md:text-lg text-gold-400 mb-5">
             Iglesia Ni Cristo Locale of Village East &bull; Villa Ardin Event's Place
         </p>
-        <p class="text-[11px] uppercase tracking-[0.35em] text-ivory-200/60">
-            Forever Begins With Faith, Love &amp; Family &bull; <span class="font-cinzel text-gold-400/90 tracking-[0.38em]">Cainta, Rizal &bull; Philippines</span>
+        <p class="text-[9.5px] sm:text-[10.5px] uppercase tracking-[0.24em] sm:tracking-[0.32em] text-ivory-200/60 leading-relaxed">
+            Forever Begins With Faith, Love &amp; Family &bull; <span class="font-cinzel text-gold-400/90 tracking-[0.28em] sm:tracking-[0.34em]">Cainta, Rizal &bull; Philippines</span>
         </p>
     </footer>
 
     <!-- WEDDING ETIQUETTE REVIEW MODAL (Shown Only When "Attending with Joy" Is Selected) -->
-    <div id="etiquetteReviewModal" role="dialog" aria-modal="true" aria-labelledby="etiquetteModalTitle" class="fixed inset-0 z-50 hidden items-end sm:items-center justify-center bg-obsidian/85 backdrop-blur-md p-2 sm:p-4 overflow-y-auto">
-        <div class="w-full max-w-xl max-h-[90dvh] rounded-2xl bg-ivory-50 text-obsidian border border-gold-500/60 shadow-[0_30px_70px_rgba(0,0,0,0.85)] overflow-hidden flex flex-col my-auto">
+    <div id="etiquetteReviewModal" role="dialog" aria-modal="true" aria-labelledby="etiquetteModalTitle" class="fixed inset-0 z-50 hidden items-end sm:items-center justify-center bg-obsidian/85 backdrop-blur-md sm:backdrop-blur-xl p-2 sm:p-4 overflow-y-auto">
+        <div class="w-full max-w-xl max-h-[88dvh] sm:max-h-[90dvh] rounded-2xl bg-ivory-50/96 sm:bg-ivory-50/90 backdrop-blur-xl sm:backdrop-blur-2xl text-obsidian border border-gold-500/35 sm:border-white/80 shadow-[0_30px_70px_rgba(0,0,0,0.85)] overflow-hidden flex flex-col my-auto">
             <!-- Modal Header -->
-            <div class="bg-obsidian text-ivory-50 px-4 sm:px-7 py-4 sm:py-5 border-b border-gold-400/40 flex items-center justify-between gap-3 shrink-0">
+            <div class="bg-obsidian/95 backdrop-blur-md text-ivory-50 px-4 sm:px-6 py-3.5 sm:py-4 border-b border-gold-400/40 flex items-center justify-between gap-3 shrink-0">
                 <div class="min-w-0">
-                    <p class="text-[9px] sm:text-[10px] uppercase tracking-[0.26em] sm:tracking-[0.3em] text-gold-300 font-semibold">Before We Lock Your Seat</p>
-                    <h3 id="etiquetteModalTitle" class="font-cinzel text-base sm:text-xl text-ivory-50 mt-0.5 truncate">Wedding Etiquette Reminder</h3>
+                    <p class="text-[9px] uppercase tracking-[0.24em] text-gold-300 font-semibold">Before We Lock Your Seat</p>
+                    <h3 id="etiquetteModalTitle" class="font-cinzel text-sm sm:text-lg text-ivory-50 mt-0.5 truncate">Wedding Etiquette Reminder</h3>
                 </div>
                 <button type="button" onclick="closeEtiquetteModal()" class="w-9 h-9 rounded-full border border-gold-400/40 text-gold-300 hover:bg-gold-500 hover:text-obsidian flex items-center justify-center transition-colors shrink-0" aria-label="Close Etiquette Modal">
-                    <i class="fa-solid fa-xmark text-sm"></i>
+                    <i class="fa-solid fa-xmark text-xs"></i>
                 </button>
             </div>
 
             <!-- Scrollable Etiquette Summary Body -->
-            <div class="p-4 sm:p-6 overflow-y-auto space-y-2.5 sm:space-y-3 text-left flex-1">
-                <p class="font-serif italic text-sm sm:text-base text-charcoal/90 leading-snug">
+            <div class="p-4 sm:p-5 overflow-y-auto space-y-2.5 text-left flex-1">
+                <p class="font-serif italic text-xs sm:text-sm md:text-base text-charcoal/90 leading-snug">
                     As you prepare to celebrate with us, please take a brief moment to review these cherished courtesies:
                 </p>
 
-                <div class="rounded-xl bg-obsidian text-ivory-50 border border-gold-400/60 p-3 sm:p-3.5">
-                    <p class="font-cinzel text-[11px] sm:text-xs font-semibold text-gold-300 uppercase tracking-wider mb-1">
+                <div class="rounded-xl glass-dark text-ivory-50 p-3">
+                    <p class="font-cinzel text-[10.5px] sm:text-xs font-semibold text-gold-300 uppercase tracking-wider mb-1">
                         <i class="fa-solid fa-crown mr-1.5"></i>Bridal Color Reservation
                     </p>
-                    <p class="font-serif text-sm sm:text-base text-ivory-100 leading-snug">
+                    <p class="font-serif text-xs sm:text-sm md:text-base text-ivory-100 leading-snug">
                         Kindly reserve <span class="text-gold-300 font-semibold">Pure Ivory, Pure White &amp; Cream</span> exclusively for the Bride, and dress within our curated six-shade pastel palette.
                     </p>
                 </div>
 
-                <div class="rounded-xl bg-white border border-gold-500/35 p-3 sm:p-3.5">
-                    <p class="font-cinzel text-[11px] sm:text-xs font-semibold text-gold-700 uppercase tracking-wider mb-1">
+                <div class="rounded-xl glass-light p-3">
+                    <p class="font-cinzel text-[10.5px] sm:text-xs font-semibold text-gold-700 uppercase tracking-wider mb-1">
                         <i class="fa-solid fa-camera-retro mr-1.5"></i>Unplugged Ceremony
                     </p>
-                    <p class="font-serif text-sm sm:text-base text-charcoal leading-snug">
-                        Kindly keep phones and cameras tucked away inside the sanctuary so we may share our vows face to face.
+                    <p class="font-serif text-xs sm:text-sm md:text-base text-charcoal leading-snug">
+                        Kindly keep phones and cameras tucked away inside the church so we may share our vows face to face.
                     </p>
                 </div>
 
-                <div class="rounded-xl bg-white border border-gold-500/35 p-3 sm:p-3.5">
-                    <p class="font-cinzel text-[11px] sm:text-xs font-semibold text-gold-700 uppercase tracking-wider mb-1">
+                <div class="rounded-xl glass-light p-3">
+                    <p class="font-cinzel text-[10.5px] sm:text-xs font-semibold text-gold-700 uppercase tracking-wider mb-1">
                         <i class="fa-solid fa-envelope-open-text mr-1.5"></i>A Note on Gifts
                     </p>
-                    <p class="font-serif text-sm sm:text-base text-charcoal leading-snug">
+                    <p class="font-serif text-xs sm:text-sm md:text-base text-charcoal leading-snug">
                         Your presence and prayers are our greatest gift; should you wish to bless our new home, any contribution is received with heartfelt gratitude.
                     </p>
                 </div>
 
-                <div class="rounded-xl bg-white border border-gold-500/35 p-3 sm:p-3.5">
-                    <p class="font-cinzel text-[11px] sm:text-xs font-semibold text-gold-700 uppercase tracking-wider mb-1">
-                        <i class="fa-solid fa-chair mr-1.5"></i>Reserved Seating &amp; Sanctuary Modesty
+                <div class="rounded-xl glass-light p-3">
+                    <p class="font-cinzel text-[10.5px] sm:text-xs font-semibold text-gold-700 uppercase tracking-wider mb-1">
+                        <i class="fa-solid fa-chair mr-1.5"></i>Reserved Seating &amp; church Modesty
                     </p>
-                    <p class="font-serif text-sm sm:text-base text-charcoal leading-snug">
+                    <p class="font-serif text-xs sm:text-sm md:text-base text-charcoal leading-snug">
                         Seats are lovingly reserved only for named guests. Kindly arrive 30 minutes early in modest, sleeved formal attire.
                     </p>
                 </div>
 
-                <div class="rounded-xl bg-white border border-gold-500/35 p-3 sm:p-3.5">
-                    <p class="font-cinzel text-[11px] sm:text-xs font-semibold text-gold-700 uppercase tracking-wider mb-1">
+                <div class="rounded-xl glass-light p-3">
+                    <p class="font-cinzel text-[10.5px] sm:text-xs font-semibold text-gold-700 uppercase tracking-wider mb-1">
                         <i class="fa-solid fa-mug-hot mr-1.5"></i>Alcohol-Free &amp; Non-Dancing Evening
                     </p>
-                    <p class="font-serif text-sm sm:text-base text-charcoal leading-snug">
+                    <p class="font-serif text-xs sm:text-sm md:text-base text-charcoal leading-snug">
                         Our reception is a serene, alcohol-free celebration with no dancing—curated for warm dining and fellowship.
                     </p>
                 </div>
             </div>
 
             <!-- Modal Footer & Final Confirmation -->
-            <div class="px-4 sm:px-6 py-3.5 sm:py-4 bg-ivory-100 border-t border-gold-500/30 space-y-3 shrink-0">
-                <label for="modalEtiquetteAgree" class="flex items-start space-x-2.5 cursor-pointer select-none">
+            <div class="px-4 sm:px-5 py-3 sm:py-3.5 bg-ivory-100/92 backdrop-blur-md border-t border-gold-500/30 space-y-2.5 shrink-0">
+                <label for="modalEtiquetteAgree" class="flex items-start space-x-2.5 cursor-pointer select-none py-0.5">
                     <input type="checkbox" id="modalEtiquetteAgree" onchange="toggleModalConfirmBtn()" class="mt-0.5 accent-[#C5A059] w-4 h-4 rounded shrink-0">
-                    <span class="font-serif text-sm sm:text-base text-obsidian leading-snug">
+                    <span class="font-serif text-xs sm:text-sm md:text-base text-obsidian leading-snug">
                         I have read and agree to honor all wedding etiquettes, including reserving Ivory/White for the Bride.
                     </span>
                 </label>
 
-                <div class="flex flex-col-reverse sm:flex-row sm:items-center sm:justify-end gap-2 sm:gap-3">
-                    <button type="button" onclick="closeEtiquetteModal()" class="w-full sm:w-auto px-4 py-2.5 rounded-xl border border-gold-500/40 text-charcoal hover:bg-ivory-200 font-cinzel text-xs uppercase tracking-[0.2em] transition-colors">
+                <div class="flex flex-col-reverse sm:flex-row sm:items-center sm:justify-end gap-2">
+                    <button type="button" onclick="closeEtiquetteModal()" class="w-full sm:w-auto px-4 py-2.5 rounded-xl border border-gold-500/40 bg-white/80 text-charcoal hover:bg-ivory-200 font-cinzel text-[11px] uppercase tracking-[0.2em] transition-colors">
                         Go Back
                     </button>
-                    <button type="button" id="modalFinalConfirmBtn" onclick="confirmEtiquetteAndSubmit()" disabled class="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-charcoal/30 text-charcoal/50 font-cinzel text-xs font-semibold uppercase tracking-[0.2em] cursor-not-allowed transition-all">
+                    <button type="button" id="modalFinalConfirmBtn" onclick="confirmEtiquetteAndSubmit()" disabled class="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-charcoal/30 text-charcoal/50 font-cinzel text-[11px] font-semibold uppercase tracking-[0.2em] cursor-not-allowed transition-all">
                         I Agree &amp; Submit
                     </button>
                 </div>
@@ -1820,18 +1989,46 @@
 
     <!-- CUSTOM NOTIFICATION TOAST -->
     <div id="toastModal" class="fixed bottom-4 sm:bottom-6 left-1/2 sm:left-auto -translate-x-1/2 sm:translate-x-0 sm:right-6 z-50 transform translate-y-28 opacity-0 transition-all duration-300 pointer-events-none max-w-sm w-[92%] sm:w-full">
-        <div class="rounded-2xl bg-obsidian text-ivory-50 border border-gold-400/50 p-4 sm:p-5 shadow-2xl flex items-start space-x-3.5">
-            <div class="w-8 h-8 rounded-full bg-gold-500/20 flex items-center justify-center text-gold-400 shrink-0 mt-0.5">
+        <div class="rounded-2xl glass-dark text-ivory-50 p-4 flex items-start space-x-3">
+            <div class="w-7 h-7 rounded-full bg-gold-500/20 flex items-center justify-center text-gold-400 shrink-0 mt-0.5">
                 <i class="fa-solid fa-check text-xs"></i>
             </div>
             <div>
-                <h4 id="toastTitle" class="font-cinzel text-xs sm:text-sm text-gold-400 tracking-wider">Notification</h4>
-                <p id="toastBody" class="font-serif text-sm sm:text-base text-ivory-100 mt-1 leading-snug"></p>
+                <h4 id="toastTitle" class="font-cinzel text-xs text-gold-400 tracking-wider">Notification</h4>
+                <p id="toastBody" class="font-serif text-xs sm:text-sm text-ivory-100 mt-0.5 leading-snug"></p>
             </div>
         </div>
     </div>
 
     <script>
+        /* ==========================================
+           0. MOBILE & TABLET NAVIGATION DRAWER
+           ========================================== */
+        function toggleMobileMenu() {
+            const drawer = document.getElementById('mobileNavDrawer');
+            const icon = document.getElementById('mobileMenuIcon');
+            const btn = document.getElementById('mobileMenuBtn');
+            if (!drawer) return;
+
+            const isHidden = drawer.classList.contains('hidden');
+            if (isHidden) {
+                drawer.classList.remove('hidden');
+                if (icon) icon.className = 'fa-solid fa-xmark text-xs';
+                if (btn) btn.setAttribute('aria-expanded', 'true');
+            } else {
+                closeMobileMenu();
+            }
+        }
+
+        function closeMobileMenu() {
+            const drawer = document.getElementById('mobileNavDrawer');
+            const icon = document.getElementById('mobileMenuIcon');
+            const btn = document.getElementById('mobileMenuBtn');
+            if (drawer) drawer.classList.add('hidden');
+            if (icon) icon.className = 'fa-solid fa-bars text-xs';
+            if (btn) btn.setAttribute('aria-expanded', 'false');
+        }
+
         /* ==========================================
            1. FLOATING GOLDEN DUST MOTES & PREMIERE ENTRANCE
            ========================================== */
@@ -1860,7 +2057,6 @@
             const html = document.documentElement;
             const topNav = document.getElementById('topNav');
 
-            // Reset scroll position to the absolute top before unlocking
             window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
             document.documentElement.scrollTop = 0;
             document.body.scrollTop = 0;
@@ -1873,7 +2069,6 @@
             }
             if (body) {
                 body.classList.remove('entrance-locked');
-                // Trigger the hero name entrance immediately as the curtain parts
                 setTimeout(() => {
                     body.classList.add('hero-active');
                 }, 120);
@@ -1883,12 +2078,10 @@
                 topNav.classList.add('opacity-100');
             }
 
-            // Ensure scroll stays pinned at top right after reveal transition
             requestAnimationFrame(() => {
                 window.scrollTo(0, 0);
             });
 
-            // Gently begin romantic piano soundtrack upon user interaction
             if (!isPlayingMusic) {
                 toggleAmbientMusic();
             }
@@ -1942,10 +2135,10 @@
                     if (text) text.textContent = 'Playing';
 
                     const progression = [
-                        [261.63, 329.63, 392.00, 493.88], // Cmaj7
-                        [220.00, 261.63, 329.63, 392.00], // Am7
-                        [174.61, 220.00, 261.63, 349.23], // Fmaj7
-                        [196.00, 246.94, 293.66, 392.00]  // G6
+                        [261.63, 329.63, 392.00, 493.88],
+                        [220.00, 261.63, 329.63, 392.00],
+                        [174.61, 220.00, 261.63, 349.23],
+                        [196.00, 246.94, 293.66, 392.00]
                     ];
                     let step = 0;
                     playPianoChord(progression[0]);
@@ -2031,14 +2224,16 @@
 
             beforeMoments.forEach((moment, index) => {
                 const card = document.createElement('div');
-                card.className = 'coverflow-item rounded-2xl overflow-hidden border-2 border-gold-400/50 bg-obsidian cursor-pointer';
+                card.className = 'coverflow-item rounded-3xl p-1.5 sm:p-2 overflow-hidden cursor-pointer';
                 card.dataset.index = index;
                 card.innerHTML = `
-                    <img src="${moment.img}"
-                         onerror="this.src='https://placehold.co/600x800/1C1712/E8CE7A?text=${encodeURIComponent(moment.title)}'"
-                         alt="${moment.title}"
-                         class="w-full h-full object-cover pointer-events-none">
-                    <div class="absolute inset-0 bg-gradient-to-t from-obsidian/75 via-transparent to-transparent pointer-events-none"></div>
+                    <div class="relative w-full h-full rounded-2xl overflow-hidden bg-obsidian">
+                        <img src="${moment.img}"
+                             onerror="this.src='https://placehold.co/600x800/1C1712/E8CE7A?text=${encodeURIComponent(moment.title)}'"
+                             alt="${moment.title}"
+                             class="w-full h-full object-cover pointer-events-none">
+                        <div class="absolute inset-0 bg-gradient-to-t from-obsidian/70 via-transparent to-white/10 pointer-events-none"></div>
+                    </div>
                 `;
                 card.addEventListener('click', () => {
                     if (currentSlide !== index) {
@@ -2060,7 +2255,6 @@
                 dotsContainer.appendChild(dot);
             });
 
-            // Pause autoplay while hovering on desktop
             container.addEventListener('mouseenter', () => {
                 isCoverflowPaused = true;
             });
@@ -2068,7 +2262,6 @@
                 isCoverflowPaused = false;
             });
 
-            // Touch Swipe Support for Mobile
             container.addEventListener('touchstart', (e) => {
                 isCoverflowPaused = true;
                 touchStartX = e.changedTouches[0].screenX;
@@ -2077,7 +2270,7 @@
             container.addEventListener('touchend', (e) => {
                 touchEndX = e.changedTouches[0].screenX;
                 const diff = touchStartX - touchEndX;
-                if (Math.abs(diff) > 40) {
+                if (Math.abs(diff) > 36) {
                     moveCoverflow(diff > 0 ? 1 : -1);
                 }
                 isCoverflowPaused = false;
@@ -2106,38 +2299,60 @@
             const total = beforeMoments.length;
             const half = Math.floor(total / 2);
             const vw = window.innerWidth;
-            const cardWidth = vw < 420 ? 220 : vw < 768 ? 270 : 340;
-            const cardHeight = vw < 420 ? 310 : vw < 768 ? 380 : 460;
-            const spacing = vw < 420 ? 115 : vw < 768 ? 165 : 230;
+
+            let activeWidth, activeHeight, spacing;
+            if (vw < 400) {
+                activeWidth = 210;
+                activeHeight = 290;
+                spacing = 122;
+            } else if (vw < 640) {
+                activeWidth = 240;
+                activeHeight = 330;
+                spacing = 148;
+            } else if (vw < 1024) {
+                activeWidth = 295;
+                activeHeight = 405;
+                spacing = 215;
+            } else {
+                activeWidth = 370;
+                activeHeight = 500;
+                spacing = 285;
+            }
 
             cards.forEach((card, index) => {
-                // Circular shortest-path offset so the carousel loops seamlessly around both sides
                 let offset = (index - currentSlide) % total;
                 if (offset > half) offset -= total;
                 if (offset < -half) offset += total;
 
                 const absOffset = Math.abs(offset);
 
-                card.style.width = `${cardWidth}px`;
-                card.style.height = `${cardHeight}px`;
-
                 if (offset === 0) {
-                    card.style.transform = `translate(-50%, -50%) translateX(0px) translateZ(120px) rotateY(0deg) scale(1)`;
+                    card.classList.add('is-active');
+                    card.style.width = `${activeWidth}px`;
+                    card.style.height = `${activeHeight}px`;
+                    card.style.transform = `translate(-50%, -50%) translateX(0px) translateZ(140px) rotateY(0deg) scale(1)`;
                     card.style.zIndex = 30;
                     card.style.opacity = '1';
                     card.style.filter = 'brightness(1)';
                 } else if (absOffset <= 2) {
+                    card.classList.remove('is-active');
+                    const sizeFactor = absOffset === 1 ? 0.68 : 0.50;
+                    card.style.width = `${Math.round(activeWidth * sizeFactor)}px`;
+                    card.style.height = `${Math.round(activeHeight * sizeFactor)}px`;
+
                     const sign = offset > 0 ? 1 : -1;
-                    const translateX = sign * (spacing + (absOffset - 1) * (spacing * 0.55));
-                    const rotateY = -sign * 36;
-                    const scale = 1 - absOffset * 0.16;
-                    card.style.transform = `translate(-50%, -50%) translateX(${translateX}px) translateZ(${-absOffset * 80}px) rotateY(${rotateY}deg) scale(${scale})`;
+                    const translateX = sign * (spacing + (absOffset - 1) * (spacing * 0.54));
+                    const rotateY = -sign * 28;
+                    card.style.transform = `translate(-50%, -50%) translateX(${translateX}px) translateZ(${-absOffset * 70}px) rotateY(${rotateY}deg) scale(1)`;
                     card.style.zIndex = 20 - absOffset;
-                    card.style.opacity = absOffset === 1 ? '0.88' : '0.52';
-                    card.style.filter = 'brightness(0.78)';
+                    card.style.opacity = absOffset === 1 ? '0.86' : (vw < 640 ? '0.35' : '0.58');
+                    card.style.filter = absOffset === 1 ? 'brightness(0.84)' : 'brightness(0.7)';
                 } else {
+                    card.classList.remove('is-active');
+                    card.style.width = `${Math.round(activeWidth * 0.44)}px`;
+                    card.style.height = `${Math.round(activeHeight * 0.44)}px`;
                     const sign = offset > 0 ? 1 : -1;
-                    card.style.transform = `translate(-50%, -50%) translateX(${sign * spacing * 2.2}px) translateZ(-260px) scale(0.55)`;
+                    card.style.transform = `translate(-50%, -50%) translateX(${sign * spacing * 2.1}px) translateZ(-240px) scale(0.85)`;
                     card.style.zIndex = 1;
                     card.style.opacity = '0';
                 }
@@ -2145,9 +2360,9 @@
 
             dots.forEach((dot, idx) => {
                 if (idx === currentSlide) {
-                    dot.className = 'w-7 h-2.5 rounded-full bg-gold-600 transition-all duration-300';
+                    dot.className = 'w-6 sm:w-7 h-2 rounded-full bg-gold-600 transition-all duration-300';
                 } else {
-                    dot.className = 'w-2.5 h-2.5 rounded-full bg-gold-500/35 hover:bg-gold-500/60 transition-all duration-300';
+                    dot.className = 'w-2 h-2 rounded-full bg-gold-500/35 hover:bg-gold-500/60 transition-all duration-300';
                 }
             });
 
@@ -2195,19 +2410,9 @@
 
         /* ==========================================
            GOOGLE SHEETS RSVP ENGINE
-           ==========================================
-           HOW TO CONNECT YOUR GOOGLE SHEET:
-           1. Create a Google Sheet with columns in Row 1:
-              First Name | Last Name | Group | Status | Contact | Note | Timestamp
-              (Leave "Group" blank for individual guests who can only RSVP for themselves.
-               Give the exact same "Group" name—e.g. "Reyes Family"—to members eligible for Bulk RSVP.)
-           2. Open Extensions > Apps Script, paste the doGet / doPost handler, deploy as Web App
-              (Execute as: Me, Who has access: Anyone), and paste your Web App URL below.
-        */
-        const GOOGLE_SHEETS_WEB_APP_URL = ""; // <-- Paste your deployed Google Apps Script Web App URL here
+           ========================================== */
+        const GOOGLE_SHEETS_WEB_APP_URL = "";
 
-        // Built-in fallback sample roster so you can test Individual vs. Group RSVP immediately
-        // before connecting your live Google Sheet URL above.
         const fallbackSheetRoster = [
             { id: "1", firstName: "Richard", lastName: "Bonus", group: "Bonus Family", status: "", contact: "" },
             { id: "2", firstName: "Lily", lastName: "Bonus", group: "Bonus Family", status: "", contact: "" },
@@ -2251,11 +2456,11 @@
 
             if (isSampleGuestName(firstInput, lastInput)) {
                 lookupBtn.disabled = true;
-                lookupBtn.className = "w-full py-3 rounded-xl bg-charcoal border border-gold-500/30 text-ivory-200/50 font-cinzel text-xs font-semibold uppercase tracking-[0.2em] cursor-not-allowed";
+                lookupBtn.className = "w-full py-3 rounded-xl bg-white/10 border border-gold-500/30 text-ivory-200/50 font-cinzel text-[11px] font-semibold uppercase tracking-[0.2em] cursor-not-allowed";
                 lookupBtn.innerHTML = `<i class="fa-solid fa-ban mr-2"></i> Sample Only (Disabled)`;
             } else {
                 lookupBtn.disabled = false;
-                lookupBtn.className = "w-full py-3 rounded-xl bg-gold-500 hover:bg-gold-400 text-obsidian font-cinzel text-xs font-semibold uppercase tracking-[0.24em] shadow-[0_12px_28px_-6px_rgba(212,175,55,0.45)] transition-all active:scale-95";
+                lookupBtn.className = "w-full py-3 rounded-xl bg-gold-500/95 hover:bg-gold-400 text-obsidian font-cinzel text-[11px] font-semibold uppercase tracking-[0.22em] shadow-[0_12px_28px_-6px_rgba(212,175,55,0.45)] transition-all active:scale-95";
                 lookupBtn.innerHTML = `<i class="fa-solid fa-check-circle mr-2"></i> Confirm Invitation`;
             }
         }
@@ -2321,7 +2526,6 @@
                 return;
             }
 
-            // Check if guest belongs to a declared Group or is an Individual
             const hasDeclaredGroup = Boolean(matchedGuest.group && matchedGuest.group.trim().length > 0);
 
             if (hasDeclaredGroup) {
@@ -2329,11 +2533,9 @@
                     g => normalizeName(g.group) === normalizeName(matchedGuest.group)
                 );
             } else {
-                // Individual with NO declared group: strictly restricted to themselves only
                 activePartyMembers = [matchedGuest];
             }
 
-            // Check which members are still unconfirmed (already confirmed members are permanently locked)
             const unsubmittedMembers = activePartyMembers.filter(m => !isGuestLocked(m));
 
             if (unsubmittedMembers.length === 0) {
@@ -2384,18 +2586,17 @@
                 const isSelf = normalizeName(member.firstName) === normalizeName(guest.firstName) &&
                                normalizeName(member.lastName) === normalizeName(guest.lastName);
 
-                // Default to self check-in (only "(You)" is pre-checked); other unlocked group members can be ticked for bulk RSVP
                 const shouldPrecheck = !isLocked && (!isGroupParty || isSelf);
 
                 const row = document.createElement("label");
-                row.className = `flex items-center justify-between gap-2 px-3.5 py-2.5 rounded-xl border text-xs transition-colors ${
+                row.className = `flex items-center justify-between gap-2 px-3 py-2 rounded-xl border text-xs backdrop-blur-md transition-colors ${
                     isLocked
-                        ? "bg-charcoal/40 border-ivory-100/10 text-ivory-200/45 cursor-not-allowed"
-                        : "bg-charcoal border-gold-500/30 text-ivory-50 hover:border-gold-400 cursor-pointer"
+                        ? "bg-white/5 border-ivory-100/10 text-ivory-200/45 cursor-not-allowed"
+                        : "bg-white/10 border-gold-400/35 text-ivory-50 hover:border-gold-400 cursor-pointer"
                 }`;
 
                 row.innerHTML = `
-                    <span class="flex items-center space-x-2.5 min-w-0">
+                    <span class="flex items-center space-x-2 min-w-0">
                         <input type="checkbox"
                                name="selectedGuests"
                                value="${idx}"
@@ -2423,11 +2624,11 @@
             if (finalSubmitBtn) {
                 if (isSampleGuest) {
                     finalSubmitBtn.disabled = true;
-                    finalSubmitBtn.className = "w-full py-3 rounded-xl bg-charcoal border border-gold-500/30 text-ivory-200/50 font-cinzel text-xs font-semibold uppercase tracking-[0.2em] cursor-not-allowed";
+                    finalSubmitBtn.className = "w-full py-3 rounded-xl bg-white/10 border border-gold-500/30 text-ivory-200/50 font-cinzel text-[11px] font-semibold uppercase tracking-[0.2em] cursor-not-allowed";
                     finalSubmitBtn.textContent = "Sample Guest Only (Submission Disabled)";
                 } else {
                     finalSubmitBtn.disabled = false;
-                    finalSubmitBtn.className = "w-full py-3 rounded-xl bg-gold-500 hover:bg-gold-400 text-obsidian font-cinzel text-xs font-semibold uppercase tracking-[0.24em] shadow-[0_12px_28px_-6px_rgba(212,175,55,0.45)] transition-all active:scale-95";
+                    finalSubmitBtn.className = "w-full py-3 rounded-xl bg-gold-500/95 hover:bg-gold-400 text-obsidian font-cinzel text-[11px] font-semibold uppercase tracking-[0.22em] shadow-[0_12px_28px_-6px_rgba(212,175,55,0.45)] transition-all active:scale-95";
                     finalSubmitBtn.textContent = "Confirm R.S.V.P.";
                 }
             }
@@ -2461,7 +2662,6 @@
             const attendance = document.getElementById("attendance").value;
             const mobile = document.getElementById("guestMobile").value.trim();
             const email = document.getElementById("guestEmail").value.trim();
-            const submitBtn = document.getElementById("rsvpFinalSubmitBtn");
 
             if (!mobile && !email) {
                 showToast("Contact Required", "Please provide your mobile number or email address for event updates.");
@@ -2473,17 +2673,14 @@
             let guestsToConfirm = [];
 
             if (!isGroupParty) {
-                // Individual invitation: strictly themselves only
                 guestsToConfirm = [activeVerifiedGuest];
             } else {
-                // Group invitation: supports self check-in or bulk group selection among unlocked members
                 const checkedBoxes = document.querySelectorAll('#partyMembersContainer input[type="checkbox"]:checked:not(:disabled)');
                 guestsToConfirm = Array.from(checkedBoxes)
                     .map(cb => activePartyMembers[parseInt(cb.value, 10)])
                     .filter(Boolean);
             }
 
-            // Strictly block anyone already confirmed so their reply can never be altered
             guestsToConfirm = guestsToConfirm.filter(g => !isGuestLocked(g));
 
             if (!guestsToConfirm.length) {
@@ -2499,7 +2696,6 @@
                 guestsToConfirm
             };
 
-            // Only show the Wedding Etiquette reminder modal when "Attending with Joy" is selected
             if (attendance === "Attending with Joy") {
                 openEtiquetteModal();
             } else {
@@ -2533,10 +2729,10 @@
 
             if (agreeBox.checked) {
                 confirmBtn.disabled = false;
-                confirmBtn.className = "w-full sm:w-auto px-5 py-2.5 rounded-xl bg-gold-500 hover:bg-gold-400 text-obsidian font-cinzel text-xs font-semibold uppercase tracking-[0.2em] shadow-[0_10px_24px_-6px_rgba(212,175,55,0.45)] transition-all active:scale-95";
+                confirmBtn.className = "w-full sm:w-auto px-5 py-2.5 rounded-xl bg-gold-500/95 hover:bg-gold-400 text-obsidian font-cinzel text-[11px] font-semibold uppercase tracking-[0.2em] shadow-[0_10px_24px_-6px_rgba(212,175,55,0.45)] transition-all active:scale-95";
             } else {
                 confirmBtn.disabled = true;
-                confirmBtn.className = "w-full sm:w-auto px-5 py-2.5 rounded-xl bg-charcoal/30 text-charcoal/50 font-cinzel text-xs font-semibold uppercase tracking-[0.2em] cursor-not-allowed transition-all";
+                confirmBtn.className = "w-full sm:w-auto px-5 py-2.5 rounded-xl bg-charcoal/30 text-charcoal/50 font-cinzel text-[11px] font-semibold uppercase tracking-[0.2em] cursor-not-allowed transition-all";
             }
         }
 
@@ -2597,7 +2793,6 @@
                 }
             }
 
-            // Permanently lock each confirmed guest so neither they nor any group member can change their reply
             guestsToConfirm.forEach(g => {
                 const k = getGuestUniqueKey(g.firstName, g.lastName);
                 submittedGuestKeys.add(k);
@@ -2640,7 +2835,6 @@
             validateLookupButtonState();
         }
 
-        // Prevent browser from restoring mid-page scroll positions
         if ('scrollRestoration' in history) {
             history.scrollRestoration = 'manual';
         }
@@ -2683,7 +2877,6 @@
             targets.forEach((el) => observer.observe(el));
         }
 
-        // Initialize Everything Safely on Window Load & Resize
         window.addEventListener('load', () => {
             window.scrollTo(0, 0);
             createDustMotes();
@@ -2694,6 +2887,9 @@
 
         window.addEventListener('resize', () => {
             updateCoverflow();
+            if (window.innerWidth >= 1024) {
+                closeMobileMenu();
+            }
         });
     </script>
 </body>
