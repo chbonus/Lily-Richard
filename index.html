@@ -1741,9 +1741,11 @@
     </footer>
 
     <!-- WEDDING ETIQUETTE REVIEW MODAL -->
-    <div id="etiquetteReviewModal" role="dialog" aria-modal="true" aria-labelledby="etiquetteModalTitle" class="fixed inset-0 z-50 hidden items-end sm:items-center justify-center bg-obsidian/88 backdrop-blur-md sm:backdrop-blur-xl p-3 sm:p-5 overflow-y-auto">
-        <div class="w-full max-w-xl max-h-[88dvh] sm:max-h-[90dvh] rounded-2xl bg-ivory-50/98 sm:bg-ivory-50/95 backdrop-blur-xl sm:backdrop-blur-2xl text-obsidian border border-gold-500/40 shadow-[0_30px_70px_rgba(0,0,0,0.85)] overflow-hidden flex flex-col my-auto">
-            <div class="bg-obsidian backdrop-blur-md text-ivory-50 px-5 sm:px-6 py-4 border-b border-gold-400/40 flex items-center justify-between gap-3 shrink-0">
+    <div id="etiquetteReviewModal" role="dialog" aria-modal="true" aria-labelledby="etiquetteModalTitle" class="fixed inset-0 z-50 hidden items-center justify-center bg-obsidian/88 backdrop-blur-md p-3 sm:p-5 overflow-y-auto">
+        <div class="w-full max-w-xl max-h-[90dvh] rounded-2xl bg-ivory-50 text-obsidian border border-gold-500/40 shadow-[0_30px_70px_rgba(0,0,0,0.85)] flex flex-col overflow-hidden my-auto">
+            
+            <!-- Modal Header -->
+            <div class="bg-obsidian text-ivory-50 px-5 sm:px-6 py-4 border-b border-gold-400/40 flex items-center justify-between gap-3 shrink-0">
                 <div class="min-w-0">
                     <p class="text-[10px] uppercase tracking-[0.24em] text-gold-300 font-bold">Before We Lock Your Seat</p>
                     <h3 id="etiquetteModalTitle" class="font-cinzel text-base sm:text-xl text-ivory-50 font-bold mt-0.5 truncate">Wedding Etiquette Reminder</h3>
@@ -1753,72 +1755,75 @@
                 </button>
             </div>
 
-			<div class="p-5 overflow-y-auto space-y-3 text-left flex-1">
-				<p class="font-sans italic text-sm sm:text-base text-charcoal font-medium leading-relaxed">
-					As you prepare to celebrate with us, please take a brief moment to review these cherished courtesies:
-				</p>
+            <!-- Scrollable Content Area -->
+            <div class="p-4 sm:p-6 overflow-y-auto space-y-3.5 text-left flex-1">
+                <p class="font-sans italic text-xs sm:text-sm text-charcoal font-medium leading-relaxed">
+                    As you prepare to celebrate with us, please scroll through and review these cherished courtesies:
+                </p>
 
-				<!-- 1. Bridal Color Reservation -->
-				<div class="rounded-xl glass-dark text-ivory-50 p-4">
-					<p class="font-cinzel text-xs sm:text-sm font-bold text-gold-300 uppercase tracking-wider mb-1">
-						<i class="fa-solid fa-crown mr-2"></i>Bridal Color Reservation
-					</p>
-					<p class="font-sans text-sm sm:text-base text-ivory-100 font-normal leading-relaxed">
-						Kindly reserve <span class="text-gold-300 font-semibold">Pure Ivory, Pure White &amp; Cream</span> exclusively for the Bride, and dress within our curated six-shade pastel palette.
-					</p>
-				</div>
+                <!-- 1. Bridal Color Reservation -->
+                <div class="rounded-xl bg-obsidian text-ivory-50 p-4 border border-gold-400/30">
+                    <p class="font-cinzel text-xs font-bold text-gold-300 uppercase tracking-wider mb-1">
+                        <i class="fa-solid fa-crown mr-2"></i>Bridal Color Reservation
+                    </p>
+                    <p class="font-sans text-xs sm:text-sm text-ivory-100 font-normal leading-relaxed">
+                        Kindly reserve <span class="text-gold-300 font-semibold">Pure Ivory, Pure White &amp; Cream</span> exclusively for the Bride, and dress within our curated six-shade pastel palette.
+                    </p>
+                </div>
 
-				<!-- 2. Reserved Seating & Church Reverence -->
-				<div class="rounded-xl glass-light p-4">
-					<p class="font-cinzel text-xs sm:text-sm font-bold text-gold-700 uppercase tracking-wider mb-1">
-						<i class="fa-solid fa-chair mr-2"></i>Reserved Seating &amp; Church Reverence
-					</p>
-					<p class="font-sans text-sm sm:text-base text-charcoal font-normal leading-relaxed">
-						Seats are lovingly reserved only for named guests. Kindly arrive 30 minutes early in modest, sleeved formal attire.
-					</p>
-				</div>
+                <!-- 2. Reserved Seating & Church Reverence -->
+                <div class="rounded-xl bg-white/90 p-4 border border-gold-500/25 shadow-sm">
+                    <p class="font-cinzel text-xs font-bold text-gold-700 uppercase tracking-wider mb-1">
+                        <i class="fa-solid fa-chair mr-2"></i>Reserved Seating &amp; Church Reverence
+                    </p>
+                    <p class="font-sans text-xs sm:text-sm text-charcoal font-normal leading-relaxed">
+                        Seats are lovingly reserved only for named guests. Kindly arrive 30 minutes early in modest, sleeved formal attire.
+                    </p>
+                </div>
 
-				<!-- 3. Adults-Only Celebration (18+) -->
-				<div class="rounded-xl glass-light p-4">
-					<p class="font-cinzel text-xs sm:text-sm font-bold text-gold-700 uppercase tracking-wider mb-1">
-						<i class="fa-solid fa-camera-retro mr-2"></i>Adults-Only Celebration (18+)
-					</p>
-					<p class="font-sans text-sm sm:text-base text-charcoal font-normal leading-relaxed">
-						While we love your little ones, please note that our wedding and reception are strictly for guests aged 18 and above. We appreciate your understanding in making arrangements ahead of time.
-					</p>
-				</div>
+                <!-- 3. Adults-Only Celebration (18+) -->
+                <div class="rounded-xl bg-white/90 p-4 border border-gold-500/25 shadow-sm">
+                    <p class="font-cinzel text-xs font-bold text-gold-700 uppercase tracking-wider mb-1">
+                        <i class="fa-solid fa-user-check mr-2"></i>Adults-Only Celebration (18+)
+                    </p>
+                    <p class="font-sans text-xs sm:text-sm text-charcoal font-normal leading-relaxed">
+                        While we love your little ones, please note that our wedding and reception are strictly for guests aged 18 and above. We appreciate your understanding in making arrangements ahead of time.
+                    </p>
+                </div>
 
-				<!-- 4. Unplugged Ceremony -->
-				<div class="rounded-xl glass-light p-4">
-					<p class="font-cinzel text-xs sm:text-sm font-bold text-gold-700 uppercase tracking-wider mb-1">
-						<i class="fa-solid fa-camera-retro mr-2"></i>Unplugged Ceremony
-					</p>
-					<p class="font-sans text-sm sm:text-base text-charcoal font-normal leading-relaxed">
-						Kindly keep phones and cameras tucked away inside the church so we may share our vows face to face.
-					</p>
-				</div>
+                <!-- 4. Unplugged Ceremony -->
+                <div class="rounded-xl bg-white/90 p-4 border border-gold-500/25 shadow-sm">
+                    <p class="font-cinzel text-xs font-bold text-gold-700 uppercase tracking-wider mb-1">
+                        <i class="fa-solid fa-camera-retro mr-2"></i>Unplugged Ceremony
+                    </p>
+                    <p class="font-sans text-xs sm:text-sm text-charcoal font-normal leading-relaxed">
+                        Kindly keep phones and cameras tucked away inside the church so we may share our vows face to face.
+                    </p>
+                </div>
 
-				<!-- 5. A Note on Gifts -->
-				<div class="rounded-xl glass-light p-4">
-					<p class="font-cinzel text-xs sm:text-sm font-bold text-gold-700 uppercase tracking-wider mb-1">
-						<i class="fa-solid fa-envelope-open-text mr-2"></i>A Note on Gifts
-					</p>
-					<p class="font-sans text-sm sm:text-base text-charcoal font-normal leading-relaxed">
-						Your presence and prayers are our greatest gift; should you wish to bless us, any monetary gift is received with heartfelt gratitude.
-					</p>
-				</div>
+                <!-- 5. A Note on Gifts -->
+                <div class="rounded-xl bg-white/90 p-4 border border-gold-500/25 shadow-sm">
+                    <p class="font-cinzel text-xs font-bold text-gold-700 uppercase tracking-wider mb-1">
+                        <i class="fa-solid fa-envelope-open-text mr-2"></i>A Note on Gifts
+                    </p>
+                    <p class="font-sans text-xs sm:text-sm text-charcoal font-normal leading-relaxed">
+                        Your presence and prayers are our greatest gift; should you wish to bless us, any monetary gift is received with heartfelt gratitude.
+                    </p>
+                </div>
 
-				<!-- 6. Alcohol-Free & Non-Dancing Evening -->
-				<div class="rounded-xl glass-light p-4">
-					<p class="font-cinzel text-xs sm:text-sm font-bold text-gold-700 uppercase tracking-wider mb-1">
-						<i class="fa-solid fa-mug-hot mr-2"></i>Alcohol-Free &amp; Non-Dancing Evening
-					</p>
-					<p class="font-sans text-sm sm:text-base text-charcoal font-normal leading-relaxed">
-						Our reception is a serene, alcohol-free celebration with no dancing—curated for warm dining and fellowship.
-					</p>
-				</div>
-			</div>
-            <div class="px-5 py-4 bg-ivory-100/95 backdrop-blur-md border-t border-gold-500/30 space-y-3 shrink-0">
+                <!-- 6. Alcohol-Free & Non-Dancing Evening -->
+                <div class="rounded-xl bg-white/90 p-4 border border-gold-500/25 shadow-sm">
+                    <p class="font-cinzel text-xs font-bold text-gold-700 uppercase tracking-wider mb-1">
+                        <i class="fa-solid fa-mug-hot mr-2"></i>Alcohol-Free &amp; Non-Dancing Evening
+                    </p>
+                    <p class="font-sans text-xs sm:text-sm text-charcoal font-normal leading-relaxed">
+                        Our reception is a serene, alcohol-free celebration with no dancing—curated for warm dining and fellowship.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Sticky Modal Footer -->
+            <div class="px-5 py-4 bg-ivory-100 border-t border-gold-500/30 space-y-3 shrink-0">
                 <label for="modalEtiquetteAgree" class="flex items-start space-x-3 cursor-pointer select-none py-0.5">
                     <input type="checkbox" id="modalEtiquetteAgree" onchange="toggleModalConfirmBtn()" class="mt-0.5 accent-[#C59A45] w-4.5 h-4.5 rounded shrink-0">
                     <span class="font-sans text-xs sm:text-sm text-obsidian font-semibold leading-relaxed">
@@ -1835,6 +1840,7 @@
                     </button>
                 </div>
             </div>
+
         </div>
     </div>
 
