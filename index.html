@@ -91,7 +91,7 @@
            MOBILE-OPTIMIZED FROSTED GLASSMORPHISM
            ========================================== */
         .glass-light {
-            background: linear-gradient(145deg, rgba(255, 255, 255, 0.88) 0%, rgba(253, 251, 247, 0.78) 100%);
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.88) 0%, rgba(253, 251, 247, 0.40) 100%);
             backdrop-filter: blur(12px) saturate(145%);
             -webkit-backdrop-filter: blur(12px) saturate(145%);
             border: 1px solid rgba(212, 175, 55, 0.28);
@@ -788,8 +788,8 @@
         <div id="dustContainer" class="absolute inset-0 pointer-events-none z-10"></div>
 
         <!-- Top Widescreen Letterbox Bar -->
-        <div class="letterbox-bar letterbox-top border-b flex items-center justify-between px-4 sm:px-8 md:px-10 text-[9px] sm:text-[10px] tracking-[0.18em] sm:tracking-[0.32em] text-gold-300/85 uppercase">
-            <span class="truncate max-w-[60%] sm:max-w-none">THE WEDDING OF LILY &amp; RICHARD</span>
+        <div class="letterbox-bar letterbox-top border-b flex items-center justify-between px-4 sm:px-8 md:px-10 text-[10px] sm:text-[11px] tracking-[0.18em] sm:tracking-[0.32em] text-gold-300/85 uppercase">
+            <span class="truncate max-w-[70%] sm:max-w-none">THE WEDDING OF LILY &amp; RICHARD</span>
             <span class="hidden lg:inline">A CELEBRATION OF COVENANT &amp; DEVOTION</span>
             <span class="font-cinzel tracking-[0.22em] sm:tracking-[0.38em] text-gold-300 font-medium shrink-0">CAINTA &bull; RIZAL</span>
         </div>
@@ -803,7 +803,7 @@
                     <i class="fa-solid fa-diamond text-[8px] sm:text-[9px]"></i>
                     <i class="fa-solid fa-diamond text-[6px] sm:text-[7px]"></i>
                 </div>
-                <p class="font-serif italic text-xs sm:text-base md:text-lg text-ivory-100/95 tracking-wide drop-shadow leading-snug">
+                <p class="font-serif italic text-sm sm:text-lg md:text-xl text-ivory-100/95 tracking-wide drop-shadow leading-snug">
                     &ldquo;Two ordinary paths, one extraordinary grace—written long before we knew.&rdquo;
                 </p>
             </div>
@@ -811,26 +811,26 @@
             <!-- Lower-Third Title Block (Keeps Couple's Faces Unobstructed) -->
             <div class="flex flex-col items-center mb-1 sm:mb-2">
                 <span class="cinema-seq-2 px-3.5 sm:px-4 py-1 rounded-full glass-pill-dark text-[8px] sm:text-[10px] uppercase tracking-[0.2em] sm:tracking-[0.3em] font-medium text-gold-300 mb-2 sm:mb-2.5">
-                    From Chance Encounter &bull; To Chosen Forever
+                    From a Passing Glance &bull; To Shared Laughter &bull; To the Love of a Lifetime
                 </span>
 
-                <h2 class="font-display text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-normal tracking-[0.12em] sm:tracking-[0.16em] entrance-foil-text drop-shadow-[0_6px_28px_rgba(0,0,0,0.9)]">
+                <h1 class="font-display text-3xl sm:text-8xl md:text-8xl lg:text-8xl font-normal tracking-[0.12em] sm:tracking-[0.16em] entrance-foil-text drop-shadow-[0_6px_28px_rgba(0,0,0,0.9)]">
                     <span class="inline-block">LILY</span>
                     <span class="font-serif italic text-gold-300 font-normal tracking-normal px-1 sm:px-2 inline-block" style="-webkit-text-fill-color: #E8CE7A;">&amp;</span>
                     <span class="inline-block">RICHARD</span>
-                </h2>
+                </h1>
 
                 <!-- Glowing Anamorphic Lens Flare -->
                 <div class="anamorphic-flare my-2 sm:my-3.5"></div>
 
-                <p class="cinema-seq-3 font-serif italic text-xs sm:text-base md:text-lg text-ivory-50 max-w-xs sm:max-w-lg mb-3.5 sm:mb-6 drop-shadow-[0_2px_12px_rgba(0,0,0,0.85)] leading-snug">
+                <p class="cinema-seq-3 font-serif italic text-s sm:text-base md:text-lg text-ivory-50 max-w-s sm:max-w-lg mb-3.5 sm:mb-6 drop-shadow-[0_2px_12px_rgba(0,0,0,0.85)] leading-snug">
                     &ldquo;What began as quiet conversation in passing seasons blossomed into the safest place our hearts have ever called home.&rdquo;
                 </p>
 
                 <!-- Open Invitation Trigger Button -->
                 <button onclick="enterPremiere()" class="cinema-seq-4 btn-cinema-shimmer group relative inline-flex items-center space-x-2 sm:space-x-2.5 px-5 sm:px-9 py-3 sm:py-3.5 rounded-full glass-pill-dark hover:bg-gold-400 text-ivory-50 hover:text-obsidian transition-all duration-500 active:scale-95 min-h-[42px]">
-                    <i class="fa-solid fa-envelope-open text-[11px] sm:text-xs text-gold-300 group-hover:text-obsidian transition-colors"></i>
-                    <span class="font-cinzel text-[11px] sm:text-xs tracking-[0.18em] sm:tracking-[0.26em] uppercase font-semibold">
+                    <i class="fa-solid fa-envelope-open text-[11px] sm:text-s text-gold-300 group-hover:text-obsidian transition-colors"></i>
+                    <span class="font-cinzel text-[11px] sm:text-s tracking-[0.18em] sm:tracking-[0.26em] uppercase font-semibold">
                         Open Our Invitation
                     </span>
                 </button>
@@ -874,7 +874,7 @@
                 </button>
                 <!-- Mobile & Tablet Section Menu Button -->
                 <button id="mobileMenuBtn" onclick="toggleMobileMenu()" class="lg:hidden w-8 h-8 sm:w-9 sm:h-9 rounded-full glass-pill hover:bg-gold-500/15 text-obsidian flex items-center justify-center transition-colors" aria-label="Toggle Navigation Menu" aria-expanded="false">
-                    <i id="mobileMenuIcon" class="fa-solid fa-bars text-xs"></i>
+                    <i id="mobileMenuIcon" class="fa-solid fa-bars text-s"></i>
                 </button>
             </div>
         </div>
@@ -922,7 +922,7 @@
             </div>
 
             <p class="hero-reveal-2 font-serif italic text-base sm:text-xl md:text-2xl text-[#6E4D19] font-medium mb-2.5 sm:mb-3.5 tracking-wide drop-shadow-[0_1px_1px_rgba(255,255,255,0.95)] px-2">
-                Humbled by Providence and cherished by those who raised us
+                Guided by Grace &bull; Carrying the Blessing of Our Families Into Forever
             </p>
 
             <h1 class="font-display text-center mx-auto my-4 sm:my-5 hero-title-shadow flex flex-col items-center justify-center">
@@ -943,7 +943,7 @@
 
             <!-- Save the Date Anchor -->
             <div class="hero-reveal-4 mb-4 sm:mb-5">
-                <p class="font-cinzel text-xs sm:text-lg md:text-xl lg:text-2xl tracking-[0.16em] sm:tracking-[0.24em] text-obsidian font-semibold uppercase">
+                <p class="font-cinzel text-s sm:text-lg md:text-xl lg:text-2xl tracking-[0.16em] sm:tracking-[0.24em] text-obsidian font-semibold uppercase">
                     Friday &bull; April 9, 2027
                 </p>
                 <p class="font-serif italic text-sm sm:text-lg md:text-xl text-gold-700 font-medium mt-0.5 sm:mt-1">
@@ -990,17 +990,17 @@
         <!-- Frosted Glass Caption & Coverflow Controls -->
         <div class="relative z-10 mt-5 sm:mt-7 max-w-md mx-auto rounded-3xl glass-light px-5 py-4 sm:px-7 sm:py-5 text-center">
             <h3 id="cfTitle" class="font-cinzel text-sm sm:text-lg md:text-xl text-obsidian tracking-widest uppercase px-2">Golden Hour Reverie</h3>
-            <p id="cfSubtitle" class="font-serif italic text-xs sm:text-base md:text-lg text-charcoal/75 mt-1">Prenuptial Portrait Series &bull; I</p>
+            <p id="cfSubtitle" class="font-serif italic text-s sm:text-base md:text-lg text-charcoal/75 mt-1">Prenuptial Portrait Series &bull; I</p>
 
             <div class="flex items-center justify-center space-x-4 sm:space-x-6 mt-3.5 sm:mt-4">
                 <button onclick="moveCoverflow(-1)" class="w-10 h-10 sm:w-11 sm:h-11 rounded-full glass-pill hover:bg-obsidian hover:text-ivory-50 text-obsidian flex items-center justify-center transition-all active:scale-95" aria-label="Previous Photo">
-                    <i class="fa-solid fa-chevron-left text-xs"></i>
+                    <i class="fa-solid fa-chevron-left text-s"></i>
                 </button>
                 
                 <div id="cfDots" class="flex items-center space-x-2"></div>
 
                 <button onclick="moveCoverflow(1)" class="w-10 h-10 sm:w-11 sm:h-11 rounded-full glass-pill hover:bg-obsidian hover:text-ivory-50 text-obsidian flex items-center justify-center transition-all active:scale-95" aria-label="Next Photo">
-                    <i class="fa-solid fa-chevron-right text-xs"></i>
+                    <i class="fa-solid fa-chevron-right text-s"></i>
                 </button>
             </div>
             <p class="text-[9.5px] sm:text-[10.5px] uppercase tracking-[0.2em] text-charcoal/55 mt-3">Swipe or click side frames to explore</p>
@@ -1017,7 +1017,7 @@
             <div class="text-center max-w-2xl mx-auto mb-10 sm:mb-14">
                 <p class="luxury-kicker text-[9.5px] sm:text-[10.5px] text-gold-400 mb-2">Chapter II &bull; The Sacred &amp; The Grand</p>
                 <h2 class="font-display text-xl sm:text-3xl md:text-4xl lg:text-5xl tracking-[0.12em] mb-2.5 drop-shadow-[0_6px_22px_rgba(0,0,0,0.65)]">Chronicle &amp; Venues</h2>
-                <p class="font-cinzel text-xs sm:text-sm md:text-base tracking-[0.18em] sm:tracking-[0.24em] text-gold-300 uppercase mb-3.5">Friday, April 9, 2027 &bull; 2:00 PM</p>
+                <p class="font-cinzel text-s sm:text-sm md:text-base tracking-[0.18em] sm:tracking-[0.24em] text-gold-300 uppercase mb-3.5">Friday, April 9, 2027 &bull; 2:00 PM</p>
                 <div class="w-16 sm:w-20 h-[1px] bg-gold-400 mx-auto"></div>
             </div>
 
@@ -1075,7 +1075,7 @@
                             Locale of Village East
                         </p>
 
-                        <div class="space-y-2.5 text-xs sm:text-sm md:text-base text-ivory-200/90 font-light border-t border-ivory-100/15 pt-4">
+                        <div class="space-y-2.5 text-s sm:text-sm md:text-base text-ivory-200/90 font-light border-t border-ivory-100/15 pt-4">
                             <p class="flex items-start space-x-2.5">
                                 <i class="fa-solid fa-location-dot text-gold-400 mt-1 shrink-0"></i>
                                 <span>Village East Executive Homes, Cainta, Rizal, Philippines</span>
@@ -1136,7 +1136,7 @@
                             Cocktail Hour &amp; Evening Reception
                         </p>
 
-                        <div class="space-y-2.5 text-xs sm:text-sm md:text-base text-ivory-200/90 font-light border-t border-ivory-100/15 pt-4">
+                        <div class="space-y-2.5 text-s sm:text-sm md:text-base text-ivory-200/90 font-light border-t border-ivory-100/15 pt-4">
                             <p class="flex items-start space-x-2.5">
                                 <i class="fa-solid fa-location-dot text-gold-400 mt-1 shrink-0"></i>
                                 <span>Villa Ardin Event's Place, Rizal / Metro East, Philippines</span>
@@ -1349,7 +1349,7 @@
             <!-- Best Man & Groomsmen -->
             <div class="rounded-2xl glass-light p-3.5 sm:p-6 md:p-7 text-center luxury-card-shadow">
                 <p class="text-[8.5px] sm:text-[10px] md:text-[11px] uppercase tracking-[0.14em] sm:tracking-[0.24em] text-gold-600 mb-1.5 leading-snug">Best Man</br>Groomsmen</p>
-                <h4 class="font-cinzel text-xs sm:text-base md:text-lg lg:text-xl text-obsidian mb-0.5 leading-snug">Ricky James Tyler Bonus III</h4>
+                <h4 class="font-cinzel text-s sm:text-base md:text-lg lg:text-xl text-obsidian mb-0.5 leading-snug">Tyler Bonus III</h4>
                 <p class="text-[9px] sm:text-[10px] uppercase tracking-[0.18em] sm:tracking-[0.22em] text-gold-600/90 mb-3 sm:mb-4">Best Man</p>
 
                 <div class="w-8 sm:w-10 h-[1px] bg-gold-500/40 mx-auto mb-3 sm:mb-4"></div>
@@ -1365,7 +1365,7 @@
             <!-- Maid of Honor & Bridesmaids -->
             <div class="rounded-2xl glass-light p-3.5 sm:p-6 md:p-7 text-center luxury-card-shadow">
                 <p class="text-[8.5px] sm:text-[10px] md:text-[11px] uppercase tracking-[0.14em] sm:tracking-[0.24em] text-gold-600 mb-1.5 leading-snug">Maid of Honor</br>Bridesmaids</p>
-                <h4 class="font-cinzel text-xs sm:text-base md:text-lg lg:text-xl text-obsidian mb-0.5 leading-snug">Lovelyn Layon</h4>
+                <h4 class="font-cinzel text-s sm:text-base md:text-lg lg:text-xl text-obsidian mb-0.5 leading-snug">Lovelyn Layon</h4>
                 <p class="text-[9px] sm:text-[10px] uppercase tracking-[0.18em] sm:tracking-[0.22em] text-gold-600/90 mb-3 sm:mb-4">Maid of Honor</p>
 
                 <div class="w-8 sm:w-10 h-[1px] bg-gold-500/40 mx-auto mb-3 sm:mb-4"></div>
@@ -1412,7 +1412,7 @@
                     <i class="fa-solid fa-crown text-[9px]"></i>
                     <span>Bridal Color Reservation</span>
                 </div>
-                <p class="font-cinzel text-xs sm:text-base md:text-lg text-ivory-50 tracking-wide leading-relaxed">
+                <p class="font-cinzel text-s sm:text-base md:text-lg text-ivory-50 tracking-wide leading-relaxed">
                     Kindly Reserve <span class="text-gold-300 underline decoration-gold-400/70 underline-offset-4 font-semibold">Pure Ivory &amp; Pure White</span> Exclusively for the Bride
                 </p>
                 <p class="font-serif italic text-sm sm:text-base md:text-lg text-ivory-200/80 mt-1">
@@ -1462,7 +1462,7 @@
                                         <path d="M35,124 L37,162 L52,162 L55,134 L58,162 L73,162 L75,124 Z" fill="#3C3833"/>
                                     </g>
                                 </svg>
-                                <p class="font-serif italic text-[10px] sm:text-xs md:text-sm text-charcoal mt-1 sm:mt-1.5 text-center leading-tight">Barong Tagalog</p>
+                                <p class="font-serif italic text-[10px] sm:text-s md:text-sm text-charcoal mt-1 sm:mt-1.5 text-center leading-tight">Barong Tagalog</p>
                             </div>
 
                             <!-- Sample 2: Long-Sleeved Formal -->
@@ -1491,15 +1491,15 @@
                                         <path d="M34,116 L36,162 L52,162 L55,130 L58,162 L74,162 L76,116 Z" fill="#4A453E"/>
                                     </g>
                                 </svg>
-                                <p class="font-serif italic text-[10px] sm:text-xs md:text-sm text-charcoal mt-1 sm:mt-1.5 text-center leading-tight">Long-Sleeved</p>
+                                <p class="font-serif italic text-[10px] sm:text-s md:text-sm text-charcoal mt-1 sm:mt-1.5 text-center leading-tight">Long-Sleeved</p>
                             </div>
                         </div>
 
-                        <p class="font-serif text-xs sm:text-sm md:text-base lg:text-lg text-charcoal/90 leading-snug sm:leading-relaxed mb-2.5 sm:mb-3.5">
+                        <p class="font-serif text-s sm:text-sm md:text-base lg:text-lg text-charcoal/90 leading-snug sm:leading-relaxed mb-2.5 sm:mb-3.5">
                             Formal attire in our soft pastel palette or classic neutral tones:
                         </p>
 
-                        <ul class="space-y-1.5 sm:space-y-2 font-serif text-xs sm:text-sm md:text-base lg:text-lg text-charcoal/90 mb-3 sm:mb-4 leading-snug">
+                        <ul class="space-y-1.5 sm:space-y-2 font-serif text-s sm:text-sm md:text-base lg:text-lg text-charcoal/90 mb-3 sm:mb-4 leading-snug">
                             <li class="flex items-start space-x-1.5 sm:space-x-2">
                                 <span class="text-gold-600 font-bold mt-0.5">&bull;</span>
                                 <span><strong class="text-obsidian font-semibold">Barong Tagalog:</strong> Jusi, Piña, or Organza Barong with dark slacks.</span>
@@ -1521,7 +1521,7 @@
 
                     <div class="pt-2.5 sm:pt-3.5 border-t border-gold-500/20 bg-white/75 backdrop-blur-md rounded-xl p-2 sm:p-3">
                         <p class="text-[8.5px] sm:text-[10px] uppercase tracking-[0.18em] sm:tracking-[0.22em] text-gold-700 font-semibold mb-1">Kindly Avoid</p>
-                        <ul class="space-y-1 text-[10px] sm:text-[11.5px] md:text-xs text-charcoal/85 leading-snug">
+                        <ul class="space-y-1 text-[10px] sm:text-[12px] md:text-s text-charcoal/85 leading-snug">
                             <li class="flex items-start space-x-1.5">
                                 <i class="fa-solid fa-xmark text-gold-600 mt-0.5 shrink-0"></i>
                                 <span><strong>Pure Ivory, White, or Cream</strong> (Bride only)</span>
@@ -1572,7 +1572,7 @@
                                         <line x1="59" y1="66" x2="68" y2="156" stroke="#C78F96" stroke-width="0.7" opacity="0.7"/>
                                     </g>
                                 </svg>
-                                <p class="font-serif italic text-[10px] sm:text-xs md:text-sm text-charcoal mt-1 sm:mt-1.5 text-center leading-tight">Filipiniana</p>
+                                <p class="font-serif italic text-[10px] sm:text-s md:text-sm text-charcoal mt-1 sm:mt-1.5 text-center leading-tight">Filipiniana</p>
                             </div>
 
                             <!-- Sample 2: Pastel Evening Gown -->
@@ -1598,15 +1598,15 @@
                                         <line x1="55" y1="64" x2="55" y2="156" stroke="#9F8CB5" stroke-width="0.7" opacity="0.65"/>
                                     </g>
                                 </svg>
-                                <p class="font-serif italic text-[10px] sm:text-xs md:text-sm text-charcoal mt-1 sm:mt-1.5 text-center leading-tight">Sleeved Gown</p>
+                                <p class="font-serif italic text-[10px] sm:text-s md:text-sm text-charcoal mt-1 sm:mt-1.5 text-center leading-tight">Sleeved Gown</p>
                             </div>
                         </div>
 
-                        <p class="font-serif text-xs sm:text-sm md:text-base lg:text-lg text-charcoal/90 leading-snug sm:leading-relaxed mb-2.5 sm:mb-3.5">
+                        <p class="font-serif text-s sm:text-sm md:text-base lg:text-lg text-charcoal/90 leading-snug sm:leading-relaxed mb-2.5 sm:mb-3.5">
                             Modest, church-appropriate silhouettes in any of our six pastel hues:
                         </p>
 
-                        <ul class="space-y-1.5 sm:space-y-2 font-serif text-xs sm:text-sm md:text-base lg:text-lg text-charcoal/90 mb-3 sm:mb-4 leading-snug">
+                        <ul class="space-y-1.5 sm:space-y-2 font-serif text-s sm:text-sm md:text-base lg:text-lg text-charcoal/90 mb-3 sm:mb-4 leading-snug">
                             <li class="flex items-start space-x-1.5 sm:space-x-2">
                                 <span class="text-gold-600 font-bold mt-0.5">&bull;</span>
                                 <span><strong class="text-obsidian font-semibold">Modern Filipiniana:</strong> Terno, Alampay, or butterfly-sleeve ensemble.</span>
@@ -1628,7 +1628,7 @@
 
                     <div class="pt-2.5 sm:pt-3.5 border-t border-gold-500/20 bg-white/75 backdrop-blur-md rounded-xl p-2 sm:p-3">
                         <p class="text-[8.5px] sm:text-[10px] uppercase tracking-[0.18em] sm:tracking-[0.22em] text-gold-700 font-semibold mb-1">Kindly Avoid</p>
-                        <ul class="space-y-1 text-[10px] sm:text-[11.5px] md:text-xs text-charcoal/85 leading-snug">
+                        <ul class="space-y-1 text-[10px] sm:text-[12px] md:text-s text-charcoal/85 leading-snug">
                             <li class="flex items-start space-x-1.5">
                                 <i class="fa-solid fa-xmark text-gold-600 mt-0.5 shrink-0"></i>
                                 <span><strong>Pure Ivory, White, or Cream</strong> (Bride only)</span>
@@ -1654,37 +1654,37 @@
             <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4">
                 <button onclick="copyColor('#F7E7CE', 'Champagne Silk')" class="group rounded-2xl glass-light p-3 sm:p-4 text-center luxury-card-shadow focus:outline-none active:scale-95">
                     <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full mx-auto mb-2 border border-white/80 swatch-orb-shadow group-hover:scale-105 transition-transform" style="background-color: #F7E7CE;"></div>
-                    <p class="font-cinzel text-[11px] sm:text-xs text-obsidian font-semibold">Champagne</p>
+                    <p class="font-cinzel text-[11px] sm:text-s text-obsidian font-semibold">Champagne</p>
                     <p class="font-serif text-[11px] text-charcoal/70 mt-0.5">#F7E7CE</p>
                 </button>
 
                 <button onclick="copyColor('#F4D4D7', 'Blush Rose')" class="group rounded-2xl glass-light p-3 sm:p-4 text-center luxury-card-shadow focus:outline-none active:scale-95">
                     <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full mx-auto mb-2 border border-white/80 swatch-orb-shadow group-hover:scale-105 transition-transform" style="background-color: #F4D4D7;"></div>
-                    <p class="font-cinzel text-[11px] sm:text-xs text-obsidian font-semibold">Blush Rose</p>
+                    <p class="font-cinzel text-[11px] sm:text-s text-obsidian font-semibold">Blush Rose</p>
                     <p class="font-serif text-[11px] text-charcoal/70 mt-0.5">#F4D4D7</p>
                 </button>
 
                 <button onclick="copyColor('#DCE5D8', 'Sage Celadon')" class="group rounded-2xl glass-light p-3 sm:p-4 text-center luxury-card-shadow focus:outline-none active:scale-95">
                     <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full mx-auto mb-2 border border-white/80 swatch-orb-shadow group-hover:scale-105 transition-transform" style="background-color: #DCE5D8;"></div>
-                    <p class="font-cinzel text-[11px] sm:text-xs text-obsidian font-semibold">Sage Celadon</p>
+                    <p class="font-cinzel text-[11px] sm:text-s text-obsidian font-semibold">Sage Celadon</p>
                     <p class="font-serif text-[11px] text-charcoal/70 mt-0.5">#DCE5D8</p>
                 </button>
 
                 <button onclick="copyColor('#D8E2EC', 'Powder Sky')" class="group rounded-2xl glass-light p-3 sm:p-4 text-center luxury-card-shadow focus:outline-none active:scale-95">
                     <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full mx-auto mb-2 border border-white/80 swatch-orb-shadow group-hover:scale-105 transition-transform" style="background-color: #D8E2EC;"></div>
-                    <p class="font-cinzel text-[11px] sm:text-xs text-obsidian font-semibold">Powder Sky</p>
+                    <p class="font-cinzel text-[11px] sm:text-s text-obsidian font-semibold">Powder Sky</p>
                     <p class="font-serif text-[11px] text-charcoal/70 mt-0.5">#D8E2EC</p>
                 </button>
 
                 <button onclick="copyColor('#E6DCEF', 'Wisteria Lilac')" class="group rounded-2xl glass-light p-3 sm:p-4 text-center luxury-card-shadow focus:outline-none active:scale-95">
                     <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full mx-auto mb-2 border border-white/80 swatch-orb-shadow group-hover:scale-105 transition-transform" style="background-color: #E6DCEF;"></div>
-                    <p class="font-cinzel text-[11px] sm:text-xs text-obsidian font-semibold">Wisteria Lilac</p>
+                    <p class="font-cinzel text-[11px] sm:text-s text-obsidian font-semibold">Wisteria Lilac</p>
                     <p class="font-serif text-[11px] text-charcoal/70 mt-0.5">#E6DCEF</p>
                 </button>
 
                 <button onclick="copyColor('#F5DDD0', 'Peach Blossom')" class="group rounded-2xl glass-light p-3 sm:p-4 text-center luxury-card-shadow focus:outline-none active:scale-95">
                     <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full mx-auto mb-2 border border-white/80 swatch-orb-shadow group-hover:scale-105 transition-transform" style="background-color: #F5DDD0;"></div>
-                    <p class="font-cinzel text-[11px] sm:text-xs text-obsidian font-semibold">Peach Blossom</p>
+                    <p class="font-cinzel text-[11px] sm:text-s text-obsidian font-semibold">Peach Blossom</p>
                     <p class="font-serif text-[11px] text-charcoal/70 mt-0.5">#F5DDD0</p>
                 </button>
             </div>
@@ -1712,7 +1712,7 @@
                             <span class="w-7 h-7 rounded-full bg-gold-500/20 border border-gold-400/50 flex items-center justify-center shrink-0">
                                 <i class="fa-solid fa-camera-retro text-[11px]"></i>
                             </span>
-                            <h3 class="font-cinzel text-xs sm:text-sm md:text-base text-gold-300 tracking-wide font-semibold">Unplugged Ceremony &bull; Share the Moment With Us</h3>
+                            <h3 class="font-cinzel text-s sm:text-sm md:text-base text-gold-300 tracking-wide font-semibold">Unplugged Ceremony &bull; Share the Moment With Us</h3>
                         </div>
                         <span class="hidden sm:inline-block px-2.5 py-0.5 rounded-full bg-gold-500/20 border border-gold-400/40 text-[9px] uppercase tracking-[0.2em] text-gold-300 font-semibold shrink-0">
                             Kindly Note
@@ -1729,7 +1729,7 @@
                             <span class="w-7 h-7 rounded-full bg-gold-500/20 border border-gold-400/50 flex items-center justify-center shrink-0">
                                 <i class="fa-solid fa-envelope-open-text text-[11px]"></i>
                             </span>
-                            <h3 class="font-cinzel text-xs sm:text-sm md:text-base text-gold-300 tracking-wide font-semibold">A Note on Gifts &bull; Your Presence Is Our Treasure</h3>
+                            <h3 class="font-cinzel text-s sm:text-sm md:text-base text-gold-300 tracking-wide font-semibold">A Note on Gifts &bull; Your Presence Is Our Treasure</h3>
                         </div>
                         <span class="hidden sm:inline-block px-2.5 py-0.5 rounded-full bg-gold-500/20 border border-gold-400/40 text-[9px] uppercase tracking-[0.2em] text-gold-300 font-semibold shrink-0">
                             With Gratitude
@@ -1744,8 +1744,8 @@
                     <div class="rounded-2xl glass-ivory p-4 sm:p-5 luxury-card-shadow flex flex-col justify-between">
                         <div>
                             <div class="flex items-center space-x-2 text-gold-700 mb-1.5">
-                                <i class="fa-solid fa-chair text-xs"></i>
-                                <h3 class="font-cinzel text-xs sm:text-sm md:text-base text-obsidian tracking-wide font-semibold">Reserved With Love</h3>
+                                <i class="fa-solid fa-chair text-s"></i>
+                                <h3 class="font-cinzel text-s sm:text-sm md:text-base text-obsidian tracking-wide font-semibold">Reserved With Love</h3>
                             </div>
                             <p class="font-serif text-sm sm:text-base text-charcoal/90 leading-snug">
                                 Because we dream of an intimate celebration with our nearest and dearest, we have lovingly reserved seats specifically for the guests named on your invitation.
@@ -1756,8 +1756,8 @@
                     <div class="rounded-2xl glass-ivory p-4 sm:p-5 luxury-card-shadow flex flex-col justify-between">
                         <div>
                             <div class="flex items-center space-x-2 text-gold-700 mb-1.5">
-                                <i class="fa-solid fa-heart text-xs"></i>
-                                <h3 class="font-cinzel text-xs sm:text-sm md:text-base text-obsidian tracking-wide font-semibold">Church Reverence</h3>
+                                <i class="fa-solid fa-heart text-s"></i>
+                                <h3 class="font-cinzel text-s sm:text-sm md:text-base text-obsidian tracking-wide font-semibold">Church Reverence</h3>
                             </div>
                             <p class="font-serif text-sm sm:text-base text-charcoal/90 leading-snug">
                                 Thank you for honoring our house of worship with modest formal attire and arriving thirty minutes early so we may begin in peaceful prayer.
@@ -1768,8 +1768,8 @@
 
                 <div class="rounded-2xl glass-ivory p-4 sm:p-5 luxury-card-shadow">
                     <div class="flex items-center space-x-2 text-gold-700 mb-1.5">
-                        <i class="fa-solid fa-mug-hot text-xs"></i>
-                        <h3 class="font-cinzel text-xs sm:text-sm md:text-base text-obsidian tracking-wide font-semibold">An Evening of Fellowship &bull; Alcohol-Free &amp; Non-Dancing</h3>
+                        <i class="fa-solid fa-mug-hot text-s"></i>
+                        <h3 class="font-cinzel text-s sm:text-sm md:text-base text-obsidian tracking-wide font-semibold">An Evening of Fellowship &bull; Alcohol-Free &amp; Non-Dancing</h3>
                     </div>
                     <p class="font-serif text-sm sm:text-base text-charcoal/90 leading-snug">
                         In keeping with our cherished values, our reception will be a serene, alcohol-free gathering without a dance floor—thoughtfully curated for unhurried dining, warm conversation, and joyful fellowship together.
@@ -1801,7 +1801,7 @@
                         </div>
                     </div>
 
-                    <div id="lookupErrorBox" class="hidden rounded-xl bg-red-950/60 backdrop-blur-md border border-red-400/40 px-3 py-2 text-xs text-red-200 leading-relaxed"></div>
+                    <div id="lookupErrorBox" class="hidden rounded-xl bg-red-950/60 backdrop-blur-md border border-red-400/40 px-3 py-2 text-s text-red-200 leading-relaxed"></div>
 
                     <button type="submit" id="lookupSubmitBtn" class="w-full py-3 rounded-xl bg-gold-500/95 hover:bg-gold-400 text-obsidian font-cinzel text-[11px] font-semibold uppercase tracking-[0.22em] shadow-[0_12px_28px_-6px_rgba(212,175,55,0.45)] transition-all active:scale-95">
                         <i class="fa-solid fa-check-circle mr-2"></i> Confirm Invitation
@@ -1869,7 +1869,7 @@
                 <!-- STEP 3: Locked Confirmation Receipt (Prevents Duplicate Counting) -->
                 <div id="rsvpReceiptBox" class="hidden rounded-xl bg-white/10 backdrop-blur-md border border-gold-400/50 p-4 text-center space-y-2.5">
                     <div class="w-9 h-9 rounded-full bg-gold-500/20 border border-gold-400/50 flex items-center justify-center text-gold-300 mx-auto">
-                        <i class="fa-solid fa-check text-xs"></i>
+                        <i class="fa-solid fa-check text-s"></i>
                     </div>
                     <h4 class="font-cinzel text-base text-gold-300">R.S.V.P. Recorded</h4>
                     <p id="rsvpReceiptSummary" class="font-serif text-sm sm:text-base text-ivory-100 leading-relaxed"></p>
@@ -1886,10 +1886,10 @@
 
     <!-- FOOTER -->
     <footer class="bg-obsidian text-ivory-200 py-12 sm:py-14 px-4 sm:px-6 text-center border-t border-gold-500/20">
-        <p class="font-cinzel text-xl sm:text-2xl md:text-3xl tracking-[0.2em] text-ivory-50 mb-1.5">
+        <p class="font-cinzel text-2xl sm:text-2xl md:text-3xl tracking-[0.2em] text-ivory-50 mb-1.5">
             LILY <span class="text-gold-400">&amp;</span> RICHARD
         </p>
-        <p class="font-cinzel text-[11px] sm:text-xs md:text-sm tracking-[0.22em] sm:tracking-[0.26em] text-gold-300 uppercase mb-2.5">
+        <p class="font-cinzel text-[11px] sm:text-s md:text-sm tracking-[0.22em] sm:tracking-[0.26em] text-gold-300 uppercase mb-2.5">
             Friday &bull; April 9, 2027 &bull; 1:30 PM
         </p>
         <p class="font-serif italic text-sm sm:text-base md:text-lg text-gold-400 mb-5">
@@ -1910,57 +1910,57 @@
                     <h3 id="etiquetteModalTitle" class="font-cinzel text-sm sm:text-lg text-ivory-50 mt-0.5 truncate">Wedding Etiquette Reminder</h3>
                 </div>
                 <button type="button" onclick="closeEtiquetteModal()" class="w-9 h-9 rounded-full border border-gold-400/40 text-gold-300 hover:bg-gold-500 hover:text-obsidian flex items-center justify-center transition-colors shrink-0" aria-label="Close Etiquette Modal">
-                    <i class="fa-solid fa-xmark text-xs"></i>
+                    <i class="fa-solid fa-xmark text-s"></i>
                 </button>
             </div>
 
             <!-- Scrollable Etiquette Summary Body -->
             <div class="p-4 sm:p-5 overflow-y-auto space-y-2.5 text-left flex-1">
-                <p class="font-serif italic text-xs sm:text-sm md:text-base text-charcoal/90 leading-snug">
+                <p class="font-serif italic text-s sm:text-sm md:text-base text-charcoal/90 leading-snug">
                     As you prepare to celebrate with us, please take a brief moment to review these cherished courtesies:
                 </p>
 
                 <div class="rounded-xl glass-dark text-ivory-50 p-3">
-                    <p class="font-cinzel text-[10.5px] sm:text-xs font-semibold text-gold-300 uppercase tracking-wider mb-1">
+                    <p class="font-cinzel text-[10.5px] sm:text-s font-semibold text-gold-300 uppercase tracking-wider mb-1">
                         <i class="fa-solid fa-crown mr-1.5"></i>Bridal Color Reservation
                     </p>
-                    <p class="font-serif text-xs sm:text-sm md:text-base text-ivory-100 leading-snug">
+                    <p class="font-serif text-s sm:text-sm md:text-base text-ivory-100 leading-snug">
                         Kindly reserve <span class="text-gold-300 font-semibold">Pure Ivory, Pure White &amp; Cream</span> exclusively for the Bride, and dress within our curated six-shade pastel palette.
                     </p>
                 </div>
 
                 <div class="rounded-xl glass-light p-3">
-                    <p class="font-cinzel text-[10.5px] sm:text-xs font-semibold text-gold-700 uppercase tracking-wider mb-1">
+                    <p class="font-cinzel text-[10.5px] sm:text-s font-semibold text-gold-700 uppercase tracking-wider mb-1">
                         <i class="fa-solid fa-camera-retro mr-1.5"></i>Unplugged Ceremony
                     </p>
-                    <p class="font-serif text-xs sm:text-sm md:text-base text-charcoal leading-snug">
+                    <p class="font-serif text-s sm:text-sm md:text-base text-charcoal leading-snug">
                         Kindly keep phones and cameras tucked away inside the church so we may share our vows face to face.
                     </p>
                 </div>
 
                 <div class="rounded-xl glass-light p-3">
-                    <p class="font-cinzel text-[10.5px] sm:text-xs font-semibold text-gold-700 uppercase tracking-wider mb-1">
+                    <p class="font-cinzel text-[10.5px] sm:text-s font-semibold text-gold-700 uppercase tracking-wider mb-1">
                         <i class="fa-solid fa-envelope-open-text mr-1.5"></i>A Note on Gifts
                     </p>
-                    <p class="font-serif text-xs sm:text-sm md:text-base text-charcoal leading-snug">
+                    <p class="font-serif text-s sm:text-sm md:text-base text-charcoal leading-snug">
                         Your presence and prayers are our greatest gift; should you wish to bless us, any monetary g is received with heartfelt gratitude.
                     </p>
                 </div>
 
                 <div class="rounded-xl glass-light p-3">
-                    <p class="font-cinzel text-[10.5px] sm:text-xs font-semibold text-gold-700 uppercase tracking-wider mb-1">
+                    <p class="font-cinzel text-[10.5px] sm:text-s font-semibold text-gold-700 uppercase tracking-wider mb-1">
                         <i class="fa-solid fa-chair mr-1.5"></i>Reserved Seating &amp; church Modesty
                     </p>
-                    <p class="font-serif text-xs sm:text-sm md:text-base text-charcoal leading-snug">
+                    <p class="font-serif text-s sm:text-sm md:text-base text-charcoal leading-snug">
                         Seats are lovingly reserved only for named guests. Kindly arrive 30 minutes early in modest, sleeved formal attire.
                     </p>
                 </div>
 
                 <div class="rounded-xl glass-light p-3">
-                    <p class="font-cinzel text-[10.5px] sm:text-xs font-semibold text-gold-700 uppercase tracking-wider mb-1">
+                    <p class="font-cinzel text-[10.5px] sm:text-s font-semibold text-gold-700 uppercase tracking-wider mb-1">
                         <i class="fa-solid fa-mug-hot mr-1.5"></i>Alcohol-Free &amp; Non-Dancing Evening
                     </p>
-                    <p class="font-serif text-xs sm:text-sm md:text-base text-charcoal leading-snug">
+                    <p class="font-serif text-s sm:text-sm md:text-base text-charcoal leading-snug">
                         Our reception is a serene, alcohol-free celebration with no dancing—curated for warm dining and fellowship.
                     </p>
                 </div>
@@ -1970,7 +1970,7 @@
             <div class="px-4 sm:px-5 py-3 sm:py-3.5 bg-ivory-100/92 backdrop-blur-md border-t border-gold-500/30 space-y-2.5 shrink-0">
                 <label for="modalEtiquetteAgree" class="flex items-start space-x-2.5 cursor-pointer select-none py-0.5">
                     <input type="checkbox" id="modalEtiquetteAgree" onchange="toggleModalConfirmBtn()" class="mt-0.5 accent-[#C5A059] w-4 h-4 rounded shrink-0">
-                    <span class="font-serif text-xs sm:text-sm md:text-base text-obsidian leading-snug">
+                    <span class="font-serif text-s sm:text-sm md:text-base text-obsidian leading-snug">
                         I have read and agree to honor all wedding etiquettes, including reserving Ivory/White for the Bride.
                     </span>
                 </label>
@@ -1991,11 +1991,11 @@
     <div id="toastModal" class="fixed bottom-4 sm:bottom-6 left-1/2 sm:left-auto -translate-x-1/2 sm:translate-x-0 sm:right-6 z-50 transform translate-y-28 opacity-0 transition-all duration-300 pointer-events-none max-w-sm w-[92%] sm:w-full">
         <div class="rounded-2xl glass-dark text-ivory-50 p-4 flex items-start space-x-3">
             <div class="w-7 h-7 rounded-full bg-gold-500/20 flex items-center justify-center text-gold-400 shrink-0 mt-0.5">
-                <i class="fa-solid fa-check text-xs"></i>
+                <i class="fa-solid fa-check text-s"></i>
             </div>
             <div>
-                <h4 id="toastTitle" class="font-cinzel text-xs text-gold-400 tracking-wider">Notification</h4>
-                <p id="toastBody" class="font-serif text-xs sm:text-sm text-ivory-100 mt-0.5 leading-snug"></p>
+                <h4 id="toastTitle" class="font-cinzel text-s text-gold-400 tracking-wider">Notification</h4>
+                <p id="toastBody" class="font-serif text-s sm:text-sm text-ivory-100 mt-0.5 leading-snug"></p>
             </div>
         </div>
     </div>
@@ -2013,7 +2013,7 @@
             const isHidden = drawer.classList.contains('hidden');
             if (isHidden) {
                 drawer.classList.remove('hidden');
-                if (icon) icon.className = 'fa-solid fa-xmark text-xs';
+                if (icon) icon.className = 'fa-solid fa-xmark text-s';
                 if (btn) btn.setAttribute('aria-expanded', 'true');
             } else {
                 closeMobileMenu();
@@ -2025,7 +2025,7 @@
             const icon = document.getElementById('mobileMenuIcon');
             const btn = document.getElementById('mobileMenuBtn');
             if (drawer) drawer.classList.add('hidden');
-            if (icon) icon.className = 'fa-solid fa-bars text-xs';
+            if (icon) icon.className = 'fa-solid fa-bars text-s';
             if (btn) btn.setAttribute('aria-expanded', 'false');
         }
 
@@ -2589,7 +2589,7 @@
                 const shouldPrecheck = !isLocked && (!isGroupParty || isSelf);
 
                 const row = document.createElement("label");
-                row.className = `flex items-center justify-between gap-2 px-3 py-2 rounded-xl border text-xs backdrop-blur-md transition-colors ${
+                row.className = `flex items-center justify-between gap-2 px-3 py-2 rounded-xl border text-s backdrop-blur-md transition-colors ${
                     isLocked
                         ? "bg-white/5 border-ivory-100/10 text-ivory-200/45 cursor-not-allowed"
                         : "bg-white/10 border-gold-400/35 text-ivory-50 hover:border-gold-400 cursor-pointer"
